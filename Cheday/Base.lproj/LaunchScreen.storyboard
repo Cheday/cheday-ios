@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +15,153 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_back" translatesAutoresizingMaskIntoConstraints="NO" id="tpY-QG-pg8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheday_logo" translatesAutoresizingMaskIntoConstraints="NO" id="DTv-vo-AsZ">
+                                <rect key="frame" x="98.5" y="158.5" width="123" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="Shl-yf-OBJ"/>
+                                    <constraint firstAttribute="height" constant="166" id="TLh-RM-hAk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOTED IN LOVE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-jK-thi">
+                                <rect key="frame" x="58" y="332.5" width="204" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHEDAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-Fi-X4d">
+                                <rect key="frame" x="57" y="364.5" width="205" height="64"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="53"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUt-CJ-1eA">
+                                <rect key="frame" x="0.0" y="451" width="320" height="86.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HE4-ne-f7n">
+                                        <rect key="frame" x="25" y="0.0" width="78" height="86.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United Nations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRl-fm-oom">
+                                                <rect key="frame" x="0.0" y="73" width="78" height="13.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="un_logo" translatesAutoresizingMaskIntoConstraints="NO" id="upG-1m-whX">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="56"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="upG-1m-whX" firstAttribute="top" secondItem="HE4-ne-f7n" secondAttribute="top" id="ASz-mM-9c7"/>
+                                            <constraint firstItem="LRl-fm-oom" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HE4-ne-f7n" secondAttribute="leading" id="GDb-zC-tj9"/>
+                                            <constraint firstItem="upG-1m-whX" firstAttribute="leading" secondItem="HE4-ne-f7n" secondAttribute="leading" id="Hjq-Tp-17W"/>
+                                            <constraint firstItem="LRl-fm-oom" firstAttribute="centerX" secondItem="HE4-ne-f7n" secondAttribute="centerX" id="Q32-oQ-uYG"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LRl-fm-oom" secondAttribute="trailing" id="Ug7-gt-Or4"/>
+                                            <constraint firstAttribute="trailing" secondItem="upG-1m-whX" secondAttribute="trailing" id="aZ7-mu-1Qa"/>
+                                            <constraint firstAttribute="bottom" secondItem="LRl-fm-oom" secondAttribute="bottom" id="kGA-8R-FBh"/>
+                                            <constraint firstItem="LRl-fm-oom" firstAttribute="top" relation="greaterThanOrEqual" secondItem="upG-1m-whX" secondAttribute="bottom" constant="16" id="oLy-1J-TYd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLp-xD-3BP">
+                                        <rect key="frame" x="133" y="0.0" width="54" height="86.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Cross" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCp-iS-4sQ">
+                                                <rect key="frame" x="0.0" y="73" width="54" height="13.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redcross_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-oc-Xj2">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="51"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GCp-iS-4sQ" secondAttribute="trailing" id="0WD-43-x2l"/>
+                                            <constraint firstItem="GCp-iS-4sQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KL7-oc-Xj2" secondAttribute="bottom" constant="16" id="R4w-ZX-6pT"/>
+                                            <constraint firstAttribute="trailing" secondItem="KL7-oc-Xj2" secondAttribute="trailing" id="aQs-Ct-FGk"/>
+                                            <constraint firstItem="GCp-iS-4sQ" firstAttribute="centerX" secondItem="sLp-xD-3BP" secondAttribute="centerX" id="kX2-IP-F5W"/>
+                                            <constraint firstItem="KL7-oc-Xj2" firstAttribute="leading" secondItem="sLp-xD-3BP" secondAttribute="leading" id="r3y-rT-wXa"/>
+                                            <constraint firstItem="GCp-iS-4sQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sLp-xD-3BP" secondAttribute="leading" id="tyd-EN-CP7"/>
+                                            <constraint firstAttribute="bottom" secondItem="GCp-iS-4sQ" secondAttribute="bottom" id="xRy-To-cR2"/>
+                                            <constraint firstItem="KL7-oc-Xj2" firstAttribute="top" secondItem="sLp-xD-3BP" secondAttribute="top" id="zMw-jq-N5G"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnn-qE-OTb">
+                                        <rect key="frame" x="223" y="0.0" width="66" height="86.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNICEF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4W-gJ-OLK">
+                                                <rect key="frame" x="13" y="73" width="40.5" height="13.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicef_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vkm-gk-UFR">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="57"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Vkm-gk-UFR" firstAttribute="top" secondItem="Dnn-qE-OTb" secondAttribute="top" id="8Vc-Y1-ejq"/>
+                                            <constraint firstItem="Vkm-gk-UFR" firstAttribute="leading" secondItem="Dnn-qE-OTb" secondAttribute="leading" id="9tp-Zb-En9"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d4W-gJ-OLK" secondAttribute="trailing" id="PUL-BP-ehm"/>
+                                            <constraint firstAttribute="bottom" secondItem="d4W-gJ-OLK" secondAttribute="bottom" id="efv-5d-FBr"/>
+                                            <constraint firstItem="d4W-gJ-OLK" firstAttribute="centerX" secondItem="Dnn-qE-OTb" secondAttribute="centerX" id="jcK-kH-eQT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vkm-gk-UFR" secondAttribute="trailing" id="pli-3L-Lh5"/>
+                                            <constraint firstItem="d4W-gJ-OLK" firstAttribute="top" secondItem="Vkm-gk-UFR" secondAttribute="bottom" constant="16" id="sk3-fH-gox"/>
+                                            <constraint firstItem="d4W-gJ-OLK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dnn-qE-OTb" secondAttribute="leading" id="y1Q-D9-1Fv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sLp-xD-3BP" secondAttribute="bottom" id="6so-Eh-TAu"/>
+                                    <constraint firstAttribute="bottom" secondItem="HE4-ne-f7n" secondAttribute="bottom" id="7lW-Xp-sZz"/>
+                                    <constraint firstItem="sLp-xD-3BP" firstAttribute="top" secondItem="oUt-CJ-1eA" secondAttribute="top" id="91u-bW-Sf4"/>
+                                    <constraint firstItem="sLp-xD-3BP" firstAttribute="centerX" secondItem="oUt-CJ-1eA" secondAttribute="centerX" id="H5K-Zh-iEm"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dnn-qE-OTb" secondAttribute="bottom" id="JpS-N6-gMs"/>
+                                    <constraint firstItem="Dnn-qE-OTb" firstAttribute="top" secondItem="oUt-CJ-1eA" secondAttribute="top" id="hjY-u2-nXZ"/>
+                                    <constraint firstItem="HE4-ne-f7n" firstAttribute="centerX" secondItem="oUt-CJ-1eA" secondAttribute="centerX" multiplier="0.4" id="sJq-cy-3sz"/>
+                                    <constraint firstItem="Dnn-qE-OTb" firstAttribute="centerX" secondItem="oUt-CJ-1eA" secondAttribute="centerX" multiplier="1.6" id="yyn-6A-4zR"/>
+                                    <constraint firstItem="HE4-ne-f7n" firstAttribute="top" secondItem="oUt-CJ-1eA" secondAttribute="top" id="zGn-Ml-k7g"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tpY-QG-pg8" secondAttribute="trailing" id="93G-8J-cKQ"/>
+                            <constraint firstItem="DTv-vo-AsZ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.85" id="Bj2-hY-eVN"/>
+                            <constraint firstItem="oUt-CJ-1eA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="TUj-fv-Npr"/>
+                            <constraint firstItem="tpY-QG-pg8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Ud0-hO-EH6"/>
+                            <constraint firstItem="GFk-jK-thi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UwG-Ns-lpV"/>
+                            <constraint firstAttribute="trailing" secondItem="oUt-CJ-1eA" secondAttribute="trailing" id="Zt4-Ww-gpg"/>
+                            <constraint firstItem="DLp-Fi-X4d" firstAttribute="top" secondItem="GFk-jK-thi" secondAttribute="bottom" id="cH5-DS-Sve"/>
+                            <constraint firstItem="GFk-jK-thi" firstAttribute="top" secondItem="DTv-vo-AsZ" secondAttribute="bottom" constant="8" id="cVr-Ho-7Wk"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="tpY-QG-pg8" secondAttribute="bottom" id="fGo-Jz-HoD"/>
+                            <constraint firstItem="tpY-QG-pg8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="jn1-hl-hy2"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="oUt-CJ-1eA" secondAttribute="bottom" constant="30" id="leh-OS-fhZ"/>
+                            <constraint firstItem="DTv-vo-AsZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="msl-6j-hOD"/>
+                            <constraint firstItem="DLp-Fi-X4d" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vFR-X2-vSH"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cheday_logo" width="123" height="166"/>
+        <image name="redcross_logo" width="51" height="51"/>
+        <image name="splash_back" width="375" height="667"/>
+        <image name="un_logo" width="66" height="56"/>
+        <image name="unicef_logo" width="66" height="57"/>
+    </resources>
 </document>

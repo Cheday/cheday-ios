@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+@import Parse;
 
 #ifndef DEBUG
     #import <Fabric/Fabric.h>
@@ -19,14 +20,30 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 #ifndef DEBUG
     [Fabric with:@[[Crashlytics class]]];
 #endif
     
+#ifdef DEBUG
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"ChedayApp";
+        configuration.server = @"https://cheday.herokuapp.com/parse";
+    }]];
+#else
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"ChedayApp";
+        configuration.server = @"https://cheday.herokuapp.com/parse";
+    }]];
+#endif
+    [self performSelector:@selector(presentAuthorization) withObject:nil afterDelay:0];
     return YES;
+}
+
+- (void)presentAuthorization
+{
+    [self.window.rootViewController presentViewController:[[UIStoryboard storyboardWithName:@"AuthorizationStoryboard" bundle:nil] instantiateInitialViewController] animated:YES completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
