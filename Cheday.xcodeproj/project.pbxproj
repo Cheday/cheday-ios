@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F04DBA21D46241700105A3D /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */; };
 		4F8ACE9F1D40D3DA00593D00 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8ACE9E1D40D3DA00593D00 /* LaunchImage.xcassets */; };
 		4F9D54851D3F97D300A14739 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */; };
 		4FBF89101D3F894300C371A4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF890E1D3F894300C371A4 /* Bolts.framework */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
 		4F8ACE9E1D40D3DA00593D00 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LaunchImage.xcassets; path = LaunchImage/LaunchImage.xcassets; sourceTree = "<group>"; };
 		4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		4FBF890E1D3F894300C371A4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				4F9D54851D3F97D300A14739 /* CocoaLumberjack.framework in Frameworks */,
 				4FFB0ABC1D3F675700D20B8A /* Crashlytics.framework in Frameworks */,
 				4FFB0ABB1D3F675700D20B8A /* Fabric.framework in Frameworks */,
+				4F04DBA21D46241700105A3D /* IQKeyboardManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +217,7 @@
 		4FFB0ABD1D3F676400D20B8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */,
 				4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */,
 				4FBF890E1D3F894300C371A4 /* Bolts.framework */,
 				4FBF890F1D3F894300C371A4 /* Parse.framework */,
@@ -303,6 +307,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Parse.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjack.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManager.framework",
 			);
 			outputPaths = (
 			);
@@ -449,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -468,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

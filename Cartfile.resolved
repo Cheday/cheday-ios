@@ -1,3 +1,4 @@
 github "BoltsFramework/Bolts-ObjC" "1.8.4"
 github "CocoaLumberjack/CocoaLumberjack" "2.3.0"
+github "andrey-krukovskiy/IQKeyboardManager" "73df44b4599918cc8b5f55f0c7be538a4769016e"
 github "ParsePlatform/Parse-SDK-iOS-OSX" "1.14.1"

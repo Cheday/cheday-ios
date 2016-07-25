@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 @import Parse;
+@import IQKeyboardManager;
 
 #ifndef DEBUG
     #import <Fabric/Fabric.h>
@@ -37,6 +38,10 @@
         configuration.server = @"https://cheday.herokuapp.com/parse";
     }]];
 #endif
+    
+    [IQKeyboardManager sharedManager].enable = NO;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    
     [self performSelector:@selector(presentAuthorization) withObject:nil afterDelay:0];
     return YES;
 }
