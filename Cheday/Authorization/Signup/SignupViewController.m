@@ -11,6 +11,8 @@
 #import "User.h"
 @import CocoaLumberjack;
 extern DDLogLevel ddLogLevel;
+#import "UIAlertController+SimpleAlert.h"
+
 
 @interface SignupViewController ()
 
@@ -44,26 +46,30 @@ extern DDLogLevel ddLogLevel;
 - (IBAction)onSignUpButtonTap:(UIButton *)sender {
     if(self.nameTextField.text == nil || [self.nameTextField.text isEqualToString:@""])
     {
-        [self showAlertWithTitle:NSLocalizedString(@"Validation", nil)
-                         message:NSLocalizedString(@"Name cannot be empty", nil)];
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
+                                                   message:NSLocalizedString(@"Name cannot be empty", nil)
+                                        fromViewController:self];
         return;
     }
     if(self.emailTextField.text == nil || [self.emailTextField.text isEqualToString:@""])
     {
-        [self showAlertWithTitle:NSLocalizedString(@"Validation", nil)
-                         message:NSLocalizedString(@"Email cannot be empty", nil)];
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
+                                                   message:NSLocalizedString(@"Email cannot be empty", nil)
+                                        fromViewController:self];
         return;
     }
     if(self.passwordTextField.text == nil || [self.passwordTextField.text isEqualToString:@""])
     {
-        [self showAlertWithTitle:NSLocalizedString(@"Validation", nil)
-                         message:NSLocalizedString(@"Password cannot be empty", nil)];
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
+                                                   message:NSLocalizedString(@"Password cannot be empty", nil)
+                                        fromViewController:self];
         return;
     }
     if(![self.passwordTextField.text isEqual:self.repeatPasswordTextField.text])
     {
-        [self showAlertWithTitle:NSLocalizedString(@"Validation", nil)
-                         message:NSLocalizedString(@"Passwords is not equal", nil)];
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
+                                                   message:NSLocalizedString(@"Passwords is not equal", nil)
+                                        fromViewController:self];
         return;
     }
     
@@ -84,26 +90,12 @@ extern DDLogLevel ddLogLevel;
             [self.delegate signupViewControllerDidSignup:self];
         }else
         {
-            [self showAlertWithTitle:NSLocalizedString(@"Error", nil)
-                             message:NSLocalizedString(error.localizedDescription, nil)];
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Error", nil)
+                                                       message:NSLocalizedString(error.localizedDescription, nil)
+                                            fromViewController:self];
         }
     }];
 }
-
--(void) showAlertWithTitle:(NSString*)title message:(NSString*)message
-{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
-                                                                             message:message
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    __weak UIAlertController *weakAlertController = alertController;
-    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil)
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction * _Nonnull action) {
-                                                          [weakAlertController dismissViewControllerAnimated:YES completion:nil];
-                                                      }]];
-    [self presentViewController:alertController animated:YES completion:nil];
-}
-
 /*
 #pragma mark - Navigation
 

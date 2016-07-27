@@ -20,6 +20,7 @@
 		4FE194991D42138C00708B49 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE194981D42138C00708B49 /* SignupViewController.m */; };
 		4FE1949C1D422BBE00708B49 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1949B1D422BBE00708B49 /* ForgotPasswordViewController.m */; };
 		4FE1949F1D422F4500708B49 /* SignupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1949E1D422F4500708B49 /* SignupView.m */; };
+		4FE1EE5D1D48C25D009170FB /* UIAlertController+SimpleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1EE5C1D48C25D009170FB /* UIAlertController+SimpleAlert.m */; };
 		4FF956B61D40D54600FB0242 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF956B51D40D54600FB0242 /* AuthorizationStoryboard.storyboard */; };
 		4FF956B81D40D9B900FB0242 /* AuthorizationAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */; };
 		4FFB0AA31D3F632400D20B8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB0AA21D3F632400D20B8A /* main.m */; };
@@ -54,6 +55,8 @@
 		4FE1949B1D422BBE00708B49 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPasswordViewController.m; path = Authorization/ForgotPassword/ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		4FE1949D1D422F4500708B49 /* SignupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupView.h; path = Authorization/Signup/SignupView.h; sourceTree = "<group>"; };
 		4FE1949E1D422F4500708B49 /* SignupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupView.m; path = Authorization/Signup/SignupView.m; sourceTree = "<group>"; };
+		4FE1EE5B1D48C25D009170FB /* UIAlertController+SimpleAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+SimpleAlert.h"; path = "Common/UI/SimpleAlert/UIAlertController+SimpleAlert.h"; sourceTree = "<group>"; };
+		4FE1EE5C1D48C25D009170FB /* UIAlertController+SimpleAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+SimpleAlert.m"; path = "Common/UI/SimpleAlert/UIAlertController+SimpleAlert.m"; sourceTree = "<group>"; };
 		4FF956B51D40D54600FB0242 /* AuthorizationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AuthorizationStoryboard.storyboard; path = Authorization/AuthorizationStoryboard.storyboard; sourceTree = "<group>"; };
 		4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AuthorizationAssets.xcassets; path = Authorization/AuthorizationAssets.xcassets; sourceTree = "<group>"; };
 		4FFB0A9E1D3F632400D20B8A /* Cheday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheday.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +143,7 @@
 		4FE1948F1D420AED00708B49 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4FE1EE5A1D48C18E009170FB /* SimpleAlert */,
 				4FE194941D420F8600708B49 /* RoundedButton */,
 				4FE194901D420AF400708B49 /* RoundedTextField */,
 			);
@@ -182,6 +186,15 @@
 				4FE1949B1D422BBE00708B49 /* ForgotPasswordViewController.m */,
 			);
 			name = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		4FE1EE5A1D48C18E009170FB /* SimpleAlert */ = {
+			isa = PBXGroup;
+			children = (
+				4FE1EE5B1D48C25D009170FB /* UIAlertController+SimpleAlert.h */,
+				4FE1EE5C1D48C25D009170FB /* UIAlertController+SimpleAlert.m */,
+			);
+			name = SimpleAlert;
 			sourceTree = "<group>";
 		};
 		4FFB0A951D3F632400D20B8A = {
@@ -349,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FE1948A1D42029200708B49 /* LoginView.m in Sources */,
+				4FE1EE5D1D48C25D009170FB /* UIAlertController+SimpleAlert.m in Sources */,
 				4FE194861D42016100708B49 /* LoginViewController.m in Sources */,
 				4FE1949F1D422F4500708B49 /* SignupView.m in Sources */,
 				4FE1948E1D420AE900708B49 /* CDRoundedTextField.m in Sources */,
