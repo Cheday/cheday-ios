@@ -10,7 +10,8 @@
 
 @interface CDRoundedButton ()
 
-@property(nonatomic, strong) UIColor *nonHighlightedBackgroundColor;
+@property(nonatomic, strong) UIColor *currentBackgroundColor;
+@property(nonatomic, strong) UIColor *originalBackgroundColor;
 
 @end
 
@@ -21,7 +22,7 @@
     [super awakeFromNib];
     
     self.layer.cornerRadius = self.bounds.size.height/2;
-    self.nonHighlightedBackgroundColor = self.backgroundColor;
+    self.currentBackgroundColor = self.originalBackgroundColor = self.backgroundColor;
 }
 
 -(void)setHighlighted:(BOOL)highlighted
@@ -33,8 +34,22 @@
         self.backgroundColor = self.highlightedBackgroundColor;
     }else
     {
-        self.backgroundColor = self.nonHighlightedBackgroundColor;
+        self.backgroundColor = self.currentBackgroundColor;
     }
+}
+
+-(void)setEnabled:(BOOL)enabled
+{
+    [super setEnabled:enabled];
+    
+    if(enabled)
+    {
+        self.backgroundColor = self.originalBackgroundColor;
+    }else
+    {
+        self.backgroundColor = self.disabledBackgroundColor;
+    }
+    self.currentBackgroundColor = self.backgroundColor;
 }
 
 @end

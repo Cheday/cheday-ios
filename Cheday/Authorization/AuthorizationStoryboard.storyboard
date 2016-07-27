@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fxd-p2-ssa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fxd-p2-ssa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Authorization View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="D55-tP-rxg">
             <objects>
-                <viewController id="Fxd-p2-ssa" customClass="AuthorizationViewController" sceneMemberID="viewController">
+                <viewController id="Fxd-p2-ssa" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9wJ-dq-n6i"/>
                         <viewControllerLayoutGuide type="bottom" id="G9o-za-4uK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zQg-DZ-Sxs" customClass="AuthorizationView">
+                    <view key="view" contentMode="scaleToFill" id="zQg-DZ-Sxs" customClass="LoginView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -147,7 +147,7 @@
                                     <color key="titleColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qKc-yd-sIc" kind="show" id="ARR-EK-EwI"/>
+                                    <segue destination="qKc-yd-sIc" kind="show" identifier="LoginShowSignup" id="ARR-EK-EwI"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-vK-OkP">
@@ -219,11 +219,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiy-gK-bww">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Aiy-gK-bww">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-RZ-G2g">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="564"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzx-gX-rCp">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
@@ -270,7 +270,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luq-y7-wqR">
-                                                <rect key="frame" x="40" y="240" width="240" height="260"/>
+                                                <rect key="frame" x="40" y="240" width="240" height="304"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-gE-mJA" customClass="CDRoundedTextField">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
@@ -334,26 +334,52 @@
                                                             <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
                                                                 <color key="value" red="0.0" green="0.49299134779999998" blue="0.75995828620000005" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                                                <color key="value" red="0.44459646940231323" green="0.71068447828292847" blue="0.87243902683258057" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onSignUpButtonTap:" destination="qKc-yd-sIc" eventType="touchUpInside" id="KY2-8F-INo"/>
+                                                        </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-RC-Pdf">
+                                                        <rect key="frame" x="93.5" y="260" width="53" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="Sd5-KT-Qd7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="Ver-Kq-M5d" kind="unwind" identifier="SignupUnwindSegueCancel" unwindAction="unwindFromSignupViewController:" id="l0H-dn-JbE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="PQk-Zp-cNF">
+                                                        <rect key="frame" x="198" y="228" width="20" height="20"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="OAs-RC-Pdf" secondAttribute="bottom" id="0ia-oj-nbX"/>
                                                     <constraint firstAttribute="trailing" secondItem="c2g-k4-e48" secondAttribute="trailing" id="4Iu-6W-jjS"/>
+                                                    <constraint firstItem="PQk-Zp-cNF" firstAttribute="trailing" secondItem="oGk-Z8-9cw" secondAttribute="trailing" constant="-22" id="7FC-qn-GGy"/>
                                                     <constraint firstItem="c2g-k4-e48" firstAttribute="leading" secondItem="Luq-y7-wqR" secondAttribute="leading" id="COa-t9-gMb"/>
                                                     <constraint firstAttribute="trailing" secondItem="RJ7-gE-mJA" secondAttribute="trailing" id="Dq0-EC-b3w"/>
+                                                    <constraint firstItem="OAs-RC-Pdf" firstAttribute="centerX" secondItem="Luq-y7-wqR" secondAttribute="centerX" id="GZW-ou-BFg"/>
                                                     <constraint firstItem="UCa-QX-LXX" firstAttribute="leading" secondItem="Luq-y7-wqR" secondAttribute="leading" id="J42-3r-2fn"/>
                                                     <constraint firstItem="SDR-Cg-ftw" firstAttribute="top" secondItem="c2g-k4-e48" secondAttribute="bottom" constant="8" id="Kmm-eE-xEk"/>
                                                     <constraint firstItem="oGk-Z8-9cw" firstAttribute="leading" secondItem="Luq-y7-wqR" secondAttribute="leading" id="Lbx-y8-s6K"/>
                                                     <constraint firstItem="UCa-QX-LXX" firstAttribute="top" secondItem="SDR-Cg-ftw" secondAttribute="bottom" constant="8" id="MRn-aK-TCV"/>
                                                     <constraint firstItem="RJ7-gE-mJA" firstAttribute="top" secondItem="Luq-y7-wqR" secondAttribute="top" id="NWj-7k-Tnd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="oGk-Z8-9cw" secondAttribute="bottom" id="O3R-xH-XLJ"/>
                                                     <constraint firstAttribute="trailing" secondItem="SDR-Cg-ftw" secondAttribute="trailing" id="P8d-Yi-krV"/>
+                                                    <constraint firstItem="OAs-RC-Pdf" firstAttribute="top" secondItem="oGk-Z8-9cw" secondAttribute="bottom" id="RUo-o4-MZp"/>
                                                     <constraint firstItem="oGk-Z8-9cw" firstAttribute="top" secondItem="UCa-QX-LXX" secondAttribute="bottom" constant="16" id="SSc-L1-jfC"/>
                                                     <constraint firstItem="c2g-k4-e48" firstAttribute="top" secondItem="RJ7-gE-mJA" secondAttribute="bottom" constant="8" id="gya-yy-r4h"/>
                                                     <constraint firstAttribute="trailing" secondItem="oGk-Z8-9cw" secondAttribute="trailing" id="icd-T9-sQt"/>
                                                     <constraint firstAttribute="trailing" secondItem="UCa-QX-LXX" secondAttribute="trailing" id="rqY-fI-uac"/>
                                                     <constraint firstItem="SDR-Cg-ftw" firstAttribute="leading" secondItem="Luq-y7-wqR" secondAttribute="leading" id="u6q-9Y-4kK"/>
+                                                    <constraint firstItem="PQk-Zp-cNF" firstAttribute="centerY" secondItem="oGk-Z8-9cw" secondAttribute="centerY" id="xth-Pm-8l5"/>
                                                     <constraint firstItem="RJ7-gE-mJA" firstAttribute="leading" secondItem="Luq-y7-wqR" secondAttribute="leading" id="yQy-S1-A52"/>
                                                 </constraints>
                                             </view>
@@ -397,8 +423,17 @@
                         </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="c2g-k4-e48" id="KSr-aW-1pn"/>
+                        <outlet property="nameTextField" destination="RJ7-gE-mJA" id="fhu-6a-PaE"/>
+                        <outlet property="passwordTextField" destination="SDR-Cg-ftw" id="hsb-RN-xb8"/>
+                        <outlet property="repeatPasswordTextField" destination="UCa-QX-LXX" id="mXP-Ag-Luh"/>
+                        <outlet property="signupActivityIndicator" destination="PQk-Zp-cNF" id="W7i-TT-Ntr"/>
+                        <outlet property="signupButton" destination="oGk-Z8-9cw" id="yYQ-CR-sRW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKb-tp-0hC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ver-Kq-M5d" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="XVa-ow-0QO">
                     <connections>
                         <action selector="onViewTap:" destination="XWJ-L3-eq8" id="aFm-aw-GCQ"/>

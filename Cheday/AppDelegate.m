@@ -9,19 +9,28 @@
 #import "AppDelegate.h"
 @import Parse;
 @import IQKeyboardManager;
+@import CocoaLumberjack;
+DDLogLevel ddLogLevel = DDLogLevelAll;
 
 #ifndef DEBUG
-    #import <Fabric/Fabric.h>
-    #import <Crashlytics/Crashlytics.h>
+    @import Fabric;
+    @import Crashlytics;
 #endif
 
+#import "LoginViewController.h"
+
 @interface AppDelegate ()
+<LoginViewControllerDelegate>
 
 @end
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
 
 #ifndef DEBUG
     [Fabric with:@[[Crashlytics class]]];
@@ -48,7 +57,14 @@
 
 - (void)presentAuthorization
 {
-    [self.window.rootViewController presentViewController:[[UIStoryboard storyboardWithName:@"AuthorizationStoryboard" bundle:nil] instantiateInitialViewController] animated:YES completion:nil];
+    LoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"AuthorizationStoryboard" bundle:nil] instantiateInitialViewController];
+    loginVC.delegate = self;
+    [self.window.rootViewController presentViewController:loginVC  animated:YES completion:nil];
+}
+
+-(void)loginViewControllerDidLogin:(LoginViewController *)loginViewController
+{
+    [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

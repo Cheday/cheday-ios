@@ -1,14 +1,14 @@
 //
-//  AuthorizationView.m
+//  LoginView.m
 //  Cheday
 //
 //  Created by Andrey Krukovskiy on 22.07.16.
 //  Copyright © 2016 Cheday. All rights reserved.
 //
 
-#import "AuthorizationView.h"
+#import "LoginView.h"
 
-@implementation AuthorizationView
+@implementation LoginView
 
 -(void)awakeFromNib
 {

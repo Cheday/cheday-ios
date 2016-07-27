@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SignupViewControllerDelegate;
+
 @interface SignupViewController : UIViewController
+
+@property(nonatomic, weak) id<SignupViewControllerDelegate> delegate;
+
+@end
+
+
+@protocol SignupViewControllerDelegate <NSObject>
+
+-(void) signupViewControllerDidSignup:(SignupViewController*)viewController;
 
 @end

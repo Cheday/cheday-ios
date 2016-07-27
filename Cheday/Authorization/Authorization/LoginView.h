@@ -1,5 +1,5 @@
 //
-//  AuthorizationView.h
+//  LoginView.h
 //  Cheday
 //
 //  Created by Andrey Krukovskiy on 22.07.16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AuthorizationView : UIView
+@interface LoginView : UIView
 <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;

@@ -21,14 +21,14 @@
 -(CGRect)leftViewRectForBounds:(CGRect)bounds
 {
     CGRect rect = [super leftViewRectForBounds:bounds];
-    rect.origin.x += self.bounds.size.height/2;
+    rect.origin.x += self.bounds.size.height/2-self.leftView.bounds.size.width/3;
     return rect;
 }
 
 -(CGRect)textRectForBounds:(CGRect)bounds
 {
     CGRect rect = [super textRectForBounds:bounds];
-    rect.origin.x -= self.bounds.size.height/2;
+    rect.size.width -= self.bounds.size.height/2 + 2*self.leftView.bounds.size.width/3;
     return rect;
 }
 
