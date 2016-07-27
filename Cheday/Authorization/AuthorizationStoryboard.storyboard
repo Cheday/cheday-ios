@@ -103,7 +103,13 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
                                                 <color key="value" red="0.0" green="0.49299134775714948" blue="0.759958286199095" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                                <color key="value" red="0.4431372549" green="0.70980392160000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onLoginButtonTap:" destination="Fxd-p2-ssa" eventType="touchUpInside" id="Oun-Ji-ae2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqk-Fd-IE8">
                                         <rect key="frame" x="62" y="156" width="116" height="44"/>
@@ -118,12 +124,16 @@
                                             <segue destination="aWj-p0-9YI" kind="show" id="YUs-IQ-d1h"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="CpR-Zp-7Xy">
+                                        <rect key="frame" x="198" y="124" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="XhZ-vU-Lkr" firstAttribute="leading" secondItem="Sfm-70-1IC" secondAttribute="leading" id="4pu-0p-WSv"/>
                                     <constraint firstItem="P35-te-qob" firstAttribute="top" secondItem="97R-pf-m2q" secondAttribute="bottom" constant="16" id="7nm-Lf-iNM"/>
                                     <constraint firstItem="Kqk-Fd-IE8" firstAttribute="top" secondItem="P35-te-qob" secondAttribute="bottom" id="CnJ-qO-Hre"/>
+                                    <constraint firstItem="CpR-Zp-7Xy" firstAttribute="trailing" secondItem="P35-te-qob" secondAttribute="trailing" constant="-22" id="H3t-cN-spJ"/>
                                     <constraint firstAttribute="trailing" secondItem="XhZ-vU-Lkr" secondAttribute="trailing" id="HhG-on-8UQ"/>
                                     <constraint firstItem="97R-pf-m2q" firstAttribute="top" secondItem="XhZ-vU-Lkr" secondAttribute="bottom" constant="8" id="IOU-kc-LZ4"/>
                                     <constraint firstItem="Kqk-Fd-IE8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sfm-70-1IC" secondAttribute="leading" id="JRN-5u-OiG"/>
@@ -132,6 +142,7 @@
                                     <constraint firstItem="Kqk-Fd-IE8" firstAttribute="centerX" secondItem="Sfm-70-1IC" secondAttribute="centerX" id="TBf-j4-6zI"/>
                                     <constraint firstItem="P35-te-qob" firstAttribute="leading" secondItem="Sfm-70-1IC" secondAttribute="leading" id="UHY-WE-rb6"/>
                                     <constraint firstItem="XhZ-vU-Lkr" firstAttribute="top" secondItem="Sfm-70-1IC" secondAttribute="top" id="ZwQ-nC-4Gr"/>
+                                    <constraint firstItem="CpR-Zp-7Xy" firstAttribute="centerY" secondItem="P35-te-qob" secondAttribute="centerY" id="bIh-vo-aWF"/>
                                     <constraint firstItem="97R-pf-m2q" firstAttribute="leading" secondItem="Sfm-70-1IC" secondAttribute="leading" id="e4g-RN-5jI"/>
                                     <constraint firstAttribute="bottom" secondItem="Kqk-Fd-IE8" secondAttribute="bottom" id="iZh-R2-1Yz"/>
                                     <constraint firstAttribute="trailing" secondItem="97R-pf-m2q" secondAttribute="trailing" id="uBH-oM-upg"/>
@@ -197,6 +208,12 @@
                         </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="loginActivityIndicator" destination="CpR-Zp-7Xy" id="Vw3-RA-weH"/>
+                        <outlet property="loginButton" destination="P35-te-qob" id="LLz-CY-ggy"/>
+                        <outlet property="nameTextField" destination="XhZ-vU-Lkr" id="24D-pn-l8x"/>
+                        <outlet property="passwordTextField" destination="97R-pf-m2q" id="ZyJ-Za-FcI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERs-iK-Rk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="S4F-LM-qJd">
@@ -335,7 +352,7 @@
                                                                 <color key="value" red="0.0" green="0.49299134779999998" blue="0.75995828620000005" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                                                <color key="value" red="0.44459646940231323" green="0.71068447828292847" blue="0.87243902683258057" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.44313725490196076" green="0.70980392156862748" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>

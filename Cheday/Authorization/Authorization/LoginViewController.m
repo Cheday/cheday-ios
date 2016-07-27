@@ -8,9 +8,18 @@
 
 #import "LoginViewController.h"
 #import "SignupViewController.h"
+#import "UIAlertController+SimpleAlert.h"
+#import "User.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+extern DDLogLevel ddLogLevel;
 
 @interface LoginViewController ()
 <SignupViewControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loginActivityIndicator;
 
 @end
 
@@ -25,6 +34,43 @@
         SignupViewController *vc = (SignupViewController*) segue.destinationViewController;
         vc.delegate = self;
     }
+}
+- (IBAction)onLoginButtonTap:(UIButton *)sender {
+    if(self.nameTextField.text == nil || [self.nameTextField.text isEqualToString:@""])
+    {
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
+                                                   message:NSLocalizedString(@"Name cannot be empty", nil)
+                                        fromViewController:self];
+        return;
+    }
+    
+    if(self.passwordTextField.text == nil || [self.passwordTextField.text isEqualToString:@""])
+    {
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
+                                                   message:NSLocalizedString(@"Password cannot be empty", nil)
+                                        fromViewController:self];
+        return;
+    }
+    
+    self.loginButton.enabled = NO;
+    [self.loginActivityIndicator startAnimating];
+    DDLogDebug(@"Log in with username %@ and password %@", self.nameTextField.text, self.passwordTextField.text);
+    [User logInWithUsernameInBackground:self.nameTextField.text
+                               password:self.passwordTextField.text
+                                  block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+                                      self.loginButton.enabled = YES;
+                                      [self.loginActivityIndicator stopAnimating];
+                                      if(user)
+                                      {
+                                          DDLogDebug(@"User logged in: %@", user);
+                                          [self.delegate loginViewControllerDidLogin:self];
+                                      }else
+                                      {
+                                          [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Error", nil)
+                                                                                     message:NSLocalizedString(error.localizedDescription, nil)
+                                                                          fromViewController:self];
+                                      }
+    }];
 }
 
 -(void)signupViewControllerDidSignup:(SignupViewController *)viewController
