@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xa-N8-gBj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="C36-ef-DU7">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="C36-ef-DU7">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-i2-t6L">
-                                        <rect key="frame" x="81" y="66" width="158" height="72"/>
+                                        <rect key="frame" x="81" y="80" width="158" height="72"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOTED IN LOVE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUn-Ac-jeZ">
                                                 <rect key="frame" x="0.0" y="48" width="158" height="24"/>
@@ -63,7 +63,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfm-70-1IC">
-                                <rect key="frame" x="40" y="212.5" width="240" height="200"/>
+                                <rect key="frame" x="40" y="240" width="240" height="200"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-vU-Lkr" customClass="CDRoundedTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
@@ -111,7 +111,7 @@
                                             <action selector="onLoginButtonTap:" destination="Fxd-p2-ssa" eventType="touchUpInside" id="Oun-Ji-ae2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqk-Fd-IE8">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqk-Fd-IE8">
                                         <rect key="frame" x="62" y="156" width="116" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="ctE-kT-9xI"/>
@@ -164,11 +164,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-vK-OkP">
                                 <rect key="frame" x="96" y="456" width="127" height="52"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POs-Kh-Sl6">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POs-Kh-Sl6">
                                         <rect key="frame" x="75" y="0.0" width="52" height="52"/>
                                         <state key="normal" image="twitter_button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-dn-NfE">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-dn-NfE">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
                                         <state key="normal" image="facebook_button"/>
                                     </button>
@@ -198,7 +198,7 @@
                             <constraint firstItem="9Xa-N8-gBj" firstAttribute="top" secondItem="zQg-DZ-Sxs" secondAttribute="top" id="bwj-1x-Rzn"/>
                             <constraint firstItem="9Xa-N8-gBj" firstAttribute="leading" secondItem="zQg-DZ-Sxs" secondAttribute="leading" id="lH6-N3-82b"/>
                             <constraint firstItem="G9o-za-4uK" firstAttribute="top" secondItem="SeC-5y-LmY" secondAttribute="bottom" constant="8" id="oZf-R1-QlE"/>
-                            <constraint firstItem="Sfm-70-1IC" firstAttribute="centerY" secondItem="zQg-DZ-Sxs" secondAttribute="centerY" multiplier="1.1" id="sGN-Bg-LvA"/>
+                            <constraint firstItem="Sfm-70-1IC" firstAttribute="centerY" secondItem="zQg-DZ-Sxs" secondAttribute="centerY" multiplier="1.1" priority="750" id="sGN-Bg-LvA"/>
                         </constraints>
                         <connections>
                             <outlet property="loginButton" destination="P35-te-qob" id="UQF-tF-5S5"/>
@@ -240,7 +240,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-RZ-G2g">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="564"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzx-gX-rCp">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
@@ -287,7 +287,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luq-y7-wqR">
-                                                <rect key="frame" x="40" y="240" width="240" height="304"/>
+                                                <rect key="frame" x="40" y="240" width="240" height="308"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-gE-mJA" customClass="CDRoundedTextField">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
@@ -360,7 +360,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-RC-Pdf">
-                                                        <rect key="frame" x="93.5" y="260" width="53" height="44"/>
+                                                        <rect key="frame" x="93.5" y="264" width="53" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="Sd5-KT-Qd7"/>
                                                         </constraints>
@@ -390,7 +390,7 @@
                                                     <constraint firstItem="UCa-QX-LXX" firstAttribute="top" secondItem="SDR-Cg-ftw" secondAttribute="bottom" constant="8" id="MRn-aK-TCV"/>
                                                     <constraint firstItem="RJ7-gE-mJA" firstAttribute="top" secondItem="Luq-y7-wqR" secondAttribute="top" id="NWj-7k-Tnd"/>
                                                     <constraint firstAttribute="trailing" secondItem="SDR-Cg-ftw" secondAttribute="trailing" id="P8d-Yi-krV"/>
-                                                    <constraint firstItem="OAs-RC-Pdf" firstAttribute="top" secondItem="oGk-Z8-9cw" secondAttribute="bottom" id="RUo-o4-MZp"/>
+                                                    <constraint firstItem="OAs-RC-Pdf" firstAttribute="top" secondItem="oGk-Z8-9cw" secondAttribute="bottom" constant="4" id="RUo-o4-MZp"/>
                                                     <constraint firstItem="oGk-Z8-9cw" firstAttribute="top" secondItem="UCa-QX-LXX" secondAttribute="bottom" constant="16" id="SSc-L1-jfC"/>
                                                     <constraint firstItem="c2g-k4-e48" firstAttribute="top" secondItem="RJ7-gE-mJA" secondAttribute="bottom" constant="8" id="gya-yy-r4h"/>
                                                     <constraint firstAttribute="trailing" secondItem="oGk-Z8-9cw" secondAttribute="trailing" id="icd-T9-sQt"/>
