@@ -164,11 +164,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-vK-OkP">
                                 <rect key="frame" x="96" y="456" width="127" height="52"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POs-Kh-Sl6">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POs-Kh-Sl6">
                                         <rect key="frame" x="75" y="0.0" width="52" height="52"/>
                                         <state key="normal" image="twitter_button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-dn-NfE">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-dn-NfE">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
                                         <state key="normal" image="facebook_button"/>
                                     </button>
@@ -196,6 +196,7 @@
                             <constraint firstItem="2jb-vK-OkP" firstAttribute="centerX" secondItem="zQg-DZ-Sxs" secondAttribute="centerX" id="IFK-gH-9QF"/>
                             <constraint firstItem="2jb-vK-OkP" firstAttribute="width" secondItem="zQg-DZ-Sxs" secondAttribute="width" multiplier="0.21" constant="60" id="PsM-yo-ZIW"/>
                             <constraint firstItem="9Xa-N8-gBj" firstAttribute="top" secondItem="zQg-DZ-Sxs" secondAttribute="top" id="bwj-1x-Rzn"/>
+                            <constraint firstItem="2jb-vK-OkP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Sfm-70-1IC" secondAttribute="bottom" constant="8" id="bzn-gT-nXa"/>
                             <constraint firstItem="9Xa-N8-gBj" firstAttribute="leading" secondItem="zQg-DZ-Sxs" secondAttribute="leading" id="lH6-N3-82b"/>
                             <constraint firstItem="G9o-za-4uK" firstAttribute="top" secondItem="SeC-5y-LmY" secondAttribute="bottom" constant="8" id="oZf-R1-QlE"/>
                             <constraint firstItem="Sfm-70-1IC" firstAttribute="centerY" secondItem="zQg-DZ-Sxs" secondAttribute="centerY" multiplier="1.1" priority="750" id="sGN-Bg-LvA"/>
