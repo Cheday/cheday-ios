@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Profile Name And Photo View Controller-->
+        <scene sceneID="dYO-Fx-0YU">
+            <objects>
+                <viewController storyboardIdentifier="ProfileNameAndPhotoViewController" id="0tO-f6-Xgw" customClass="ProfileNameAndPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ATA-HG-WtR"/>
+                        <viewControllerLayoutGuide type="bottom" id="mcX-p0-lFr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a5t-OM-VIP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePirate" translatesAutoresizingMaskIntoConstraints="NO" id="qC3-Wz-W6B" customClass="RoundImageView">
+                                <rect key="frame" x="16" y="15" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qC3-Wz-W6B" secondAttribute="height" multiplier="1:1" id="YCX-fI-zRF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPc-bP-K5r">
+                                <rect key="frame" x="94" y="15" width="210" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yPc-bP-K5r" firstAttribute="leading" secondItem="qC3-Wz-W6B" secondAttribute="trailing" constant="8" id="3nD-P3-2tx"/>
+                            <constraint firstItem="yPc-bP-K5r" firstAttribute="top" secondItem="qC3-Wz-W6B" secondAttribute="top" id="PhL-qG-v8Q"/>
+                            <constraint firstItem="qC3-Wz-W6B" firstAttribute="leading" secondItem="a5t-OM-VIP" secondAttribute="leadingMargin" id="XG4-Mw-vv9"/>
+                            <constraint firstItem="qC3-Wz-W6B" firstAttribute="centerY" secondItem="a5t-OM-VIP" secondAttribute="centerY" id="dbd-UY-MYP"/>
+                            <constraint firstItem="qC3-Wz-W6B" firstAttribute="height" secondItem="a5t-OM-VIP" secondAttribute="height" multiplier="0.7" id="hSa-hD-XGg"/>
+                            <constraint firstItem="yPc-bP-K5r" firstAttribute="trailing" secondItem="a5t-OM-VIP" secondAttribute="trailingMargin" id="yMs-Qs-Yol"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="yPc-bP-K5r" id="8IW-Yv-Z3x"/>
+                        <outlet property="photoImageView" destination="qC3-Wz-W6B" id="XhP-kc-go0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7w-nW-075" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ProfilePirate" width="140" height="126"/>
+    </resources>
+</document>

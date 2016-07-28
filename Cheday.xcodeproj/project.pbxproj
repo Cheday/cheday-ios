@@ -13,6 +13,11 @@
 		4F9D54851D3F97D300A14739 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */; };
 		4FBF89101D3F894300C371A4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF890E1D3F894300C371A4 /* Bolts.framework */; };
 		4FBF89111D3F894300C371A4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF890F1D3F894300C371A4 /* Parse.framework */; };
+		4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4701D4A0BD300854283 /* Profile.storyboard */; };
+		4FC4F4741D4A0C5A00854283 /* ProfileNameAndPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F4731D4A0C5A00854283 /* ProfileNameAndPhotoViewController.m */; };
+		4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4751D4A0E0600854283 /* Profile.xcassets */; };
+		4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F47A1D4A10D900854283 /* RoundImageView.m */; };
+		4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD28091D49FEC300C98C6A /* MainViewController.m */; };
 		4FE194861D42016100708B49 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE194851D42016100708B49 /* LoginViewController.m */; };
 		4FE1948A1D42029200708B49 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE194891D42029200708B49 /* LoginView.m */; };
 		4FE1948E1D420AE900708B49 /* CDRoundedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1948D1D420AE900708B49 /* CDRoundedTextField.m */; };
@@ -21,11 +26,10 @@
 		4FE1949C1D422BBE00708B49 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1949B1D422BBE00708B49 /* ForgotPasswordViewController.m */; };
 		4FE1949F1D422F4500708B49 /* SignupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1949E1D422F4500708B49 /* SignupView.m */; };
 		4FE1EE5D1D48C25D009170FB /* UIAlertController+SimpleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1EE5C1D48C25D009170FB /* UIAlertController+SimpleAlert.m */; };
-		4FF956B61D40D54600FB0242 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF956B51D40D54600FB0242 /* AuthorizationStoryboard.storyboard */; };
+		4FF956B61D40D54600FB0242 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF956B51D40D54600FB0242 /* Authorization.storyboard */; };
 		4FF956B81D40D9B900FB0242 /* AuthorizationAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */; };
 		4FFB0AA31D3F632400D20B8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB0AA21D3F632400D20B8A /* main.m */; };
 		4FFB0AA61D3F632400D20B8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB0AA51D3F632400D20B8A /* AppDelegate.m */; };
-		4FFB0AA91D3F632400D20B8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB0AA81D3F632400D20B8A /* ViewController.m */; };
 		4FFB0AAC1D3F632400D20B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB0AAA1D3F632400D20B8A /* Main.storyboard */; };
 		4FFB0AAE1D3F632400D20B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB0AAD1D3F632400D20B8A /* Assets.xcassets */; };
 		4FFB0AB11D3F632400D20B8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB0AAF1D3F632400D20B8A /* LaunchScreen.storyboard */; };
@@ -41,6 +45,14 @@
 		4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		4FBF890E1D3F894300C371A4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		4FBF890F1D3F894300C371A4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
+		4FC4F4701D4A0BD300854283 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/Profile.storyboard; sourceTree = "<group>"; };
+		4FC4F4721D4A0C5A00854283 /* ProfileNameAndPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileNameAndPhotoViewController.h; path = Profile/ProfileNameAndPhoto/ProfileNameAndPhotoViewController.h; sourceTree = "<group>"; };
+		4FC4F4731D4A0C5A00854283 /* ProfileNameAndPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileNameAndPhotoViewController.m; path = Profile/ProfileNameAndPhoto/ProfileNameAndPhotoViewController.m; sourceTree = "<group>"; };
+		4FC4F4751D4A0E0600854283 /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Profile.xcassets; path = Profile/Profile.xcassets; sourceTree = "<group>"; };
+		4FC4F4791D4A10D900854283 /* RoundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundImageView.h; path = Profile/RoundImageView/RoundImageView.h; sourceTree = "<group>"; };
+		4FC4F47A1D4A10D900854283 /* RoundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundImageView.m; path = Profile/RoundImageView/RoundImageView.m; sourceTree = "<group>"; };
+		4FCD28081D49FEC300C98C6A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = MainScreen/MainViewController.h; sourceTree = "<group>"; };
+		4FCD28091D49FEC300C98C6A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = MainScreen/MainViewController.m; sourceTree = "<group>"; };
 		4FE194841D42016100708B49 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Authorization/Authorization/LoginViewController.h; sourceTree = "<group>"; };
 		4FE194851D42016100708B49 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Authorization/Authorization/LoginViewController.m; sourceTree = "<group>"; };
 		4FE194881D42029200708B49 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Authorization/Authorization/LoginView.h; sourceTree = "<group>"; };
@@ -57,14 +69,12 @@
 		4FE1949E1D422F4500708B49 /* SignupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupView.m; path = Authorization/Signup/SignupView.m; sourceTree = "<group>"; };
 		4FE1EE5B1D48C25D009170FB /* UIAlertController+SimpleAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+SimpleAlert.h"; path = "Common/UI/SimpleAlert/UIAlertController+SimpleAlert.h"; sourceTree = "<group>"; };
 		4FE1EE5C1D48C25D009170FB /* UIAlertController+SimpleAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+SimpleAlert.m"; path = "Common/UI/SimpleAlert/UIAlertController+SimpleAlert.m"; sourceTree = "<group>"; };
-		4FF956B51D40D54600FB0242 /* AuthorizationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AuthorizationStoryboard.storyboard; path = Authorization/AuthorizationStoryboard.storyboard; sourceTree = "<group>"; };
+		4FF956B51D40D54600FB0242 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Authorization.storyboard; path = Authorization/Authorization.storyboard; sourceTree = "<group>"; };
 		4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AuthorizationAssets.xcassets; path = Authorization/AuthorizationAssets.xcassets; sourceTree = "<group>"; };
 		4FFB0A9E1D3F632400D20B8A /* Cheday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB0AA21D3F632400D20B8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4FFB0AA41D3F632400D20B8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FFB0AA51D3F632400D20B8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4FFB0AA71D3F632400D20B8A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4FFB0AA81D3F632400D20B8A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4FFB0AAB1D3F632400D20B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FFB0AAD1D3F632400D20B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FFB0AB01D3F632400D20B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +115,7 @@
 				4FE194961D4212F800708B49 /* ForgotPassword */,
 				4FE194951D4212CC00708B49 /* Signup */,
 				4FE194871D42016600708B49 /* Authorization */,
-				4FF956B51D40D54600FB0242 /* AuthorizationStoryboard.storyboard */,
+				4FF956B51D40D54600FB0242 /* Authorization.storyboard */,
 				4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */,
 			);
 			name = Authorization;
@@ -118,6 +128,45 @@
 				4F8ACE9E1D40D3DA00593D00 /* LaunchImage.xcassets */,
 			);
 			name = LaunchImage;
+			sourceTree = "<group>";
+		};
+		4FC4F4771D4A106200854283 /* RoundImageView */ = {
+			isa = PBXGroup;
+			children = (
+				4FC4F4791D4A10D900854283 /* RoundImageView.h */,
+				4FC4F47A1D4A10D900854283 /* RoundImageView.m */,
+			);
+			name = RoundImageView;
+			sourceTree = "<group>";
+		};
+		4FC4F4781D4A108900854283 /* ProfileNameAndPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				4FC4F4721D4A0C5A00854283 /* ProfileNameAndPhotoViewController.h */,
+				4FC4F4731D4A0C5A00854283 /* ProfileNameAndPhotoViewController.m */,
+			);
+			name = ProfileNameAndPhoto;
+			sourceTree = "<group>";
+		};
+		4FCD28071D49FE8000C98C6A /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4FCD28081D49FEC300C98C6A /* MainViewController.h */,
+				4FCD28091D49FEC300C98C6A /* MainViewController.m */,
+				4FFB0AAA1D3F632400D20B8A /* Main.storyboard */,
+			);
+			name = MainScreen;
+			sourceTree = "<group>";
+		};
+		4FCD280B1D4A0B7A00C98C6A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4FC4F4771D4A106200854283 /* RoundImageView */,
+				4FC4F4781D4A108900854283 /* ProfileNameAndPhoto */,
+				4FC4F4701D4A0BD300854283 /* Profile.storyboard */,
+				4FC4F4751D4A0E0600854283 /* Profile.xcassets */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		4FE194871D42016600708B49 /* Authorization */ = {
@@ -217,14 +266,13 @@
 		4FFB0AA01D3F632400D20B8A /* Cheday */ = {
 			isa = PBXGroup;
 			children = (
+				4FCD280B1D4A0B7A00C98C6A /* Profile */,
 				4FE1948B1D420A9700708B49 /* Common */,
+				4FCD28071D49FE8000C98C6A /* MainScreen */,
 				4F7BFA241D40D4EE005BB78C /* Authorization */,
 				4F8ACE9D1D40D37E00593D00 /* LaunchImage */,
 				4FFB0AA41D3F632400D20B8A /* AppDelegate.h */,
 				4FFB0AA51D3F632400D20B8A /* AppDelegate.m */,
-				4FFB0AA71D3F632400D20B8A /* ViewController.h */,
-				4FFB0AA81D3F632400D20B8A /* ViewController.m */,
-				4FFB0AAA1D3F632400D20B8A /* Main.storyboard */,
 				4FFB0AAD1D3F632400D20B8A /* Assets.xcassets */,
 				4FFB0AB21D3F632400D20B8A /* Info.plist */,
 				4FFB0AA11D3F632400D20B8A /* Supporting Files */,
@@ -316,8 +364,10 @@
 				4FFB0AB11D3F632400D20B8A /* LaunchScreen.storyboard in Resources */,
 				4FFB0AAE1D3F632400D20B8A /* Assets.xcassets in Resources */,
 				4F8ACE9F1D40D3DA00593D00 /* LaunchImage.xcassets in Resources */,
-				4FF956B61D40D54600FB0242 /* AuthorizationStoryboard.storyboard in Resources */,
+				4FF956B61D40D54600FB0242 /* Authorization.storyboard in Resources */,
 				4FF956B81D40D9B900FB0242 /* AuthorizationAssets.xcassets in Resources */,
+				4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */,
+				4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */,
 				4FFB0AAC1D3F632400D20B8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,12 +417,14 @@
 				4FE194861D42016100708B49 /* LoginViewController.m in Sources */,
 				4FE1949F1D422F4500708B49 /* SignupView.m in Sources */,
 				4FE1948E1D420AE900708B49 /* CDRoundedTextField.m in Sources */,
-				4FFB0AA91D3F632400D20B8A /* ViewController.m in Sources */,
 				4FFB0AA61D3F632400D20B8A /* AppDelegate.m in Sources */,
 				4F2F33811D47436200F1F003 /* User.m in Sources */,
+				4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */,
 				4FFB0AA31D3F632400D20B8A /* main.m in Sources */,
 				4FE1949C1D422BBE00708B49 /* ForgotPasswordViewController.m in Sources */,
 				4FE194991D42138C00708B49 /* SignupViewController.m in Sources */,
+				4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */,
+				4FC4F4741D4A0C5A00854283 /* ProfileNameAndPhotoViewController.m in Sources */,
 				4FE194931D420F7E00708B49 /* CDRoundedButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

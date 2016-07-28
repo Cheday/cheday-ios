@@ -18,6 +18,11 @@ DDLogLevel ddLogLevel = DDLogLevelAll;
 #endif
 
 #import "LoginViewController.h"
+#import "user.h"
+
+
+
+
 
 @interface AppDelegate ()
 <LoginViewControllerDelegate>
@@ -51,13 +56,16 @@ DDLogLevel ddLogLevel = DDLogLevelAll;
     [IQKeyboardManager sharedManager].enable = NO;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     
-    [self performSelector:@selector(presentAuthorization) withObject:nil afterDelay:0];
+    if([User currentUser] == nil)
+    {
+        [self performSelector:@selector(presentAuthorization) withObject:nil afterDelay:0];
+    }
     return YES;
 }
 
 - (void)presentAuthorization
 {
-    LoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"AuthorizationStoryboard" bundle:nil] instantiateInitialViewController];
+    LoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"Authorization" bundle:nil] instantiateInitialViewController];
     loginVC.delegate = self;
     [self.window.rootViewController presentViewController:loginVC  animated:YES completion:nil];
 }
