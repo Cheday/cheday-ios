@@ -109,6 +109,13 @@
 			name = DataModel;
 			sourceTree = "<group>";
 		};
+		4F796C971D4B6809009D0E6C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		4F7BFA241D40D4EE005BB78C /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +273,7 @@
 		4FFB0AA01D3F632400D20B8A /* Cheday */ = {
 			isa = PBXGroup;
 			children = (
+				4F796C971D4B6809009D0E6C /* Events */,
 				4FCD280B1D4A0B7A00C98C6A /* Profile */,
 				4FE1948B1D420A9700708B49 /* Common */,
 				4FCD28071D49FE8000C98C6A /* MainScreen */,

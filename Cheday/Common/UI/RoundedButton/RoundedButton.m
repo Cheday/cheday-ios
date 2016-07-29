@@ -49,6 +49,14 @@
     }
 }
 
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.currentBackgroundColor = self.originalBackgroundColor = self.backgroundColor;
+    self.enabled = self.enabled;
+}
+
 -(void)setHighlighted:(BOOL)highlighted
 {
     [super setHighlighted:highlighted];
