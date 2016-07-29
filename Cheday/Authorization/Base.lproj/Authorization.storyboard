@@ -65,7 +65,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfm-70-1IC">
                                 <rect key="frame" x="40" y="240" width="240" height="200"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-vU-Lkr" customClass="CDRoundedTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-vU-Lkr" customClass="RoundedTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="11z-6l-xbV"/>
@@ -77,7 +77,7 @@
                                             <outlet property="delegate" destination="zQg-DZ-Sxs" id="PuL-1o-MB9"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97R-pf-m2q" customClass="CDRoundedTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97R-pf-m2q" customClass="RoundedTextField">
                                         <rect key="frame" x="0.0" y="52" width="240" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="9k2-ty-i6Y"/>
@@ -89,19 +89,19 @@
                                             <outlet property="delegate" destination="zQg-DZ-Sxs" id="dti-Da-9E2"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P35-te-qob" customClass="CDRoundedButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P35-te-qob" customClass="RoundedButton">
                                         <rect key="frame" x="0.0" y="112" width="240" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="J5J-Qr-65K"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Log In">
+                                        <state key="normal" title="Войти">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
-                                                <color key="value" red="0.0" green="0.49299134775714948" blue="0.759958286199095" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.0" green="0.49411764705882355" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
                                                 <color key="value" red="0.4431372549" green="0.70980392160000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,12 +112,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqk-Fd-IE8">
-                                        <rect key="frame" x="62" y="156" width="116" height="44"/>
+                                        <rect key="frame" x="65.5" y="156" width="109" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="ctE-kT-9xI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Forgot password?">
+                                        <state key="normal" title="Забыли пароль?">
                                             <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -149,12 +149,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeC-5y-LmY">
-                                <rect key="frame" x="131" y="516" width="58" height="44"/>
+                                <rect key="frame" x="77" y="516" width="166" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="T5P-Sz-apc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Sign up">
+                                <state key="normal" title="Зарегистрироваться">
                                     <color key="titleColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -290,7 +290,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luq-y7-wqR">
                                                 <rect key="frame" x="40" y="240" width="240" height="308"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-gE-mJA" customClass="CDRoundedTextField">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-gE-mJA" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="ysu-uA-N7i"/>
@@ -302,7 +302,7 @@
                                                             <outlet property="delegate" destination="XWJ-L3-eq8" id="hJn-VE-y7x"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-k4-e48" customClass="CDRoundedTextField">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-k4-e48" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="52" width="240" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="KJ1-zj-ANe"/>
@@ -314,7 +314,7 @@
                                                             <outlet property="delegate" destination="XWJ-L3-eq8" id="OVJ-aC-ohI"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-Cg-ftw" customClass="CDRoundedTextField">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-Cg-ftw" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="104" width="240" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="468-sh-tIR"/>
@@ -326,7 +326,7 @@
                                                             <outlet property="delegate" destination="XWJ-L3-eq8" id="ZAK-I7-2x6"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCa-QX-LXX" customClass="CDRoundedTextField">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль повторно" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCa-QX-LXX" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="156" width="240" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="P58-bM-njn"/>
@@ -338,14 +338,14 @@
                                                             <outlet property="delegate" destination="XWJ-L3-eq8" id="l5u-Kf-MuB"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGk-Z8-9cw" customClass="CDRoundedButton">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGk-Z8-9cw" customClass="RoundedButton">
                                                         <rect key="frame" x="0.0" y="216" width="240" height="44"/>
                                                         <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="RV2-pa-LAu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <state key="normal" title="Sign Up">
+                                                        <state key="normal" title="Зарегистрироваться">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -361,12 +361,12 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAs-RC-Pdf">
-                                                        <rect key="frame" x="93.5" y="264" width="53" height="44"/>
+                                                        <rect key="frame" x="95" y="264" width="50" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="Sd5-KT-Qd7"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <state key="normal" title="Cancel">
+                                                        <state key="normal" title="Назад">
                                                             <color key="titleColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>

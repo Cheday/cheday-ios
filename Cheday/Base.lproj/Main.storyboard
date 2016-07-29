@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -17,18 +18,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lw4-hW-UwB">
-                                <rect key="frame" x="0.0" y="64" width="320" height="145"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw4-hW-UwB">
+                                <rect key="frame" x="0.0" y="64" width="320" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="C3H-X7-o0O"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="48D-nq-ap7" kind="embed" identifier="MainEmbedProfileNameAndPhoto" id="QwE-Ks-Efj"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-t1-2Ut">
+                                <rect key="frame" x="0.0" y="184" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbk-3B-mPi" customClass="RoundedButton">
+                                        <rect key="frame" x="4.5" y="0.0" width="151" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Стать волонтером">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                                <color key="value" red="0.0" green="0.49411764705882355" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                                <color key="value" red="0.4431372549" green="0.70980392160000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipu-m3-6mC" customClass="RoundedButton">
+                                        <rect key="frame" x="164.5" y="0.0" width="151" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Создать мероприятие">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                                <color key="value" red="0.0" green="0.49411764705882355" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                                <color key="value" red="0.4431372549" green="0.70980392160000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xbk-3B-mPi" secondAttribute="bottom" id="6rV-za-kWy"/>
+                                    <constraint firstItem="Ipu-m3-6mC" firstAttribute="top" secondItem="5yB-t1-2Ut" secondAttribute="top" id="BRf-WM-47f"/>
+                                    <constraint firstItem="Ipu-m3-6mC" firstAttribute="width" secondItem="xbk-3B-mPi" secondAttribute="width" id="JQN-AL-osC"/>
+                                    <constraint firstItem="xbk-3B-mPi" firstAttribute="centerX" secondItem="5yB-t1-2Ut" secondAttribute="centerX" multiplier="0.5" id="PGm-cH-j60"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ipu-m3-6mC" secondAttribute="bottom" id="QzF-ga-elu"/>
+                                    <constraint firstAttribute="height" constant="44" id="VUP-a3-HfW"/>
+                                    <constraint firstItem="Ipu-m3-6mC" firstAttribute="centerX" secondItem="5yB-t1-2Ut" secondAttribute="centerX" multiplier="1.5" id="gMe-jg-rF9"/>
+                                    <constraint firstItem="xbk-3B-mPi" firstAttribute="top" secondItem="5yB-t1-2Ut" secondAttribute="top" id="p3a-Oj-YF9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lw4-hW-UwB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5aY-a4-FfO"/>
+                            <constraint firstItem="5yB-t1-2Ut" firstAttribute="top" secondItem="lw4-hW-UwB" secondAttribute="bottom" id="UyA-z0-u62"/>
+                            <constraint firstItem="5yB-t1-2Ut" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZVB-DP-5KK"/>
                             <constraint firstItem="lw4-hW-UwB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mmS-5P-jGO"/>
                             <constraint firstAttribute="trailing" secondItem="lw4-hW-UwB" secondAttribute="trailing" id="qdP-v9-N6B"/>
+                            <constraint firstAttribute="trailing" secondItem="5yB-t1-2Ut" secondAttribute="trailing" id="weO-hg-kgc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ciu-O1-O4f"/>
@@ -36,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="-380"/>
+            <point key="canvasLocation" x="804" y="-380"/>
         </scene>
         <!--ProfileNameAndPhotoViewController-->
         <scene sceneID="aYw-dU-oIU">
@@ -44,7 +101,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="ProfileNameAndPhotoViewController" storyboardName="Profile" referencedIdentifier="ProfileNameAndPhotoViewController" id="48D-nq-ap7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yW-PZ-UkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="-380"/>
+            <point key="canvasLocation" x="1184" y="-380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="08J-dL-4a5">

@@ -6,9 +6,9 @@
 //  Copyright © 2016 Cheday. All rights reserved.
 //
 
-#import "CDRoundedTextField.h"
+#import "RoundedTextField.h"
 
-@implementation CDRoundedTextField
+@implementation RoundedTextField
 
 -(void)awakeFromNib
 {

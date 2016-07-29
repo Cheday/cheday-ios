@@ -18,14 +18,16 @@ DDLogLevel ddLogLevel = DDLogLevelAll;
 #endif
 
 #import "LoginViewController.h"
-#import "user.h"
-
+#import "User.h"
+#import "MainViewController.h"
 
 
 
 
 @interface AppDelegate ()
 <LoginViewControllerDelegate>
+
+@property(nonatomic, strong) MainViewController *mainVC;
 
 @end
 
@@ -56,9 +58,15 @@ DDLogLevel ddLogLevel = DDLogLevelAll;
     [IQKeyboardManager sharedManager].enable = NO;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     
+    UINavigationController *navController = (UINavigationController*)self.window.rootViewController;
+    self.mainVC = (MainViewController*)navController.viewControllers[0];
+    
     if([User currentUser] == nil)
     {
         [self performSelector:@selector(presentAuthorization) withObject:nil afterDelay:0];
+    }else
+    {
+        self.mainVC.user = [User currentUser];
     }
     return YES;
 }
@@ -73,6 +81,7 @@ DDLogLevel ddLogLevel = DDLogLevelAll;
 -(void)loginViewControllerDidLogin:(LoginViewController *)loginViewController
 {
     [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    self.mainVC.user = [User currentUser];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

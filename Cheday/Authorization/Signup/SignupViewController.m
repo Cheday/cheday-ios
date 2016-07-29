@@ -46,29 +46,29 @@ extern DDLogLevel ddLogLevel;
 - (IBAction)onSignUpButtonTap:(UIButton *)sender {
     if(self.nameTextField.text == nil || [self.nameTextField.text isEqualToString:@""])
     {
-        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
-                                                   message:NSLocalizedString(@"Name cannot be empty", nil)
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Имя не может быть пустым", nil)
                                         fromViewController:self];
         return;
     }
     if(self.emailTextField.text == nil || [self.emailTextField.text isEqualToString:@""])
     {
-        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
-                                                   message:NSLocalizedString(@"Email cannot be empty", nil)
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Email не может быть пустым", nil)
                                         fromViewController:self];
         return;
     }
     if(self.passwordTextField.text == nil || [self.passwordTextField.text isEqualToString:@""])
     {
-        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
-                                                   message:NSLocalizedString(@"Password cannot be empty", nil)
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Пароль не может быть пустым", nil)
                                         fromViewController:self];
         return;
     }
     if(![self.passwordTextField.text isEqual:self.repeatPasswordTextField.text])
     {
-        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Validation", nil)
-                                                   message:NSLocalizedString(@"Passwords is not equal", nil)
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Пароли не совпадают", nil)
                                         fromViewController:self];
         return;
     }
@@ -90,8 +90,8 @@ extern DDLogLevel ddLogLevel;
             [self.delegate signupViewControllerDidSignup:self];
         }else
         {
-            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Error", nil)
-                                                       message:NSLocalizedString(error.localizedDescription, nil)
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                       message:error.localizedDescription
                                             fromViewController:self];
         }
     }];

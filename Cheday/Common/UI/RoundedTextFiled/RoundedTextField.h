@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CDRoundedTextField : UITextField
+@interface RoundedTextField : UITextField
 
 @end

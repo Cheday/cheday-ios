@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPc-bP-K5r">
-                                <rect key="frame" x="94" y="15" width="210" height="18"/>
+                                <rect key="frame" x="94" y="41" width="210" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yPc-bP-K5r" firstAttribute="leading" secondItem="qC3-Wz-W6B" secondAttribute="trailing" constant="8" id="3nD-P3-2tx"/>
-                            <constraint firstItem="yPc-bP-K5r" firstAttribute="top" secondItem="qC3-Wz-W6B" secondAttribute="top" id="PhL-qG-v8Q"/>
+                            <constraint firstItem="yPc-bP-K5r" firstAttribute="centerY" secondItem="a5t-OM-VIP" secondAttribute="centerY" id="VHz-h9-jAw"/>
                             <constraint firstItem="qC3-Wz-W6B" firstAttribute="leading" secondItem="a5t-OM-VIP" secondAttribute="leadingMargin" id="XG4-Mw-vv9"/>
                             <constraint firstItem="qC3-Wz-W6B" firstAttribute="centerY" secondItem="a5t-OM-VIP" secondAttribute="centerY" id="dbd-UY-MYP"/>
                             <constraint firstItem="qC3-Wz-W6B" firstAttribute="height" secondItem="a5t-OM-VIP" secondAttribute="height" multiplier="0.7" id="hSa-hD-XGg"/>

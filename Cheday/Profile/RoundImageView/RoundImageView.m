@@ -15,6 +15,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.layer.masksToBounds = YES;
+        self.layer.cornerRadius = MIN(self.bounds.size.height, self.bounds.size.width)/2;
         [self addObserver:self
                forKeyPath:@"bounds"
                   options:NSKeyValueObservingOptionNew

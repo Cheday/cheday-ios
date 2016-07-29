@@ -9,14 +9,26 @@
 #import "MainViewController.h"
 #import "ProfileNameAndPhotoViewController.h"
 
+@interface MainViewController ()
+
+@property(nonatomic, weak) ProfileNameAndPhotoViewController *profileNamAndPhotoVC;
+
+@end
+
 @implementation MainViewController
+
+-(void)setUser:(User *)user
+{
+    _user = user;
+    self.profileNamAndPhotoVC.user = user;
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"MainEmbedProfileNameAndPhoto"])
     {
-        ProfileNameAndPhotoViewController *vc = segue.destinationViewController;
-        vc.user = [User currentUser];
+        self.profileNamAndPhotoVC= segue.destinationViewController;
+        self.profileNamAndPhotoVC.user = self.user;
     }
 }
 

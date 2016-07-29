@@ -16,7 +16,7 @@
                                                                              message:message
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     __weak UIAlertController *weakAlertController = alertController;
-    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil)
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Ок", nil)
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * _Nonnull action) {
                                                           [weakAlertController dismissViewControllerAnimated:YES completion:nil];
