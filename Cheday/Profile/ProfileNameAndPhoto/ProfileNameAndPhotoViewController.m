@@ -7,6 +7,7 @@
 //
 
 #import "ProfileNameAndPhotoViewController.h"
+@import AFNetworking;
 
 @interface ProfileNameAndPhotoViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -27,8 +28,14 @@
 
 -(void) setUserToView
 {
-    self.nameLabel.text = self.user.username;
+    if(self.user.fullName)
+        self.nameLabel.text = self.user.fullName;
+    else
+        if(self.user.twitterName)
+            self.nameLabel.text = self.user.twitterName;
     
+    [self.photoImageView setImageWithURL:[NSURL URLWithString:self.user.twitterPhotoURLString]
+                        placeholderImage:[UIImage imageNamed:@"ProfilePirate"]];
 }
 
 - (void)viewDidLoad {

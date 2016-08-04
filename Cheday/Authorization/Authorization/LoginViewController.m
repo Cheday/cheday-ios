@@ -12,6 +12,8 @@
 #import "User.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 extern DDLogLevel ddLogLevel;
+@import ParseTwitterUtils;
+#import "ProfileUpdaterFromTwitter.h"
 
 @interface LoginViewController ()
 <SignupViewControllerDelegate>
@@ -19,6 +21,8 @@ extern DDLogLevel ddLogLevel;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *facebookLoginButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterLoginButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loginActivityIndicator;
 
 @end
@@ -53,12 +57,16 @@ extern DDLogLevel ddLogLevel;
     }
     
     self.loginButton.enabled = NO;
+    self.facebookLoginButton.enabled = NO;
+    self.twitterLoginButton.enabled = NO;
     [self.loginActivityIndicator startAnimating];
     DDLogDebug(@"Log in with username %@ and password %@", self.nameTextField.text, self.passwordTextField.text);
     [User logInWithUsernameInBackground:self.nameTextField.text
                                password:self.passwordTextField.text
                                   block:^(PFUser * _Nullable user, NSError * _Nullable error) {
                                       self.loginButton.enabled = YES;
+                                      self.facebookLoginButton.enabled = YES;
+                                      self.twitterLoginButton.enabled = YES;
                                       [self.loginActivityIndicator stopAnimating];
                                       if(user)
                                       {
@@ -71,6 +79,56 @@ extern DDLogLevel ddLogLevel;
                                                                           fromViewController:self];
                                       }
     }];
+}
+
+- (IBAction)onLoginWithTwitter:(UIButton *)sender {
+    self.loginButton.enabled = NO;
+    self.facebookLoginButton.enabled = NO;
+    self.twitterLoginButton.enabled = NO;
+    [self.loginActivityIndicator startAnimating];
+    DDLogDebug(@"Log in with twitter");
+    [PFTwitterUtils logInWithBlock:^(PFUser * _Nullable user, NSError * _Nullable error) {
+        if(user)
+        {
+            DDLogDebug(@"User logged in: %@", user);
+            [ProfileUpdaterFromTwitter updateUser:(User*)user completion:^(User *user, NSError *error) {
+                if(error)
+                {
+                    [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                               message:error.localizedDescription
+                                                    fromViewController:self];
+                }
+                [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                    self.loginButton.enabled = YES;
+                    self.facebookLoginButton.enabled = YES;
+                    self.twitterLoginButton.enabled = YES;
+                    [self.loginActivityIndicator stopAnimating];
+                    
+                    if(!succeeded)
+                    {
+                        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                                   message:error.localizedDescription
+                                                        fromViewController:self];
+                    }
+                    [self.delegate loginViewControllerDidLogin:self];
+                }];
+            }];
+        }else
+        {
+            self.loginButton.enabled = YES;
+            self.facebookLoginButton.enabled = YES;
+            self.twitterLoginButton.enabled = YES;
+            [self.loginActivityIndicator stopAnimating];
+
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                       message:error.localizedDescription
+                                            fromViewController:self];
+        }
+    }];
+}
+
+- (IBAction)onLoginWithFacebook:(UIButton *)sender {
+    
 }
 
 -(void)signupViewControllerDidSignup:(SignupViewController *)viewController

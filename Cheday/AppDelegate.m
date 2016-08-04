@@ -10,12 +10,14 @@
 @import Parse;
 @import IQKeyboardManager;
 @import CocoaLumberjack;
-DDLogLevel ddLogLevel = DDLogLevelAll;
+DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 #ifndef DEBUG
     @import Fabric;
     @import Crashlytics;
 #endif
+
+@import ParseTwitterUtils;
 
 #import "LoginViewController.h"
 #import "User.h"
@@ -54,6 +56,9 @@ DDLogLevel ddLogLevel = DDLogLevelAll;
         configuration.server = @"https://cheday.herokuapp.com/parse";
     }]];
 #endif
+    
+    [PFTwitterUtils initializeWithConsumerKey:@"qgZqM8mTgxrWvqvsQp0d5SjcL"
+                               consumerSecret:@"k2RUY84LVxzd1Dy2oXDOoyxiua8UTZvIZqAA2si0H4jHdwJq5q"];
     
     [IQKeyboardManager sharedManager].enable = NO;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;

@@ -1,3 +1,6 @@
 github "CocoaLumberjack/CocoaLumberjack"
-github "ParsePlatform/Parse-SDK-iOS-OSX"
+github "andrey-krukovskiy/Parse-SDK-iOS-OSX" "master"
 github "andrey-krukovskiy/IQKeyboardManager" "master"
+github "andrey-krukovskiy/ParseTwitterUtils-iOS" "master"
+github "facebook/facebook-ios-sdk"
+github "AFNetworking/AFNetworking" ~> 3.0

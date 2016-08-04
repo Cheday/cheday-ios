@@ -11,4 +11,15 @@
 @interface User : PFUser
 <PFSubclassing>
 
+@property(nonatomic, strong) NSString *firstName;
+@property(nonatomic, strong) NSString *lastName;
+@property(nonatomic, strong, readonly) NSString *fullName;
+
+@property(nonatomic, strong) NSString *twitterID;
+@property(nonatomic, strong) NSString *twitterName;
+@property(nonatomic, strong) NSString *twitterPhotoURLString;
+
+@property(nonatomic, strong) NSString *facebookID;
+
+
 @end
