@@ -56,18 +56,12 @@ extern DDLogLevel ddLogLevel;
         return;
     }
     
-    self.loginButton.enabled = NO;
-    self.facebookLoginButton.enabled = NO;
-    self.twitterLoginButton.enabled = NO;
-    [self.loginActivityIndicator startAnimating];
+    [self disableLoginButtons];
     DDLogDebug(@"Log in with username %@ and password %@", self.nameTextField.text, self.passwordTextField.text);
     [User logInWithUsernameInBackground:self.nameTextField.text
                                password:self.passwordTextField.text
                                   block:^(PFUser * _Nullable user, NSError * _Nullable error) {
-                                      self.loginButton.enabled = YES;
-                                      self.facebookLoginButton.enabled = YES;
-                                      self.twitterLoginButton.enabled = YES;
-                                      [self.loginActivityIndicator stopAnimating];
+                                      [self enableLoginButtons];
                                       if(user)
                                       {
                                           DDLogDebug(@"User logged in: %@", user);
@@ -82,10 +76,7 @@ extern DDLogLevel ddLogLevel;
 }
 
 - (IBAction)onLoginWithTwitter:(UIButton *)sender {
-    self.loginButton.enabled = NO;
-    self.facebookLoginButton.enabled = NO;
-    self.twitterLoginButton.enabled = NO;
-    [self.loginActivityIndicator startAnimating];
+    [self disableLoginButtons];
     DDLogDebug(@"Log in with twitter");
     [PFTwitterUtils logInWithBlock:^(PFUser * _Nullable user, NSError * _Nullable error) {
         if(user)
@@ -99,11 +90,7 @@ extern DDLogLevel ddLogLevel;
                                                     fromViewController:self];
                 }
                 [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                    self.loginButton.enabled = YES;
-                    self.facebookLoginButton.enabled = YES;
-                    self.twitterLoginButton.enabled = YES;
-                    [self.loginActivityIndicator stopAnimating];
-                    
+                    [self enableLoginButtons];
                     if(!succeeded)
                     {
                         [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
@@ -115,11 +102,7 @@ extern DDLogLevel ddLogLevel;
             }];
         }else
         {
-            self.loginButton.enabled = YES;
-            self.facebookLoginButton.enabled = YES;
-            self.twitterLoginButton.enabled = YES;
-            [self.loginActivityIndicator stopAnimating];
-
+            [self enableLoginButtons];
             [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
                                                        message:error.localizedDescription
                                             fromViewController:self];
@@ -140,6 +123,22 @@ extern DDLogLevel ddLogLevel;
 -(IBAction) unwindFromSignupViewController:(UIStoryboardSegue*)segue
 {
     
+}
+
+-(void) disableLoginButtons
+{
+    self.loginButton.enabled = NO;
+    self.facebookLoginButton.enabled = NO;
+    self.twitterLoginButton.enabled = NO;
+    [self.loginActivityIndicator startAnimating];
+}
+
+-(void) enableLoginButtons
+{
+    self.loginButton.enabled = YES;
+    self.facebookLoginButton.enabled = YES;
+    self.twitterLoginButton.enabled = YES;
+    [self.loginActivityIndicator stopAnimating];
 }
 
 @end
