@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePirate" translatesAutoresizingMaskIntoConstraints="NO" id="qC3-Wz-W6B" customClass="RoundImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePirate" translatesAutoresizingMaskIntoConstraints="NO" id="qC3-Wz-W6B" customClass="RoundImageView">
                                 <rect key="frame" x="16" y="15" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qC3-Wz-W6B" secondAttribute="height" multiplier="1:1" id="YCX-fI-zRF"/>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7w-nW-075" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="90"/>
+            <point key="canvasLocation" x="-376" y="57"/>
         </scene>
     </scenes>
     <resources>

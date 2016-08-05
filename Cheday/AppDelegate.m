@@ -18,6 +18,8 @@ DDLogLevel ddLogLevel = DDLogLevelDebug;
 #endif
 
 @import ParseTwitterUtils;
+@import ParseFacebookUtilsV4;
+@import FBSDKCoreKit;
 
 #import "LoginViewController.h"
 #import "User.h"
@@ -59,6 +61,7 @@ DDLogLevel ddLogLevel = DDLogLevelDebug;
     
     [PFTwitterUtils initializeWithConsumerKey:@"qgZqM8mTgxrWvqvsQp0d5SjcL"
                                consumerSecret:@"k2RUY84LVxzd1Dy2oXDOoyxiua8UTZvIZqAA2si0H4jHdwJq5q"];
+    [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     
     [IQKeyboardManager sharedManager].enable = NO;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
@@ -105,10 +108,19 @@ DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+    return [[FBSDKApplicationDelegate sharedInstance] application:app
+                                                          openURL:url
+                                                sourceApplication:options[UIApplicationLaunchOptionsSourceApplicationKey]
+                                                       annotation:options[UIApplicationLaunchOptionsAnnotationKey]];
 }
 
 @end

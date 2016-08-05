@@ -12,7 +12,7 @@
 
 @dynamic firstName, lastName;
 @dynamic twitterID, twitterName, twitterPhotoURLString;
-@dynamic facebookID;
+@dynamic facebookID, facebookName, facebookPhotoURLString;
 
 +(void)load
 {
@@ -30,12 +30,31 @@
         if(self.firstName.length)
         {
             fullName = self.firstName;
-        }else
+        }else if(self.lastName.length)
         {
             fullName = self.lastName;
+        }else if(self.facebookName.length)
+        {
+            fullName = self.facebookName;
+        }else if(self.twitterName.length)
+        {
+            fullName = self.twitterName;
         }
     }
     return fullName;
+}
+
+-(NSString *)photoURLString
+{
+    NSString *photoURLString = nil;
+    if(self.facebookPhotoURLString.length)
+    {
+        photoURLString = [self.facebookPhotoURLString stringByAppendingString:@"&width=200&height=200"];
+    }else if(self.twitterPhotoURLString.length)
+    {
+        photoURLString = self.twitterPhotoURLString;
+    }
+    return photoURLString;
 }
 
 @end

@@ -13,7 +13,9 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 extern DDLogLevel ddLogLevel;
 @import ParseTwitterUtils;
+@import ParseFacebookUtilsV4;
 #import "ProfileUpdaterFromTwitter.h"
+#import "ProfileUpdaterFromFacebook.h"
 
 @interface LoginViewController ()
 <SignupViewControllerDelegate>
@@ -83,19 +85,11 @@ extern DDLogLevel ddLogLevel;
         {
             DDLogDebug(@"User logged in: %@", user);
             [ProfileUpdaterFromTwitter updateUser:(User*)user completion:^(User *user, NSError *error) {
-                if(error)
-                {
-                    [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
-                                                               message:error.localizedDescription
-                                                    fromViewController:self];
-                }
                 [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
                     [self enableLoginButtons];
                     if(!succeeded)
                     {
-                        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
-                                                                   message:error.localizedDescription
-                                                        fromViewController:self];
+                        DDLogError(@"Save user error: %@", error);
                     }
                     [self.delegate loginViewControllerDidLogin:self];
                 }];
@@ -103,15 +97,48 @@ extern DDLogLevel ddLogLevel;
         }else
         {
             [self enableLoginButtons];
-            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
-                                                       message:error.localizedDescription
-                                            fromViewController:self];
+            //Если пользователь отменил, ошибки не будет
+            if(error)
+            {
+                [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                           message:error.localizedDescription
+                                                fromViewController:self];
+            }
         }
     }];
 }
 
 - (IBAction)onLoginWithFacebook:(UIButton *)sender {
-    
+    [self disableLoginButtons];
+    DDLogDebug(@"Log in with facebook");
+    [PFFacebookUtils facebookLoginManager].loginBehavior = FBSDKLoginBehaviorSystemAccount;
+    [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"email", @"public_profile", @"user_friends"]
+                                                    block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+        if(user)
+        {
+            DDLogDebug(@"User logged in: %@", user);
+            [ProfileUpdaterFromFacebook updateUser:(User*)user completion:^(User *user, NSError *error) {
+                [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                    [self enableLoginButtons];
+                    if(!succeeded)
+                    {
+                        DDLogError(@"Save user error: %@", error);
+                    }
+                    [self.delegate loginViewControllerDidLogin:self];
+                }];
+            }];
+        }else
+        {
+            [self enableLoginButtons];
+            //Если пользователь отменил, ошибки не будет
+            if(error)
+            {
+                [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                           message:error.localizedDescription
+                                                fromViewController:self];
+            }
+        }
+    }];
 }
 
 -(void)signupViewControllerDidSignup:(SignupViewController *)viewController

@@ -14,12 +14,16 @@
 @property(nonatomic, strong) NSString *firstName;
 @property(nonatomic, strong) NSString *lastName;
 @property(nonatomic, strong, readonly) NSString *fullName;
+@property(nonatomic, strong, readonly) NSString *photoURLString;
+
 
 @property(nonatomic, strong) NSString *twitterID;
 @property(nonatomic, strong) NSString *twitterName;
 @property(nonatomic, strong) NSString *twitterPhotoURLString;
 
 @property(nonatomic, strong) NSString *facebookID;
+@property(nonatomic, strong) NSString *facebookName;
+@property(nonatomic, strong) NSString *facebookPhotoURLString;
 
 
 @end

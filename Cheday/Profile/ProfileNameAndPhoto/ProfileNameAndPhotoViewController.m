@@ -28,13 +28,9 @@
 
 -(void) setUserToView
 {
-    if(self.user.fullName)
-        self.nameLabel.text = self.user.fullName;
-    else
-        if(self.user.twitterName)
-            self.nameLabel.text = self.user.twitterName;
+    self.nameLabel.text = self.user.fullName;
     
-    [self.photoImageView setImageWithURL:[NSURL URLWithString:self.user.twitterPhotoURLString]
+    [self.photoImageView setImageWithURL:[NSURL URLWithString:self.user.photoURLString]
                         placeholderImage:[UIImage imageNamed:@"ProfilePirate"]];
 }
 
