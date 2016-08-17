@@ -4,3 +4,4 @@ github "andrey-krukovskiy/IQKeyboardManager" "master"
 github "andrey-krukovskiy/ParseTwitterUtils-iOS" "master"
 github "facebook/facebook-ios-sdk"
 github "AFNetworking/AFNetworking" ~> 3.0
+github "andrey-krukovskiy/BEMCheckBox" "CarthageSupport"

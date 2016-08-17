@@ -25,5 +25,7 @@
 @property(nonatomic, strong) NSString *facebookName;
 @property(nonatomic, strong) NSString *facebookPhotoURLString;
 
+@property(nonatomic, strong) NSNumber *wantToVolonteer;
+
 
 @end

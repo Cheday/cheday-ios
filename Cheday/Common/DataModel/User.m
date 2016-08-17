@@ -13,6 +13,7 @@
 @dynamic firstName, lastName;
 @dynamic twitterID, twitterName, twitterPhotoURLString;
 @dynamic facebookID, facebookName, facebookPhotoURLString;
+@dynamic wantToVolonteer;
 
 +(void)load
 {

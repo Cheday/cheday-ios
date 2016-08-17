@@ -66,8 +66,9 @@ DDLogLevel ddLogLevel = DDLogLevelDebug;
     [IQKeyboardManager sharedManager].enable = NO;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     
-    UINavigationController *navController = (UINavigationController*)self.window.rootViewController;
-    self.mainVC = (MainViewController*)navController.viewControllers[0];
+//    UINavigationController *navController = (UINavigationController*)self.window.rootViewController;
+//    self.mainVC = (MainViewController*)navController.viewControllers[0];
+    self.mainVC = (MainViewController*)self.window.rootViewController;
     
     if([User currentUser] == nil)
     {
@@ -83,7 +84,7 @@ DDLogLevel ddLogLevel = DDLogLevelDebug;
 {
     LoginViewController *loginVC = [[UIStoryboard storyboardWithName:@"Authorization" bundle:nil] instantiateInitialViewController];
     loginVC.delegate = self;
-    [self.window.rootViewController presentViewController:loginVC  animated:YES completion:nil];
+    [self.window.rootViewController presentViewController:loginVC  animated:NO completion:nil];
 }
 
 -(void)loginViewControllerDidLogin:(LoginViewController *)loginViewController
