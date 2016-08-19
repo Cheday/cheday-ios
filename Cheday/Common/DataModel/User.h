@@ -16,7 +16,6 @@
 @property(nonatomic, strong, readonly) NSString *fullName;
 @property(nonatomic, strong, readonly) NSString *photoURLString;
 
-
 @property(nonatomic, strong) NSString *twitterID;
 @property(nonatomic, strong) NSString *twitterName;
 @property(nonatomic, strong) NSString *twitterPhotoURLString;
@@ -26,6 +25,8 @@
 @property(nonatomic, strong) NSString *facebookPhotoURLString;
 
 @property(nonatomic, strong) NSNumber *wantToVolonteer;
-
+@property(nonatomic, strong) NSArray *preferredEventCategories;
+@property(nonatomic, strong) NSArray *preferredVolonteerRoles;
+@property(nonatomic, strong) NSArray *preferredVolonteerDays;
 
 @end

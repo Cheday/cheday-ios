@@ -7,8 +7,7 @@
 //
 
 #import "VolonteerEventCategoriesTableViewController.h"
-#import "VolonteerEventCategoryTableViewCell.h"
-#import "EventCategory+Selected.h"
+#import "EventCategory+Selecting.h"
 
 @interface VolonteerEventCategoriesTableViewController ()
 
@@ -23,26 +22,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    VolonteerEventCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VolonteerEventCategoryTableViewCell"
-                                                            forIndexPath:indexPath];
-    cell.eventCategory = _objects[indexPath.row];
-    cell.delegate = self;
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    EventCategory *category = _objects[indexPath.row];
+    cell.textLabel.text = category.name;
     return cell;
 }
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    EventCategory *eventCategory = _objects[indexPath.row];
-    eventCategory.selected = YES;
-}
-
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    EventCategory *eventCategory = _objects[indexPath.row];
-    eventCategory.selected = NO;
-}
-
-
-
 
 @end

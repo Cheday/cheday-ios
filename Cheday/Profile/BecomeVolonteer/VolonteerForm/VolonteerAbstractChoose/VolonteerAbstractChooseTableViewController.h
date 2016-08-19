@@ -16,6 +16,8 @@
     NSArray *_objects;
 }
 
+@property(nonatomic, strong) NSMutableSet *selectedObjects;
+
 -(PFQuery*) query;
 
 @end

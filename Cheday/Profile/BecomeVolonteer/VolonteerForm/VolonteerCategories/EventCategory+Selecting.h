@@ -7,9 +7,9 @@
 //
 
 #import "EventCategory.h"
+#import "Selecting.h"
 
-@interface EventCategory (Selected)
-
-@property(nonatomic) BOOL selected;
+@interface EventCategory (Selecting)
+<Selecting>
 
 @end

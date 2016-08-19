@@ -7,12 +7,6 @@
 //
 
 #import "EventCategory.h"
-@import Parse.PFObject_Subclass;
-
-@interface EventCategory ()
-<PFSubclassing>
-
-@end
 
 @implementation EventCategory
 
@@ -26,6 +20,27 @@
 +(NSString *)parseClassName
 {
     return @"EventCategory";
+}
+
+-(BOOL)isEqual:(id)object
+{
+    if([super isEqual:object])
+    {
+        return YES;
+    }else
+    {
+        return [self isEqualToEventCategory:object];
+    }
+}
+
+-(BOOL) isEqualToEventCategory:(EventCategory*)eventCategory
+{
+    return [self.objectId isEqualToString:eventCategory.objectId]||[self.name isEqual:eventCategory.name];
+}
+
+-(NSUInteger)hash
+{
+    return [self.name hash];
 }
 
 @end

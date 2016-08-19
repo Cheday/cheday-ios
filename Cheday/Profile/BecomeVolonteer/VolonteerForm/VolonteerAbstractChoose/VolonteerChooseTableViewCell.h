@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import BEMCheckBox;
+#import "Selecting.h"
 
 @protocol VolonteerChooseTableViewCellDelegate;
 
@@ -18,6 +19,7 @@
 }
 
 @property(nonatomic, weak) id<VolonteerChooseTableViewCellDelegate> delegate;
+@property(nonatomic, strong) NSObject<Selecting> *selectableObject;
 
 @end
 

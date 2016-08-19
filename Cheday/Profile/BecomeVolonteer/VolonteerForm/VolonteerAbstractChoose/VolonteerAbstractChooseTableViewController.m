@@ -11,6 +11,20 @@
 
 @implementation VolonteerAbstractChooseTableViewController
 
+-(NSSet *)selectedObjects
+{
+    if(_selectedObjects == nil)
+    {
+        @synchronized (self) {
+            if(_selectedObjects == nil)
+            {
+                _selectedObjects = [NSMutableSet new];
+            }
+        }
+    }
+    return _selectedObjects;
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -77,6 +91,9 @@
         }else
         {
             _objects = objects;
+            [_objects enumerateObjectsUsingBlock:^(id<Selecting>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                obj.selected = [self.selectedObjects containsObject:obj];
+            }];
             [self.tableView reloadData];    
         }
         
@@ -97,6 +114,15 @@
     return _objects.count;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    VolonteerChooseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VolonteerChooseTableViewCell"
+                                                                                forIndexPath:indexPath];
+    cell.selectableObject = _objects[indexPath.row];
+    cell.delegate = self;
+    return cell;
+}
+
 -(void)volonteerChooseTableViewCellDidSelectCheckbox:(VolonteerChooseTableViewCell *)cell
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
@@ -109,6 +135,20 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     [self tableView:self.tableView didDeselectRowAtIndexPath:indexPath];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id<Selecting> selectableObject = _objects[indexPath.row];
+    selectableObject.selected = YES;
+    [self.selectedObjects addObject:selectableObject];
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id<Selecting> selectableObject = _objects[indexPath.row];
+    selectableObject.selected = NO;
+    [self.selectedObjects removeObject:selectableObject];
 }
 
 @end
