@@ -35,6 +35,7 @@ extern DDLogLevel ddLogLevel;
 -(void)loginViewControllerDidLogin:(LoginViewController *)loginViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    self.user = [User currentUser];
 }
 
 -(void)setUser:(User *)user

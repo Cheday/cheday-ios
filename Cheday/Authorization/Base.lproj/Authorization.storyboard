@@ -382,14 +382,14 @@
                                                         </connections>
                                                     </button>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="PQk-Zp-cNF">
-                                                        <rect key="frame" x="198" y="228" width="20" height="20"/>
+                                                        <rect key="frame" x="208" y="228" width="20" height="20"/>
                                                     </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="OAs-RC-Pdf" secondAttribute="bottom" id="0ia-oj-nbX"/>
                                                     <constraint firstAttribute="trailing" secondItem="c2g-k4-e48" secondAttribute="trailing" id="4Iu-6W-jjS"/>
-                                                    <constraint firstItem="PQk-Zp-cNF" firstAttribute="trailing" secondItem="oGk-Z8-9cw" secondAttribute="trailing" constant="-22" id="7FC-qn-GGy"/>
+                                                    <constraint firstItem="PQk-Zp-cNF" firstAttribute="trailing" secondItem="oGk-Z8-9cw" secondAttribute="trailing" constant="-12" id="7FC-qn-GGy"/>
                                                     <constraint firstItem="c2g-k4-e48" firstAttribute="leading" secondItem="Luq-y7-wqR" secondAttribute="leading" id="COa-t9-gMb"/>
                                                     <constraint firstAttribute="trailing" secondItem="RJ7-gE-mJA" secondAttribute="trailing" id="Dq0-EC-b3w"/>
                                                     <constraint firstItem="OAs-RC-Pdf" firstAttribute="centerX" secondItem="Luq-y7-wqR" secondAttribute="centerX" id="GZW-ou-BFg"/>
