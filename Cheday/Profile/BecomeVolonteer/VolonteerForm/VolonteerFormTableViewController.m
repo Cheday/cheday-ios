@@ -12,36 +12,47 @@
 #import "VolonteerChooseDatesTableViewController.h"
 #import "User.h"
 
-@interface VolonteerFormTableViewController ()
-
-@end
-
 @implementation VolonteerFormTableViewController
+
+-(NSMutableSet *)selectedPreferredEventCategories
+{
+    if(_selectedPreferredEventCategories == nil)
+    {
+        self.selectedPreferredEventCategories = [NSMutableSet setWithArray:[User currentUser].preferredEventCategories];
+    }
+    return _selectedPreferredEventCategories;
+}
+
+-(NSMutableSet *)selectedPreferredVolonteerRoles
+{
+    if(_selectedPreferredVolonteerRoles == nil)
+    {
+        self.selectedPreferredVolonteerRoles = [NSMutableSet setWithArray:[User currentUser].preferredVolonteerRoles];
+    }
+    return _selectedPreferredVolonteerRoles;
+}
+
+-(NSMutableSet *)selectedPreferredDates
+{
+    if(_selectedPreferredDates == nil)
+    {
+        self.selectedPreferredDates = [NSMutableSet setWithArray:[User currentUser].preferredVolonteerDays];
+    }
+    return _selectedPreferredDates;
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"VolonteerFromShowChooseCategories"])
     {
-        if(self.selectedPreferredEventCategories == nil)
-        {
-            self.selectedPreferredEventCategories = [NSMutableSet setWithArray:[User currentUser].preferredEventCategories];
-        }
         VolonteerChooseEventCategoriesTableViewController *vc = segue.destinationViewController;
         vc.selectedObjects = self.selectedPreferredEventCategories;
     }else if([segue.identifier isEqualToString:@"VolonteerFromShowChooseRoles"])
     {
-        if(self.selectedPreferredVolonteerRoles == nil)
-        {
-            self.selectedPreferredVolonteerRoles = [NSMutableSet setWithArray:[User currentUser].preferredVolonteerRoles];
-        }
         VolonteerChooseRolesTableViewController *vc = segue.destinationViewController;
         vc.selectedObjects = self.selectedPreferredVolonteerRoles;
     } else if([segue.identifier isEqualToString:@"VolonteerFromShowChooseDates"])
     {
-        if(self.selectedPreferredDates == nil)
-        {
-            self.selectedPreferredDates = [NSMutableSet setWithArray:[User currentUser].preferredVolonteerDays];
-        }
         VolonteerChooseDatesTableViewController *vc = segue.destinationViewController;
         vc.selectedObjects = self.selectedPreferredDates;
     }

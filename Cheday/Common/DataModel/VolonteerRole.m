@@ -24,21 +24,27 @@
 
 -(BOOL)isEqual:(id)object
 {
-    if([super isEqual:object])
-    {
+    if(self == object)
         return YES;
-    }
-    return [self isEqualToVolonteerRole:object];
+    if(!object || ![object isKindOfClass:[self class]])
+        return NO;
+    return [self isEqualToEventCategory:object];
 }
 
--(BOOL) isEqualToVolonteerRole:(VolonteerRole*)volonteerRole
+-(BOOL) isEqualToEventCategory:(VolonteerRole*)volonteerRole
 {
-    return [self.objectId isEqualToString:volonteerRole.objectId]||[self.name isEqual:volonteerRole.name];
+    if(self == volonteerRole)
+        return YES;
+    if((self.objectId != self.objectId) && ![self.objectId isEqualToString:volonteerRole.objectId])
+        return NO;
+    if((self.name != volonteerRole.name) && ![self.name isEqual:volonteerRole.name])
+        return NO;
+    return YES;
 }
 
 -(NSUInteger)hash
 {
-    return [self.name hash];
+    return [self.objectId hash];
 }
 
 @end

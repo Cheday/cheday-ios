@@ -24,21 +24,27 @@
 
 -(BOOL)isEqual:(id)object
 {
-    if([super isEqual:object])
-    {
+    if(self == object)
         return YES;
-    }
+    if(!object || ![object isKindOfClass:[self class]])
+        return NO;
     return [self isEqualToEventCategory:object];
 }
 
 -(BOOL) isEqualToEventCategory:(EventCategory*)eventCategory
 {
-    return [self.objectId isEqualToString:eventCategory.objectId]||[self.name isEqual:eventCategory.name];
+    if(self == eventCategory)
+        return YES;
+    if((self.objectId != self.objectId) && ![self.objectId isEqualToString:eventCategory.objectId])
+        return NO;
+    if((self.name != eventCategory.name) && ![self.name isEqual:eventCategory.name])
+        return NO;
+    return YES;
 }
 
 -(NSUInteger)hash
 {
-    return [self.name hash];
+    return [self.objectId hash];
 }
 
 @end

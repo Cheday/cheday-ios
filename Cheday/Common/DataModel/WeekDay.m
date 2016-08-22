@@ -24,21 +24,27 @@
 
 -(BOOL)isEqual:(id)object
 {
-    if([super isEqual:object])
-    {
+    if(self == object)
         return YES;
-    }
-    return [self isEqualToWeekDay:object];
+    if(!object || ![object isKindOfClass:[self class]])
+        return NO;
+    return [self isEqualToEventCategory:object];
 }
 
--(BOOL) isEqualToWeekDay:(WeekDay*)weekDay
+-(BOOL) isEqualToEventCategory:(WeekDay*)weekDay
 {
-    return [self.objectId isEqualToString:weekDay.objectId]||[self.name isEqual:weekDay.name];
+    if(self == weekDay)
+        return YES;
+    if((self.objectId != self.objectId) && ![self.objectId isEqualToString:weekDay.objectId])
+        return NO;
+    if((self.name != weekDay.name) && ![self.name isEqual:weekDay.name])
+        return NO;
+    return YES;
 }
 
 -(NSUInteger)hash
 {
-    return [self.name hash];
+    return [self.objectId hash];
 }
 
 

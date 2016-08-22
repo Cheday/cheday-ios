@@ -28,9 +28,11 @@
                                         <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
-                                        <state key="normal" title="Стать волонтером">
+                                        <state key="normal" title="Стать волонтером" backgroundImage="button_normal_background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="disabled" backgroundImage="button_disabled_background"/>
+                                        <state key="highlighted" backgroundImage="button_highlighted_background"/>
                                         <connections>
                                             <segue destination="xwF-aH-lto" kind="show" identifier="MainShowBecomeVolonteer" id="nUo-Ui-Bsn"/>
                                         </connections>
@@ -40,9 +42,11 @@
                                         <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
-                                        <state key="normal" title="Создать мероприятие">
+                                        <state key="normal" title="Создать мероприятие" backgroundImage="button_normal_background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="disabled" backgroundImage="button_disabled_background"/>
+                                        <state key="highlighted" backgroundImage="button_highlighted_background"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,5 +135,8 @@
     </scenes>
     <resources>
         <image name="ProfilePirate" width="140" height="126"/>
+        <image name="button_disabled_background" width="1" height="1"/>
+        <image name="button_highlighted_background" width="1" height="1"/>
+        <image name="button_normal_background" width="1" height="1"/>
     </resources>
 </document>
