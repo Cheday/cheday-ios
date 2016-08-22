@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -288,14 +287,14 @@
             </objects>
             <point key="canvasLocation" x="306" y="1011"/>
         </scene>
-        <!--Volonteer Roles Choose Table View Controller-->
+        <!--Volonteer Choose Roles Table View Controller-->
         <scene sceneID="Q5W-fP-hbw">
             <objects>
-                <tableViewController id="mn0-FE-OKi" customClass="VolonteerRolesChooseTableViewController" sceneMemberID="viewController">
+                <tableViewController id="mn0-FE-OKi" customClass="VolonteerChooseRolesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4FY-SX-Mhp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VolonteerChooseTableViewCell" textLabel="nOg-hh-DkH" style="IBUITableViewCellStyleDefault" id="2Jk-vO-jfr" customClass="VolonteerChooseTableViewCell">
                                 <rect key="frame" x="0.0" y="49.5" width="320" height="44"/>
@@ -308,7 +307,7 @@
                                             <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buD-Lc-Z64" customClass="BEMCheckBox">
@@ -357,14 +356,14 @@
             </objects>
             <point key="canvasLocation" x="1183" y="768"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Volonteer Choose Dates Table View Controller-->
         <scene sceneID="9du-O2-HmX">
             <objects>
-                <tableViewController id="wk2-GS-Ygo" sceneMemberID="viewController">
+                <tableViewController id="wk2-GS-Ygo" customClass="VolonteerChooseDatesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="cc6-lt-qIw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VolonteerChooseTableViewCell" textLabel="Woy-oc-O5C" style="IBUITableViewCellStyleDefault" id="wax-0o-SOb" customClass="VolonteerChooseTableViewCell">
                                 <rect key="frame" x="0.0" y="49.5" width="320" height="44"/>
@@ -377,7 +376,7 @@
                                             <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c6l-p8-tdm" customClass="BEMCheckBox">
@@ -429,11 +428,11 @@
         <!--Категории-->
         <scene sceneID="cUn-42-GMx">
             <objects>
-                <tableViewController title="Категории" id="W9i-o1-c46" customClass="VolonteerEventCategoriesTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Категории" id="W9i-o1-c46" customClass="VolonteerChooseEventCategoriesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="FEk-dc-Gq1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VolonteerChooseTableViewCell" textLabel="b41-p1-yjT" style="IBUITableViewCellStyleDefault" id="II2-ai-seU" customClass="VolonteerChooseTableViewCell">
                                 <rect key="frame" x="0.0" y="49.5" width="320" height="44"/>

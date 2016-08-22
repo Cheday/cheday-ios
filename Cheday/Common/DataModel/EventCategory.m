@@ -27,10 +27,8 @@
     if([super isEqual:object])
     {
         return YES;
-    }else
-    {
-        return [self isEqualToEventCategory:object];
     }
+    return [self isEqualToEventCategory:object];
 }
 
 -(BOOL) isEqualToEventCategory:(EventCategory*)eventCategory

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "VolonteerAbstractChooseTableViewController.h"
 
-@interface VolonteerEventCategoriesTableViewController : VolonteerAbstractChooseTableViewController
+@interface VolonteerChooseEventCategoriesTableViewController : VolonteerAbstractChooseTableViewController
 
 @end

@@ -8,6 +8,6 @@
 
 #import "VolonteerAbstractChooseTableViewController.h"
 
-@interface VolonteerRolesChooseTableViewController : VolonteerAbstractChooseTableViewController
+@interface VolonteerChooseRolesTableViewController : VolonteerAbstractChooseTableViewController
 
 @end

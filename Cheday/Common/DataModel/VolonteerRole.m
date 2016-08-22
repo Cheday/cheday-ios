@@ -27,10 +27,8 @@
     if([super isEqual:object])
     {
         return YES;
-    }else
-    {
-        return [self isEqualToVolonteerRole:object];
     }
+    return [self isEqualToVolonteerRole:object];
 }
 
 -(BOOL) isEqualToVolonteerRole:(VolonteerRole*)volonteerRole

@@ -6,14 +6,14 @@
 //  Copyright © 2016 Cheday. All rights reserved.
 //
 
-#import "VolonteerEventCategoriesTableViewController.h"
+#import "VolonteerChooseEventCategoriesTableViewController.h"
 #import "EventCategory+Selecting.h"
 
-@interface VolonteerEventCategoriesTableViewController ()
+@interface VolonteerChooseEventCategoriesTableViewController ()
 
 @end
 
-@implementation VolonteerEventCategoriesTableViewController
+@implementation VolonteerChooseEventCategoriesTableViewController
 
 -(PFQuery *)query
 {

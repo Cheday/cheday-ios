@@ -6,10 +6,10 @@
 //  Copyright © 2016 Cheday. All rights reserved.
 //
 
-#import "VolonteerRolesChooseTableViewController.h"
+#import "VolonteerChooseRolesTableViewController.h"
 #import "VolonteerRole.h"
 
-@implementation VolonteerRolesChooseTableViewController
+@implementation VolonteerChooseRolesTableViewController
 
 -(PFQuery *)query
 {
