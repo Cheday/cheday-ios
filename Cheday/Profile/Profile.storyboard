@@ -106,14 +106,16 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-hZ-D8D">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FW5-ms-4Tj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="СОХРАНИТЬ">
+                                <state key="normal" title="СОХРАНИТЬ" backgroundImage="button_normal_background">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled" backgroundImage="button_disabled_background"/>
+                                <state key="highlighted" backgroundImage="button_highlighted_background"/>
                                 <connections>
                                     <action selector="onSave:" destination="Z34-RQ-o0d" eventType="touchUpInside" id="3Zj-r6-jEs"/>
                                 </connections>
@@ -523,5 +525,8 @@
         <image name="VolonteerDatesIconSelected" width="14" height="15"/>
         <image name="VolonteerRolesIcon" width="16" height="15"/>
         <image name="VolonteerRolesIconSelected" width="16" height="16"/>
+        <image name="button_disabled_background" width="1" height="1"/>
+        <image name="button_highlighted_background" width="1" height="1"/>
+        <image name="button_normal_background" width="1" height="1"/>
     </resources>
 </document>

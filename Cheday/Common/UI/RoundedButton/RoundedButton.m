@@ -8,13 +8,6 @@
 
 #import "RoundedButton.h"
 
-@interface RoundedButton ()
-
-@property(nonatomic, strong) UIColor *currentBackgroundColor;
-@property(nonatomic, strong) UIColor *originalBackgroundColor;
-
-@end
-
 @implementation RoundedButton
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -49,39 +42,5 @@
     }
 }
 
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.currentBackgroundColor = self.originalBackgroundColor = self.backgroundColor;
-    self.enabled = self.enabled;
-}
-
--(void)setHighlighted:(BOOL)highlighted
-{
-    [super setHighlighted:highlighted];
-    
-    if(highlighted)
-    {
-        self.backgroundColor = self.highlightedBackgroundColor;
-    }else
-    {
-        self.backgroundColor = self.currentBackgroundColor;
-    }
-}
-
--(void)setEnabled:(BOOL)enabled
-{
-    [super setEnabled:enabled];
-    
-    if(enabled)
-    {
-        self.backgroundColor = self.originalBackgroundColor;
-    }else
-    {
-        self.backgroundColor = self.disabledBackgroundColor;
-    }
-    self.currentBackgroundColor = self.backgroundColor;
-}
 
 @end

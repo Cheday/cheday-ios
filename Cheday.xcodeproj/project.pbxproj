@@ -18,6 +18,7 @@
 		4F7FF8F31D6AE1540057B60B /* VolonteerChooseDatesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F21D6AE1540057B60B /* VolonteerChooseDatesTableViewController.m */; };
 		4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */; };
 		4F7FF8F91D6AE3B60057B60B /* WeekDay+Selecting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F81D6AE3B60057B60B /* WeekDay+Selecting.m */; };
+		4F7FF8FB1D6AFB9A0057B60B /* CommonColorsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */; };
 		4F86B1EC1D54850E004A1DAB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F86B1EB1D54850E004A1DAB /* FBSDKCoreKit.framework */; };
 		4F86B1EE1D548A8F004A1DAB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F86B1ED1D548A8F004A1DAB /* FBSDKLoginKit.framework */; };
 		4F86B1FB1D54A285004A1DAB /* ProfileUpdaterFromFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B1F71D54A285004A1DAB /* ProfileUpdaterFromFacebook.m */; };
@@ -78,6 +79,7 @@
 		4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekDay.m; path = Common/DataModel/WeekDay.m; sourceTree = "<group>"; };
 		4F7FF8F71D6AE3B60057B60B /* WeekDay+Selecting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeekDay+Selecting.h"; path = "Profile/BecomeVolonteer/VolonteerForm/VolonteerDates/WeekDay+Selecting.h"; sourceTree = "<group>"; };
 		4F7FF8F81D6AE3B60057B60B /* WeekDay+Selecting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeekDay+Selecting.m"; path = "Profile/BecomeVolonteer/VolonteerForm/VolonteerDates/WeekDay+Selecting.m"; sourceTree = "<group>"; };
+		4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CommonColorsImages.xcassets; path = Common/UI/CommonColorsImages.xcassets; sourceTree = "<group>"; };
 		4F86B1EB1D54850E004A1DAB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		4F86B1ED1D548A8F004A1DAB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		4F86B1F41D54A21C004A1DAB /* ProfileUpdaterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileUpdaterProtocol.h; path = Authorization/ProfileUpdaters/ProfileUpdaterProtocol.h; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				4FE1EE5A1D48C18E009170FB /* SimpleAlert */,
 				4FE194941D420F8600708B49 /* RoundedButton */,
 				4FE194901D420AF400708B49 /* RoundedTextField */,
+				4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7FF8FB1D6AFB9A0057B60B /* CommonColorsImages.xcassets in Resources */,
 				4FFB0AB11D3F632400D20B8A /* LaunchScreen.storyboard in Resources */,
 				4FFB0AAE1D3F632400D20B8A /* Assets.xcassets in Resources */,
 				4F8ACE9F1D40D3DA00593D00 /* LaunchImage.xcassets in Resources */,

@@ -10,7 +10,4 @@
 
 @interface RoundedButton : UIButton
 
-@property(nonatomic, strong) IBInspectable UIColor *highlightedBackgroundColor;
-@property(nonatomic, strong) IBInspectable UIColor *disabledBackgroundColor;
-
 @end

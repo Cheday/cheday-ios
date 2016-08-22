@@ -31,14 +31,6 @@
                                         <state key="normal" title="Стать волонтером">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
-                                                <color key="value" red="0.0" green="0.49411764705882355" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                                <color key="value" red="0.4431372549" green="0.70980392160000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="xwF-aH-lto" kind="show" identifier="MainShowBecomeVolonteer" id="nUo-Ui-Bsn"/>
                                         </connections>
@@ -51,14 +43,6 @@
                                         <state key="normal" title="Создать мероприятие">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
-                                                <color key="value" red="0.0" green="0.49411764705882355" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                                <color key="value" red="0.4431372549" green="0.70980392160000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

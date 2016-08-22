@@ -96,17 +96,11 @@
                                             <constraint firstAttribute="height" constant="44" id="J5J-Qr-65K"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Войти">
+                                        <state key="normal" title="Войти" backgroundImage="button_normal_background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
-                                                <color key="value" red="0.0" green="0.49411764705882355" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                                <color key="value" red="0.4431372549" green="0.70980392160000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <state key="disabled" backgroundImage="button_disabled_background"/>
+                                        <state key="highlighted" backgroundImage="button_highlighted_background"/>
                                         <connections>
                                             <action selector="onLoginButtonTap:" destination="Fxd-p2-ssa" eventType="touchUpInside" id="Oun-Ji-ae2"/>
                                         </connections>
@@ -353,17 +347,11 @@
                                                             <constraint firstAttribute="height" constant="44" id="RV2-pa-LAu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <state key="normal" title="Зарегистрироваться">
+                                                        <state key="normal" title="Зарегистрироваться" backgroundImage="button_normal_background">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
-                                                                <color key="value" red="0.0" green="0.49299134779999998" blue="0.75995828620000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                                                <color key="value" red="0.44313725490196076" green="0.70980392156862748" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
+                                                        <state key="disabled" backgroundImage="button_disabled_background"/>
+                                                        <state key="highlighted" backgroundImage="button_highlighted_background"/>
                                                         <connections>
                                                             <action selector="onSignUpButtonTap:" destination="qKc-yd-sIc" eventType="touchUpInside" id="KY2-8F-INo"/>
                                                         </connections>
@@ -489,6 +477,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button_disabled_background" width="1" height="1"/>
+        <image name="button_highlighted_background" width="1" height="1"/>
+        <image name="button_normal_background" width="1" height="1"/>
         <image name="facebook_button" width="52" height="52"/>
         <image name="login_background" width="375" height="224"/>
         <image name="twitter_button" width="52" height="52"/>
