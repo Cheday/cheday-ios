@@ -12,13 +12,15 @@
 @import CocoaLumberjack;
 extern DDLogLevel ddLogLevel;
 #import "VolonteerForm/VolonteerFormTableViewController.h"
+#import "UIAlertController+SimpleAlert.h"
 
 @interface BecomeVolonteerViewController ()
-<BEMCheckBoxDelegate, VolonteerFormTableViewControllerDelegate>
+<BEMCheckBoxDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet BEMCheckBox *iWantBeVolonteerSwitch;
+@property (weak, nonatomic) VolonteerFormTableViewController *volonteerFormViewController;
 
 @end
 
@@ -63,33 +65,31 @@ extern DDLogLevel ddLogLevel;
 {
     if([segue.identifier isEqualToString:@"BecomeVolonteerEmbedVolonteerForm"])
     {
-        VolonteerFormTableViewController *volonterFormTVC = segue.destinationViewController;
-        volonterFormTVC.delegate = self;
+        self.volonteerFormViewController = segue.destinationViewController;
     }
-}
-
--(void)volonteerFromTVCDidSelectCategories:(VolonteerFormTableViewController *)volonteerTVC
-{
-    [self performSegueWithIdentifier:@"BecomeVolonteerShowChooseCategories" sender:self];
-}
-
--(void)volonteerFromTVCDidSelectRoles:(VolonteerFormTableViewController *)volonteerTVC
-{
-    [self performSegueWithIdentifier:@"BecomeVolonteerShowChooseRole" sender:self];
-}
-
--(void)volonteerFromTVCDidSelectDates:(VolonteerFormTableViewController *)volonteerTVC
-{
-    [self performSegueWithIdentifier:@"BecomeVolonteerShowChooseDate" sender:self];
 }
 
 -(void)didTapCheckBox:(BEMCheckBox *)checkBox
 {
-    self.user.wantToVolonteer = @(checkBox.on);
+    //self.user.wantToVolonteer = @(checkBox.on);
 }
 
 - (IBAction)onSave:(UIButton *)sender {
-    
+    self.user.wantToVolonteer = @(self.iWantBeVolonteerSwitch.on);
+    self.user.preferredEventCategories = self.volonteerFormViewController.selectedPreferredEventCategories.allObjects;
+    self.user.preferredVolonteerRoles = self.volonteerFormViewController.selectedPreferredVolonteerRoles.allObjects;
+    self.user.preferredVolonteerDays = self.volonteerFormViewController.selectedPreferredDates.allObjects;
+    [self.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if(succeeded)
+        {
+            [self performSegueWithIdentifier:@"BecomeVolonteerUnwind" sender:self];
+        }else
+        {
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                       message:error.localizedDescription
+                                            fromViewController:self];
+        }
+    }];
 }
 
 @end

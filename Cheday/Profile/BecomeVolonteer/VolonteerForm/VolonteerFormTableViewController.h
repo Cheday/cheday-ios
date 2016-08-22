@@ -8,18 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol VolonteerFormTableViewControllerDelegate;
-
 @interface VolonteerFormTableViewController : UITableViewController
 
-@property(nonatomic, weak) id<VolonteerFormTableViewControllerDelegate> delegate;
-
-@end
-
-@protocol VolonteerFormTableViewControllerDelegate <NSObject>
-
--(void) volonteerFromTVCDidSelectCategories:(VolonteerFormTableViewController*)volonteerTVC;
--(void) volonteerFromTVCDidSelectRoles:(VolonteerFormTableViewController*)volonteerTVC;
--(void) volonteerFromTVCDidSelectDates:(VolonteerFormTableViewController*)volonteerTVC;
+@property(nonatomic, strong) NSMutableSet *selectedPreferredEventCategories;
+@property(nonatomic, strong) NSMutableSet *selectedPreferredVolonteerRoles;
+@property(nonatomic, strong) NSMutableSet *selectedPreferredDates;
 
 @end

@@ -14,10 +14,6 @@
 
 @interface VolonteerFormTableViewController ()
 
-@property(nonatomic, strong) NSMutableSet *selectedPreferredEventCategories;
-@property(nonatomic, strong) NSMutableSet *selectedPreferredVolonteerRoles;
-@property(nonatomic, strong) NSMutableSet *selectedPreferredDates;
-
 @end
 
 @implementation VolonteerFormTableViewController
@@ -32,7 +28,6 @@
         }
         VolonteerChooseEventCategoriesTableViewController *vc = segue.destinationViewController;
         vc.selectedObjects = self.selectedPreferredEventCategories;
-        
     }else if([segue.identifier isEqualToString:@"VolonteerFromShowChooseRoles"])
     {
         if(self.selectedPreferredVolonteerRoles == nil)
