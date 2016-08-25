@@ -9,8 +9,13 @@
 #import "AppDelegate.h"
 @import Parse;
 @import IQKeyboardManager;
+
 @import CocoaLumberjack;
-DDLogLevel ddLogLevel = DDLogLevelDebug;
+#ifdef DEBUG
+    DDLogLevel ddLogLevel = DDLogLevelDebug;
+#else 
+    DDLogLevel ddLogLevel = DDLogLevelWarning;
+#endif
 
 #ifndef DEBUG
     @import Fabric;
