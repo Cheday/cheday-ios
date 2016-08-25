@@ -22,6 +22,8 @@ extern DDLogLevel ddLogLevel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet BEMCheckBox *iWantBeVolonteerSwitch;
 @property (weak, nonatomic) VolonteerFormTableViewController *volonteerFormViewController;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end
 
@@ -74,7 +76,11 @@ extern DDLogLevel ddLogLevel;
     user.preferredVolonteerRoles = self.volonteerFormViewController.selectedPreferredVolonteerRoles.allObjects;
     user.preferredVolonteerDays = self.volonteerFormViewController.selectedPreferredDates.allObjects;
     DDLogDebug(@"Save user: %@", user);
+    [self.activityIndicator startAnimating];
+    self.saveButton.enabled = NO;
     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        [self.activityIndicator stopAnimating];
+        self.saveButton.enabled = YES;
         if(succeeded)
         {
             [self performSegueWithIdentifier:@"BecomeVolonteerUnwind" sender:self];

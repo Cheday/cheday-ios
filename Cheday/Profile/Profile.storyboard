@@ -120,6 +120,9 @@
                                     <action selector="onSave:" destination="Z34-RQ-o0d" eventType="touchUpInside" id="3Zj-r6-jEs"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Sup-3M-6mw">
+                                <rect key="frame" x="284" y="536" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -128,20 +131,24 @@
                             <constraint firstItem="wQ5-Pm-9mT" firstAttribute="top" secondItem="lXe-hZ-D8D" secondAttribute="bottom" id="KRL-T2-6Gf"/>
                             <constraint firstAttribute="trailing" secondItem="lXe-hZ-D8D" secondAttribute="trailing" id="MVF-qe-KFz"/>
                             <constraint firstItem="I9Z-Q2-UP0" firstAttribute="leading" secondItem="a44-X2-lTC" secondAttribute="leading" id="Uj4-Tp-uYq"/>
+                            <constraint firstItem="Sup-3M-6mw" firstAttribute="trailing" secondItem="a44-X2-lTC" secondAttribute="trailingMargin" id="edz-So-0iL"/>
                             <constraint firstItem="687-hy-wyh" firstAttribute="leading" secondItem="a44-X2-lTC" secondAttribute="leading" id="gSF-aP-sAs"/>
                             <constraint firstAttribute="trailing" secondItem="687-hy-wyh" secondAttribute="trailing" id="jpP-cf-MO8"/>
                             <constraint firstItem="lXe-hZ-D8D" firstAttribute="leading" secondItem="a44-X2-lTC" secondAttribute="leading" id="kS1-Ph-euS"/>
                             <constraint firstItem="lXe-hZ-D8D" firstAttribute="top" secondItem="687-hy-wyh" secondAttribute="bottom" id="lGX-6x-YzE"/>
                             <constraint firstItem="I9Z-Q2-UP0" firstAttribute="height" secondItem="a44-X2-lTC" secondAttribute="height" multiplier="100/568" id="mkC-Pc-Pz3"/>
+                            <constraint firstItem="Sup-3M-6mw" firstAttribute="centerY" secondItem="lXe-hZ-D8D" secondAttribute="centerY" id="ri3-u3-sAk"/>
                             <constraint firstItem="I9Z-Q2-UP0" firstAttribute="top" secondItem="vIV-Gf-W32" secondAttribute="bottom" id="sFw-ER-INT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BbU-co-XhE"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Sup-3M-6mw" id="AGA-NG-lap"/>
                         <outlet property="iWantBeVolonteerSwitch" destination="41A-9Q-jXb" id="Raf-u2-x0P"/>
                         <outlet property="nameLabel" destination="83q-e1-YSO" id="GBZ-fm-br0"/>
                         <outlet property="photoImageView" destination="U4j-LA-I92" id="Exd-Dr-7Mw"/>
+                        <outlet property="saveButton" destination="lXe-hZ-D8D" id="gle-ya-gYu"/>
                         <segue destination="adr-Om-oEM" kind="unwind" identifier="BecomeVolonteerUnwind" unwindAction="unwindFromBecomeVolonteerViewController:" id="g83-W2-Eaa"/>
                     </connections>
                 </viewController>
