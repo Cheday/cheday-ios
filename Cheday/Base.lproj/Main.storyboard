@@ -116,6 +116,8 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="becomeVolonteerButton" destination="xbk-3B-mPi" id="0Nk-Bl-Whi"/>
+                        <outlet property="createEventButton" destination="Ipu-m3-6mC" id="p6K-yK-hjc"/>
                         <outlet property="nameLabel" destination="cPA-14-yv5" id="GqH-m3-Uyb"/>
                         <outlet property="photoImageView" destination="3vR-jv-08A" id="YLO-kR-i0R"/>
                     </connections>

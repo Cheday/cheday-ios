@@ -19,6 +19,8 @@ extern DDLogLevel ddLogLevel;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UIButton *becomeVolonteerButton;
+@property (weak, nonatomic) IBOutlet UIButton *createEventButton;
 
 @end
 
@@ -71,10 +73,12 @@ extern DDLogLevel ddLogLevel;
 {
     if([segue.identifier isEqualToString:@"MainShowBecomeVolonteer"])
     {
+        /*
         BecomeVolonteerViewController *vc = segue.destinationViewController;
         UINavigationController *navController = segue.destinationViewController;
         vc = navController.viewControllers[0];
         vc.user = self.user;
+         */
     }
 }
 

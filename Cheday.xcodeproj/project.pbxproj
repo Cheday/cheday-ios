@@ -32,12 +32,16 @@
 		4FBABE8D1D67416800ACAB74 /* VolonteerChooseRolesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBABE8C1D67416800ACAB74 /* VolonteerChooseRolesTableViewController.m */; };
 		4FBABE901D67419B00ACAB74 /* VolonteerRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBABE8F1D67419B00ACAB74 /* VolonteerRole.m */; };
 		4FBABE931D67427F00ACAB74 /* VolonteerRole+Selecting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBABE921D67427F00ACAB74 /* VolonteerRole+Selecting.m */; };
+		4FBB6B271D6D88F20050F652 /* EqualityProxyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB6B261D6D88F20050F652 /* EqualityProxyFactory.m */; };
 		4FBF89101D3F894300C371A4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF890E1D3F894300C371A4 /* Bolts.framework */; };
 		4FBF89111D3F894300C371A4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF890F1D3F894300C371A4 /* Parse.framework */; };
 		4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4701D4A0BD300854283 /* Profile.storyboard */; };
 		4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4751D4A0E0600854283 /* Profile.xcassets */; };
 		4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F47A1D4A10D900854283 /* RoundImageView.m */; };
 		4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD28091D49FEC300C98C6A /* MainViewController.m */; };
+		4FDA5B7F1D6C52D3005709C1 /* EventCategoryEqualityProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA5B7E1D6C52D3005709C1 /* EventCategoryEqualityProxy.m */; };
+		4FDA5B821D6C5667005709C1 /* VolonteerRoleEqualityProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA5B811D6C5667005709C1 /* VolonteerRoleEqualityProxy.m */; };
+		4FDA5B851D6C57B0005709C1 /* WeekDayEqualityProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA5B841D6C57B0005709C1 /* WeekDayEqualityProxy.m */; };
 		4FE194861D42016100708B49 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE194851D42016100708B49 /* LoginViewController.m */; };
 		4FE1948A1D42029200708B49 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE194891D42029200708B49 /* LoginView.m */; };
 		4FE1948E1D420AE900708B49 /* RoundedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1948D1D420AE900708B49 /* RoundedTextField.m */; };
@@ -95,6 +99,7 @@
 		4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		4FACA6F81D5C71F90028E3CC /* VolonteerChooseEventCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolonteerChooseEventCategoriesTableViewController.h; path = Profile/BecomeVolonteer/VolonteerForm/VolonteerCategories/VolonteerChooseEventCategoriesTableViewController.h; sourceTree = "<group>"; };
 		4FACA6F91D5C71F90028E3CC /* VolonteerChooseEventCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerChooseEventCategoriesTableViewController.m; path = Profile/BecomeVolonteer/VolonteerForm/VolonteerCategories/VolonteerChooseEventCategoriesTableViewController.m; sourceTree = "<group>"; };
+		4FB1CC001D6ED8B5002879CD /* EqualityProxyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EqualityProxyProtocol.h; path = Common/DataModel/EqualityProxies/EqualityProxyProtocol.h; sourceTree = "<group>"; };
 		4FB88D081D61F4A700CDB4C8 /* EventCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventCategory.h; path = Common/DataModel/EventCategory.h; sourceTree = "<group>"; };
 		4FB88D091D61F4A700CDB4C8 /* EventCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventCategory.m; path = Common/DataModel/EventCategory.m; sourceTree = "<group>"; };
 		4FBABE8A1D673A8000ACAB74 /* Selecting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Selecting.h; path = Profile/BecomeVolonteer/VolonteerForm/VolonteerAbstractChoose/Selecting.h; sourceTree = "<group>"; };
@@ -104,6 +109,8 @@
 		4FBABE8F1D67419B00ACAB74 /* VolonteerRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerRole.m; path = Common/DataModel/VolonteerRole.m; sourceTree = "<group>"; };
 		4FBABE911D67427F00ACAB74 /* VolonteerRole+Selecting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VolonteerRole+Selecting.h"; path = "Profile/BecomeVolonteer/VolonteerForm/VolonteerRoles/VolonteerRole+Selecting.h"; sourceTree = "<group>"; };
 		4FBABE921D67427F00ACAB74 /* VolonteerRole+Selecting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "VolonteerRole+Selecting.m"; path = "Profile/BecomeVolonteer/VolonteerForm/VolonteerRoles/VolonteerRole+Selecting.m"; sourceTree = "<group>"; };
+		4FBB6B251D6D88F20050F652 /* EqualityProxyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EqualityProxyFactory.h; path = Common/DataModel/EqualityProxies/EqualityProxyFactory.h; sourceTree = "<group>"; };
+		4FBB6B261D6D88F20050F652 /* EqualityProxyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EqualityProxyFactory.m; path = Common/DataModel/EqualityProxies/EqualityProxyFactory.m; sourceTree = "<group>"; };
 		4FBF890E1D3F894300C371A4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		4FBF890F1D3F894300C371A4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
 		4FC4F4701D4A0BD300854283 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/Profile.storyboard; sourceTree = "<group>"; };
@@ -112,6 +119,12 @@
 		4FC4F47A1D4A10D900854283 /* RoundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundImageView.m; path = Profile/RoundImageView/RoundImageView.m; sourceTree = "<group>"; };
 		4FCD28081D49FEC300C98C6A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = MainScreen/MainViewController.h; sourceTree = "<group>"; };
 		4FCD28091D49FEC300C98C6A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = MainScreen/MainViewController.m; sourceTree = "<group>"; };
+		4FDA5B7D1D6C52D3005709C1 /* EventCategoryEqualityProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventCategoryEqualityProxy.h; path = Common/DataModel/EqualityProxies/EventCategoryEqualityProxy.h; sourceTree = "<group>"; };
+		4FDA5B7E1D6C52D3005709C1 /* EventCategoryEqualityProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventCategoryEqualityProxy.m; path = Common/DataModel/EqualityProxies/EventCategoryEqualityProxy.m; sourceTree = "<group>"; };
+		4FDA5B801D6C5667005709C1 /* VolonteerRoleEqualityProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolonteerRoleEqualityProxy.h; path = Common/DataModel/EqualityProxies/VolonteerRoleEqualityProxy.h; sourceTree = "<group>"; };
+		4FDA5B811D6C5667005709C1 /* VolonteerRoleEqualityProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerRoleEqualityProxy.m; path = Common/DataModel/EqualityProxies/VolonteerRoleEqualityProxy.m; sourceTree = "<group>"; };
+		4FDA5B831D6C57B0005709C1 /* WeekDayEqualityProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekDayEqualityProxy.h; path = Common/DataModel/EqualityProxies/WeekDayEqualityProxy.h; sourceTree = "<group>"; };
+		4FDA5B841D6C57B0005709C1 /* WeekDayEqualityProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekDayEqualityProxy.m; path = Common/DataModel/EqualityProxies/WeekDayEqualityProxy.m; sourceTree = "<group>"; };
 		4FE194841D42016100708B49 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Authorization/Authorization/LoginViewController.h; sourceTree = "<group>"; };
 		4FE194851D42016100708B49 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Authorization/Authorization/LoginViewController.m; sourceTree = "<group>"; };
 		4FE194881D42029200708B49 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Authorization/Authorization/LoginView.h; sourceTree = "<group>"; };
@@ -185,6 +198,7 @@
 		4F2F337E1D47433000F1F003 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				4FDA5B7C1D6C524F005709C1 /* EqualityProxies */,
 				4F2F337F1D47436200F1F003 /* User.h */,
 				4F2F33801D47436200F1F003 /* User.m */,
 				4FB88D081D61F4A700CDB4C8 /* EventCategory.h */,
@@ -328,6 +342,22 @@
 				4FC4F4751D4A0E0600854283 /* Profile.xcassets */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		4FDA5B7C1D6C524F005709C1 /* EqualityProxies */ = {
+			isa = PBXGroup;
+			children = (
+				4FDA5B7D1D6C52D3005709C1 /* EventCategoryEqualityProxy.h */,
+				4FDA5B7E1D6C52D3005709C1 /* EventCategoryEqualityProxy.m */,
+				4FDA5B801D6C5667005709C1 /* VolonteerRoleEqualityProxy.h */,
+				4FDA5B811D6C5667005709C1 /* VolonteerRoleEqualityProxy.m */,
+				4FDA5B831D6C57B0005709C1 /* WeekDayEqualityProxy.h */,
+				4FDA5B841D6C57B0005709C1 /* WeekDayEqualityProxy.m */,
+				4FBB6B251D6D88F20050F652 /* EqualityProxyFactory.h */,
+				4FBB6B261D6D88F20050F652 /* EqualityProxyFactory.m */,
+				4FB1CC001D6ED8B5002879CD /* EqualityProxyProtocol.h */,
+			);
+			name = EqualityProxies;
 			sourceTree = "<group>";
 		};
 		4FE194871D42016600708B49 /* Authorization */ = {
@@ -607,13 +637,16 @@
 				4FE1948A1D42029200708B49 /* LoginView.m in Sources */,
 				4FF218F91D5B1C560051BBCA /* VolonteerFormTableView.m in Sources */,
 				4F943AC11D58855E00854183 /* BecomeVolonteerViewController.m in Sources */,
+				4FBB6B271D6D88F20050F652 /* EqualityProxyFactory.m in Sources */,
 				4FE1EE5D1D48C25D009170FB /* UIAlertController+SimpleAlert.m in Sources */,
 				4FE194861D42016100708B49 /* LoginViewController.m in Sources */,
 				4FE1949F1D422F4500708B49 /* SignupView.m in Sources */,
 				4FE1948E1D420AE900708B49 /* RoundedTextField.m in Sources */,
 				4FBABE8D1D67416800ACAB74 /* VolonteerChooseRolesTableViewController.m in Sources */,
 				4F4A98EC1D647CF500C0F353 /* VolonteerChooseTableViewCell.m in Sources */,
+				4FDA5B7F1D6C52D3005709C1 /* EventCategoryEqualityProxy.m in Sources */,
 				4FBABE901D67419B00ACAB74 /* VolonteerRole.m in Sources */,
+				4FDA5B851D6C57B0005709C1 /* WeekDayEqualityProxy.m in Sources */,
 				4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */,
 				4FFB0AA61D3F632400D20B8A /* AppDelegate.m in Sources */,
 				4F4A98E91D645EC200C0F353 /* EventCategory+Selecting.m in Sources */,
@@ -629,6 +662,7 @@
 				4FE1949C1D422BBE00708B49 /* ForgotPasswordViewController.m in Sources */,
 				4FE194991D42138C00708B49 /* SignupViewController.m in Sources */,
 				4F86B1FC1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m in Sources */,
+				4FDA5B821D6C5667005709C1 /* VolonteerRoleEqualityProxy.m in Sources */,
 				4F7FF8F31D6AE1540057B60B /* VolonteerChooseDatesTableViewController.m in Sources */,
 				4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */,
 				4F86B1FB1D54A285004A1DAB /* ProfileUpdaterFromFacebook.m in Sources */,

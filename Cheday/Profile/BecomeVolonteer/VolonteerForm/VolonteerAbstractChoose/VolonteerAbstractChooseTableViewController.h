@@ -14,6 +14,7 @@
 <VolonteerChooseTableViewCellDelegate>
 {
     NSArray *_objects;
+    NSMutableSet *_selectedObjects;
 }
 
 @property(nonatomic, strong) NSMutableSet *selectedObjects;

@@ -13,6 +13,7 @@
 extern DDLogLevel ddLogLevel;
 #import "VolonteerForm/VolonteerFormTableViewController.h"
 #import "UIAlertController+SimpleAlert.h"
+#import "User.h"
 
 @interface BecomeVolonteerViewController ()
 <BEMCheckBoxDelegate>
@@ -26,29 +27,21 @@ extern DDLogLevel ddLogLevel;
 
 @implementation BecomeVolonteerViewController
 
--(void)setUser:(User *)user
-{
-    _user = user;
-    if(self.isViewLoaded)
-    {
-        [self setUserToView];
-    }
-}
-
 -(void) setUserToView
 {
-    self.nameLabel.text = self.user.fullName;
+    User *user = [User currentUser];
+    self.nameLabel.text = user.fullName;
 //    [self.photoImageView setImageWithURL:[NSURL URLWithString:self.user.photoURLString]
 //                        placeholderImage:[UIImage imageNamed:@"ProfilePirate"]];
-    [self.photoImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.user.photoURLString]]
+    [self.photoImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:user.photoURLString]]
                                placeholderImage:[UIImage imageNamed:@"ProfilePirate"]
                                         success:nil
                                         failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
                                             DDLogError(@"%@", error);
                                         }];
-    if(self.user.wantToVolonteer)
+    if(user.wantToVolonteer)
     {
-        self.iWantBeVolonteerSwitch.on = [self.user.wantToVolonteer boolValue];
+        self.iWantBeVolonteerSwitch.on = [user.wantToVolonteer boolValue];
     }
 }
 
@@ -75,14 +68,17 @@ extern DDLogLevel ddLogLevel;
 }
 
 - (IBAction)onSave:(UIButton *)sender {
-    self.user.wantToVolonteer = @(self.iWantBeVolonteerSwitch.on);
-    self.user.preferredEventCategories = self.volonteerFormViewController.selectedPreferredEventCategories.allObjects;
-    self.user.preferredVolonteerRoles = self.volonteerFormViewController.selectedPreferredVolonteerRoles.allObjects;
-    self.user.preferredVolonteerDays = self.volonteerFormViewController.selectedPreferredDates.allObjects;
-    [self.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+    User *user = [User currentUser];
+    user.wantToVolonteer = @(self.iWantBeVolonteerSwitch.on);
+    user.preferredEventCategories = self.volonteerFormViewController.selectedPreferredEventCategories.allObjects;
+    user.preferredVolonteerRoles = self.volonteerFormViewController.selectedPreferredVolonteerRoles.allObjects;
+    user.preferredVolonteerDays = self.volonteerFormViewController.selectedPreferredDates.allObjects;
+    DDLogDebug(@"Save user: %@", user);
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded)
         {
             [self performSegueWithIdentifier:@"BecomeVolonteerUnwind" sender:self];
+            DDLogDebug(@"User saved");
         }else
         {
             [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)

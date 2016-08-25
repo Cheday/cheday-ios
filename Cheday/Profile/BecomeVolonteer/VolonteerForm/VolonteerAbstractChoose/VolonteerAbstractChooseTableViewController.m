@@ -8,6 +8,16 @@
 
 #import "VolonteerAbstractChooseTableViewController.h"
 #import "UIAlertController+SimpleAlert.h"
+#import "EqualityProxyFactory.h"
+
+@interface VolonteerAbstractChooseTableViewController ()
+
+@property(nonatomic, strong) NSMutableSet *equalityProxiesForSelectedObjects;;
+@property(nonatomic, strong) EqualityProxyFactory *equalityProxyFactory;
+
+-(IBAction)onRefresh:(id)sender;
+
+@end
 
 @implementation VolonteerAbstractChooseTableViewController
 
@@ -15,14 +25,33 @@
 {
     if(_selectedObjects == nil)
     {
-        @synchronized (self) {
-            if(_selectedObjects == nil)
-            {
-                _selectedObjects = [NSMutableSet new];
-            }
-        }
+        _selectedObjects = [NSMutableSet new];
     }
     return _selectedObjects;
+}
+
+-(NSMutableSet *)equalityProxiesForSelectedObjects
+{
+    if(_equalityProxiesForSelectedObjects == nil)
+    {
+        _equalityProxiesForSelectedObjects = [NSMutableSet new];
+    }
+    return _equalityProxiesForSelectedObjects;
+}
+
+-(void)setSelectedObjects:(NSMutableSet *)selectedObjects
+{
+    _selectedObjects = selectedObjects;
+    self.equalityProxiesForSelectedObjects = [NSMutableSet setWithArray:[self.equalityProxyFactory proxyArrayForObjectsArray:selectedObjects.allObjects]];
+}
+
+-(EqualityProxyFactory *)equalityProxyFactory
+{
+    if(_equalityProxyFactory == nil)
+    {
+        _equalityProxyFactory = [EqualityProxyFactory new];
+    }
+    return _equalityProxyFactory;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -47,7 +76,10 @@
 -(void) refreshData
 {
     [self.refreshControl beginRefreshing];
-    [self onRefresh:nil];
+    [PFObject fetchAllIfNeededInBackground:self.selectedObjects.allObjects
+                                     block:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+                                        [self onRefresh:nil]; 
+                                     }];
 }
 
 -(PFQuery *)query
@@ -92,9 +124,9 @@
         {
             _objects = objects;
             [_objects enumerateObjectsUsingBlock:^(id<Selecting>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                obj.selected = [self.selectedObjects containsObject:obj];
+                obj.selected = [self.equalityProxiesForSelectedObjects containsObject:[self.equalityProxyFactory proxyForObject:obj]];
             }];
-            [self.tableView reloadData];    
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
         }
         
         if(refreshingCount == 0)
@@ -126,29 +158,33 @@
 -(void)volonteerChooseTableViewCellDidSelectCheckbox:(VolonteerChooseTableViewCell *)cell
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
 }
 
 -(void)volonteerChooseTableViewCellDidDeselectCheckbox:(VolonteerChooseTableViewCell *)cell
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
-    [self tableView:self.tableView didDeselectRowAtIndexPath:indexPath];
+    [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id<Selecting> selectableObject = _objects[indexPath.row];
-    selectableObject.selected = YES;
-    [self.selectedObjects addObject:selectableObject];
-}
-
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    id<Selecting> selectableObject = _objects[indexPath.row];
-    selectableObject.selected = NO;
-    [self.selectedObjects removeObject:selectableObject];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    id<Selecting> selectedObject = _objects[indexPath.row];
+    id selectedProxy = [self.equalityProxyFactory proxyForObject:selectedObject];
+    if([self.equalityProxiesForSelectedObjects containsObject:selectedProxy] == NO)
+    {
+        selectedObject.selected = YES;
+        [self.equalityProxiesForSelectedObjects addObject:[self.equalityProxyFactory proxyForObject:selectedObject]];
+        [self.selectedObjects addObject:selectedObject];
+    }else
+    {
+        selectedObject.selected = NO;
+        id<EqualityProxyProtocol> savedProxy = [self.equalityProxiesForSelectedObjects member:selectedProxy];
+        [self.equalityProxiesForSelectedObjects removeObject:savedProxy];
+        [self.selectedObjects removeObject:savedProxy.instance];
+    }
 }
 
 @end

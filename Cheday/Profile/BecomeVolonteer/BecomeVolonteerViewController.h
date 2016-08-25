@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
 
 @interface BecomeVolonteerViewController : UIViewController
-
-@property(nonatomic, strong) User *user;
 
 @end

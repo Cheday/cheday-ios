@@ -22,30 +22,4 @@
     [self registerSubclass];
 }
 
--(BOOL)isEqual:(id)object
-{
-    if(self == object)
-        return YES;
-    if(!object || ![object isKindOfClass:[self class]])
-        return NO;
-    return [self isEqualToEventCategory:object];
-}
-
--(BOOL) isEqualToEventCategory:(WeekDay*)weekDay
-{
-    if(self == weekDay)
-        return YES;
-    if((self.objectId != self.objectId) && ![self.objectId isEqualToString:weekDay.objectId])
-        return NO;
-    if((self.name != weekDay.name) && ![self.name isEqual:weekDay.name])
-        return NO;
-    return YES;
-}
-
--(NSUInteger)hash
-{
-    return [self.objectId hash];
-}
-
-
 @end
