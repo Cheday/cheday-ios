@@ -75,6 +75,30 @@ extern DDLogLevel ddLogLevel;
     user.preferredEventCategories = self.volonteerFormViewController.selectedPreferredEventCategories.allObjects;
     user.preferredVolonteerRoles = self.volonteerFormViewController.selectedPreferredVolonteerRoles.allObjects;
     user.preferredVolonteerDays = self.volonteerFormViewController.selectedPreferredDates.allObjects;
+    if(user.wantToVolonteer)
+    {
+        if(!user.preferredEventCategories.count)
+        {
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                       message:NSLocalizedString(@"Не выбрано ни одной категории", nil)
+                                            fromViewController:self];
+            return;
+        }
+        if(!user.preferredVolonteerRoles.count)
+        {
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                       message:NSLocalizedString(@"Не выбрано ни одной роли", nil)
+                                            fromViewController:self];
+            return;
+        }
+        if(!user.preferredVolonteerDays.count)
+        {
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                       message:NSLocalizedString(@"Не выбрано ни одного дня", nil)
+                                            fromViewController:self];
+            return;
+        }
+    }
     DDLogDebug(@"Save user: %@", user);
     [self.activityIndicator startAnimating];
     self.saveButton.enabled = NO;
