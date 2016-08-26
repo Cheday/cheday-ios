@@ -37,7 +37,7 @@
                                             <segue destination="xwF-aH-lto" kind="show" identifier="MainShowBecomeVolonteer" id="nUo-Ui-Bsn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipu-m3-6mC" customClass="RoundedButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipu-m3-6mC" customClass="RoundedButton">
                                         <rect key="frame" x="165" y="0.0" width="150" height="35"/>
                                         <color key="backgroundColor" red="0.0" green="0.58431372549019611" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
@@ -47,6 +47,9 @@
                                         </state>
                                         <state key="disabled" backgroundImage="button_disabled_background"/>
                                         <state key="highlighted" backgroundImage="button_highlighted_background"/>
+                                        <connections>
+                                            <segue destination="PKu-C6-9Cw" kind="show" id="E30-3y-IMa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,7 +135,15 @@
                 <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="BecomeVolonteerViewController" id="xwF-aH-lto" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehk-V5-UpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196.5" y="-624"/>
+            <point key="canvasLocation" x="1207.5" y="-407"/>
+        </scene>
+        <!--CreateEvent-->
+        <scene sceneID="lcZ-zB-Qv5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateEvent" id="PKu-C6-9Cw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPS-fA-CeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146.5" y="-353"/>
         </scene>
     </scenes>
     <resources>

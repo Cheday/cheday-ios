@@ -297,10 +297,10 @@
             </objects>
             <point key="canvasLocation" x="306" y="1011"/>
         </scene>
-        <!--Volonteer Choose Roles Table View Controller-->
+        <!--Роли-->
         <scene sceneID="Q5W-fP-hbw">
             <objects>
-                <tableViewController id="mn0-FE-OKi" customClass="VolonteerChooseRolesTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Роли" id="mn0-FE-OKi" customClass="VolonteerChooseRolesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4FY-SX-Mhp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -366,10 +366,10 @@
             </objects>
             <point key="canvasLocation" x="1183" y="768"/>
         </scene>
-        <!--Volonteer Choose Dates Table View Controller-->
+        <!--Даты-->
         <scene sceneID="9du-O2-HmX">
             <objects>
-                <tableViewController id="wk2-GS-Ygo" customClass="VolonteerChooseDatesTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Даты" id="wk2-GS-Ygo" customClass="VolonteerChooseDatesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="cc6-lt-qIw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
