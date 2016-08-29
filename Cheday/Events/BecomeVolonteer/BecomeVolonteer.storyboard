@@ -438,7 +438,7 @@
         <!--Категории-->
         <scene sceneID="cUn-42-GMx">
             <objects>
-                <tableViewController title="Категории" id="W9i-o1-c46" customClass="VolonteerChooseEventCategoriesTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="VolonteerChooseEventCategoriesTableViewController" title="Категории" id="W9i-o1-c46" customClass="VolonteerChooseEventCategoriesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="FEk-dc-Gq1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

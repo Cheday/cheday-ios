@@ -132,7 +132,7 @@
         <!--BecomeVolonteerViewController-->
         <scene sceneID="0ui-mG-OKw">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="BecomeVolonteerViewController" id="xwF-aH-lto" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="BecomeVolonteer" referencedIdentifier="BecomeVolonteerViewController" id="xwF-aH-lto" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehk-V5-UpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207.5" y="-407"/>

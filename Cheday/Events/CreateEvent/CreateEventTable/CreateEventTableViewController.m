@@ -7,6 +7,7 @@
 //
 
 #import "CreateEventTableViewController.h"
+#import "CreateEventChooseCategoryTableViewController.h"
 
 @interface CreateEventTableViewController ()
 
@@ -20,6 +21,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+}
+
+-(IBAction)unwindFromCreateEventChooseCategoryTableViewController:(UIStoryboardSegue*)segue
+{
+    CreateEventChooseCategoryTableViewController *vc = segue.sourceViewController;
+    self.selectedCategories = vc.selectedObjects;
 }
 
 @end

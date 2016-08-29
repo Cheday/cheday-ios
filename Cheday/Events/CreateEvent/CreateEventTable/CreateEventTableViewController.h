@@ -10,4 +10,6 @@
 
 @interface CreateEventTableViewController : UITableViewController
 
+@property(nonatomic, strong) NSSet *selectedCategories;
+
 @end
