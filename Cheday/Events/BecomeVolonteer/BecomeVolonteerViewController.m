@@ -16,7 +16,7 @@ extern DDLogLevel ddLogLevel;
 #import "User.h"
 
 @interface BecomeVolonteerViewController ()
-<BEMCheckBoxDelegate>
+<BEMCheckBoxDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
@@ -56,11 +56,29 @@ extern DDLogLevel ddLogLevel;
     [self setUserToView];
 }
 
+-(void)didMoveToParentViewController:(UIViewController *)parent
+{
+    [super didMoveToParentViewController:parent];
+    
+    self.navigationController.delegate = self;
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"BecomeVolonteerEmbedVolonteerForm"])
     {
         self.volonteerFormViewController = segue.destinationViewController;
+    }
+}
+
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if(viewController == self)
+    {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }else
+    {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
     }
 }
 
