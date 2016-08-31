@@ -10,6 +10,10 @@
 
 @interface CreateEventTableViewController : UITableViewController
 
-@property(nonatomic, strong) NSSet *selectedCategories;
+@property(nonatomic, strong) NSString *eventTitle;
+@property(nonatomic, strong) NSMutableSet *selectedCategories;
+@property(nonatomic, strong) NSDate *startDate;
+@property(nonatomic, strong) NSDate *endDate;
+@property(nonatomic, strong) NSMutableSet *selectedVolonteerRolesWithCountSet;
 
 @end

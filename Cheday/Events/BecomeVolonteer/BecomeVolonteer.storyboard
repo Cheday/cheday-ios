@@ -196,8 +196,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VolonteerCategoriesIcon" highlightedImage="VolonteerCategoriesIconSelected" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-xZ-iv4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VolonteerCategoriesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-xZ-iv4">
                                                     <rect key="frame" x="8" y="14.5" width="14" height="14"/>
+                                                    <color key="tintColor" red="0.57254901960000004" green="0.57254901960000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Ezr-xZ-iv4" secondAttribute="height" multiplier="1:1" id="N0h-Hf-3Pm"/>
                                                     </constraints>
@@ -227,8 +228,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VolonteerRolesIcon" highlightedImage="VolonteerRolesIconSelected" translatesAutoresizingMaskIntoConstraints="NO" id="Eu4-rc-KFR">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VolonteerRolesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Eu4-rc-KFR">
                                                     <rect key="frame" x="8" y="13.5" width="16" height="16"/>
+                                                    <color key="tintColor" red="0.57254901960000004" green="0.57254901960000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Eu4-rc-KFR" secondAttribute="height" multiplier="1:1" id="wem-H8-jH2"/>
                                                     </constraints>
@@ -258,8 +260,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VolonteerDatesIcon" highlightedImage="VolonteerDatesIconSelected" translatesAutoresizingMaskIntoConstraints="NO" id="F82-OG-1MS">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VolonteerDatesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="F82-OG-1MS">
                                                     <rect key="frame" x="8" y="14.5" width="14" height="14"/>
+                                                    <color key="tintColor" red="0.57254901960000004" green="0.57254901960000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="F82-OG-1MS" secondAttribute="height" multiplier="1:1" id="CHw-WX-nWc"/>
                                                     </constraints>
@@ -530,11 +533,8 @@
     <resources>
         <image name="ProfilePirate" width="140" height="126"/>
         <image name="VolonteerCategoriesIcon" width="14" height="14"/>
-        <image name="VolonteerCategoriesIconSelected" width="14" height="15"/>
         <image name="VolonteerDatesIcon" width="14" height="14"/>
-        <image name="VolonteerDatesIconSelected" width="14" height="15"/>
         <image name="VolonteerRolesIcon" width="16" height="15"/>
-        <image name="VolonteerRolesIconSelected" width="16" height="16"/>
         <image name="button_disabled_background" width="1" height="1"/>
         <image name="button_highlighted_background" width="1" height="1"/>
         <image name="button_normal_background" width="1" height="1"/>

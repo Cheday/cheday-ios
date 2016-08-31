@@ -8,6 +8,7 @@
 
 #import "CreateEventChooseCategoryTableViewController.h"
 #import "EventCategory.h"
+#import "EventCategory+Selecting.h"
 
 @interface CreateEventChooseCategoryTableViewController ()
 
@@ -21,11 +22,19 @@
                                                             forIndexPath:indexPath];
     EventCategory *category = _objects[indexPath.row];
     cell.textLabel.text = category.name;
+    if(category.selected)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
 
 -(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.selectedObjects removeAllObjects];
     [self.selectedObjects addObject:_objects[indexPath.row]];
     return indexPath;
 }

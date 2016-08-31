@@ -8,8 +8,14 @@
 
 #import "CreateEventTableViewController.h"
 #import "CreateEventChooseCategoryTableViewController.h"
+#import "CreateEventTableViewCell.h"
+#import "EventCategory.h"
+
+#import "CreateEventChooseVolonteerRolesTableViewController.h"
 
 @interface CreateEventTableViewController ()
+
+@property (weak, nonatomic) IBOutlet CreateEventTableViewCell *categoryCell;
 
 @end
 
@@ -19,14 +25,23 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"CreateEventShowChooseCategory"])
+    {
+        CreateEventChooseCategoryTableViewController *chooseCategoryVC = segue.destinationViewController;
+        chooseCategoryVC.selectedObjects = self.selectedCategories;
+    }else if([segue.identifier isEqualToString:@"CreateEventShowChooseVolonteerRoles"])
+    {
+        CreateEventChooseVolonteerRolesTableViewController *chooseRolesTVC = segue.destinationViewController;
+        chooseRolesTVC.selectedObjects = self.selectedVolonteerRolesWithCountSet;
+    }
 }
 
 -(IBAction)unwindFromCreateEventChooseCategoryTableViewController:(UIStoryboardSegue*)segue
 {
     CreateEventChooseCategoryTableViewController *vc = segue.sourceViewController;
     self.selectedCategories = vc.selectedObjects;
+    EventCategory *eventCategory = self.selectedCategories.anyObject;
+    self.categoryCell.filledString = eventCategory.name;
 }
 
 @end

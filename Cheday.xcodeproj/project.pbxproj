@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4F04DBA21D46241700105A3D /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */; };
+		4F2353AE1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */; };
+		4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B01D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m */; };
+		4F2353B41D76EB360047E4A9 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B31D76EB360047E4A9 /* Event.m */; };
+		4F2353B71D76F0930047E4A9 /* VolonteerRoleWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B61D76F0930047E4A9 /* VolonteerRoleWithCount.m */; };
 		4F2F33811D47436200F1F003 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F33801D47436200F1F003 /* User.m */; };
 		4F47ED661D51E83C00BE03C1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
@@ -45,6 +49,7 @@
 		4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4701D4A0BD300854283 /* Profile.storyboard */; };
 		4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4751D4A0E0600854283 /* Profile.xcassets */; };
 		4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F47A1D4A10D900854283 /* RoundImageView.m */; };
+		4FC80B391D759502002C46D2 /* CreateEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */; };
 		4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD28091D49FEC300C98C6A /* MainViewController.m */; };
 		4FDA5B7F1D6C52D3005709C1 /* EventCategoryEqualityProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA5B7E1D6C52D3005709C1 /* EventCategoryEqualityProxy.m */; };
 		4FDA5B821D6C5667005709C1 /* VolonteerRoleEqualityProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA5B811D6C5667005709C1 /* VolonteerRoleEqualityProxy.m */; };
@@ -71,6 +76,14 @@
 
 /* Begin PBXFileReference section */
 		4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
+		4F2353AC1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventChooseVolonteerRolesTableViewController.h; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewController.h; sourceTree = "<group>"; };
+		4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventChooseVolonteerRolesTableViewController.m; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewController.m; sourceTree = "<group>"; };
+		4F2353AF1D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventChooseVolonteerRolesTableViewCell.h; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewCell.h; sourceTree = "<group>"; };
+		4F2353B01D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventChooseVolonteerRolesTableViewCell.m; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewCell.m; sourceTree = "<group>"; };
+		4F2353B21D76EB360047E4A9 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = Common/DataModel/Event.h; sourceTree = "<group>"; };
+		4F2353B31D76EB360047E4A9 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = Common/DataModel/Event.m; sourceTree = "<group>"; };
+		4F2353B51D76F0930047E4A9 /* VolonteerRoleWithCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolonteerRoleWithCount.h; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRoleWithCount.h; sourceTree = "<group>"; };
+		4F2353B61D76F0930047E4A9 /* VolonteerRoleWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerRoleWithCount.m; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRoleWithCount.m; sourceTree = "<group>"; };
 		4F2F337F1D47436200F1F003 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Common/DataModel/User.h; sourceTree = "<group>"; };
 		4F2F33801D47436200F1F003 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Common/DataModel/User.m; sourceTree = "<group>"; };
 		4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
@@ -134,6 +147,8 @@
 		4FC4F4751D4A0E0600854283 /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Profile.xcassets; path = Profile/Profile.xcassets; sourceTree = "<group>"; };
 		4FC4F4791D4A10D900854283 /* RoundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundImageView.h; path = Profile/RoundImageView/RoundImageView.h; sourceTree = "<group>"; };
 		4FC4F47A1D4A10D900854283 /* RoundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundImageView.m; path = Profile/RoundImageView/RoundImageView.m; sourceTree = "<group>"; };
+		4FC80B371D759502002C46D2 /* CreateEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventTableViewCell.h; sourceTree = "<group>"; };
+		4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventTableViewCell.m; sourceTree = "<group>"; };
 		4FCD28081D49FEC300C98C6A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = MainScreen/MainViewController.h; sourceTree = "<group>"; };
 		4FCD28091D49FEC300C98C6A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = MainScreen/MainViewController.m; sourceTree = "<group>"; };
 		4FDA5B7D1D6C52D3005709C1 /* EventCategoryEqualityProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventCategoryEqualityProxy.h; path = Common/DataModel/EqualityProxies/EventCategoryEqualityProxy.h; sourceTree = "<group>"; };
@@ -196,6 +211,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2353AB1D76D2AF0047E4A9 /* CreateEventChooseVolonteerRoles */ = {
+			isa = PBXGroup;
+			children = (
+				4F2353AC1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.h */,
+				4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */,
+				4F2353AF1D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.h */,
+				4F2353B01D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m */,
+				4F2353B51D76F0930047E4A9 /* VolonteerRoleWithCount.h */,
+				4F2353B61D76F0930047E4A9 /* VolonteerRoleWithCount.m */,
+			);
+			name = CreateEventChooseVolonteerRoles;
+			sourceTree = "<group>";
+		};
 		4F2F337E1D47433000F1F003 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +236,8 @@
 				4FBABE8F1D67419B00ACAB74 /* VolonteerRole.m */,
 				4F7FF8F41D6AE1ED0057B60B /* WeekDay.h */,
 				4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */,
+				4F2353B21D76EB360047E4A9 /* Event.h */,
+				4F2353B31D76EB360047E4A9 /* Event.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -288,8 +318,11 @@
 			isa = PBXGroup;
 			children = (
 				4FBC006D1D7437E700BF32D4 /* CreateEventChooseCategory */,
+				4F2353AB1D76D2AF0047E4A9 /* CreateEventChooseVolonteerRoles */,
 				4FBC003C1D741ADA00BF32D4 /* CreateEventTableViewController.h */,
 				4FBC003D1D741ADA00BF32D4 /* CreateEventTableViewController.m */,
+				4FC80B371D759502002C46D2 /* CreateEventTableViewCell.h */,
+				4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */,
 			);
 			name = CreateEventTable;
 			sourceTree = "<group>";
@@ -694,14 +727,17 @@
 				4FE1949F1D422F4500708B49 /* SignupView.m in Sources */,
 				4FE1948E1D420AE900708B49 /* RoundedTextField.m in Sources */,
 				4FDA5B7F1D6C52D3005709C1 /* EventCategoryEqualityProxy.m in Sources */,
+				4F2353B41D76EB360047E4A9 /* Event.m in Sources */,
 				4FBABE901D67419B00ACAB74 /* VolonteerRole.m in Sources */,
 				4FDA5B851D6C57B0005709C1 /* WeekDayEqualityProxy.m in Sources */,
 				4FBC00671D7433C900BF32D4 /* VolonteerChooseDatesTableViewController.m in Sources */,
 				4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */,
 				4FFB0AA61D3F632400D20B8A /* AppDelegate.m in Sources */,
+				4F2353B71D76F0930047E4A9 /* VolonteerRoleWithCount.m in Sources */,
 				4FBC00701D74382800BF32D4 /* CreateEventChooseCategoryTableViewController.m in Sources */,
 				4FBC006B1D7433C900BF32D4 /* VolonteerChooseRolesTableViewController.m in Sources */,
 				4F2F33811D47436200F1F003 /* User.m in Sources */,
+				4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */,
 				4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */,
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
@@ -714,7 +750,9 @@
 				4F86B1FC1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m in Sources */,
 				4FDA5B821D6C5667005709C1 /* VolonteerRoleEqualityProxy.m in Sources */,
 				4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */,
+				4FC80B391D759502002C46D2 /* CreateEventTableViewCell.m in Sources */,
 				4FBC00661D7433C900BF32D4 /* VolonteerChooseEventCategoriesTableViewController.m in Sources */,
+				4F2353AE1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m in Sources */,
 				4F86B1FB1D54A285004A1DAB /* ProfileUpdaterFromFacebook.m in Sources */,
 				4FE194931D420F7E00708B49 /* RoundedButton.m in Sources */,
 				4FBC00651D7433C900BF32D4 /* EventCategory+Selecting.m in Sources */,
