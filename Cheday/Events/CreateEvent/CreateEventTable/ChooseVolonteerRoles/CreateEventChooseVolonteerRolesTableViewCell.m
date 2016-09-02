@@ -11,7 +11,7 @@
 @interface CreateEventChooseVolonteerRolesTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
 
 @end
 
@@ -21,6 +21,13 @@
 {
     _volonteerRole = volonteerRole;
     self.nameLabel.text = _volonteerRole.name;
+    self.countLabel.text = [@(_volonteerRole.count) stringValue];
+}
+
+- (IBAction)stepperValueChanged:(UIStepper *)sender
+{
+    [self.delegate createEventChooseVolonteerRolesTableViewCell:self
+                                        didChangeVolonteerCount:(NSInteger)sender.value];
 }
 
 @end

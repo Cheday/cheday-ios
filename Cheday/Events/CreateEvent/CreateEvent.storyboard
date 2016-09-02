@@ -136,6 +136,7 @@
                                                 <constraint firstItem="FE3-WQ-n59" firstAttribute="centerY" secondItem="1qV-iU-oSS" secondAttribute="centerY" id="663-Va-WY4"/>
                                                 <constraint firstItem="670-5R-6hS" firstAttribute="leading" secondItem="1qV-iU-oSS" secondAttribute="leadingMargin" id="AFL-vd-8LL"/>
                                                 <constraint firstItem="670-5R-6hS" firstAttribute="centerY" secondItem="1qV-iU-oSS" secondAttribute="centerY" id="M8X-PV-K7y"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="FE3-WQ-n59" secondAttribute="trailing" constant="8" id="VJc-Nf-oyr"/>
                                                 <constraint firstItem="FE3-WQ-n59" firstAttribute="leading" secondItem="670-5R-6hS" secondAttribute="trailing" constant="8" id="bYN-f9-FOP"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -291,16 +292,28 @@
                                         </label>
                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jxt-O4-RBb">
                                             <rect key="frame" x="218" y="10.5" width="94" height="29"/>
+                                            <connections>
+                                                <action selector="stepperValueChanged:" destination="cuC-hm-j9u" eventType="valueChanged" id="k1k-5V-kUJ"/>
+                                            </connections>
                                         </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtA-Ff-tE2">
+                                            <rect key="frame" x="199" y="14" width="11" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="bQQ-xG-8rF" firstAttribute="leading" secondItem="81u-1F-8c1" secondAttribute="leadingMargin" constant="7" id="4hF-Hq-rK5"/>
                                         <constraint firstItem="bQQ-xG-8rF" firstAttribute="centerY" secondItem="81u-1F-8c1" secondAttribute="centerY" id="LKr-jL-tsW"/>
                                         <constraint firstItem="jxt-O4-RBb" firstAttribute="trailing" secondItem="81u-1F-8c1" secondAttribute="trailingMargin" id="NCj-G6-Wxx"/>
+                                        <constraint firstItem="jxt-O4-RBb" firstAttribute="leading" secondItem="WtA-Ff-tE2" secondAttribute="trailing" constant="8" id="TQq-Jt-tFE"/>
+                                        <constraint firstItem="WtA-Ff-tE2" firstAttribute="baseline" secondItem="bQQ-xG-8rF" secondAttribute="baseline" id="g0a-Ui-JO7"/>
                                         <constraint firstItem="jxt-O4-RBb" firstAttribute="centerY" secondItem="81u-1F-8c1" secondAttribute="centerY" id="yqw-QI-2Ax"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="countLabel" destination="WtA-Ff-tE2" id="wju-1m-qSn"/>
                                     <outlet property="nameLabel" destination="bQQ-xG-8rF" id="eXx-Vl-huW"/>
                                 </connections>
                             </tableViewCell>

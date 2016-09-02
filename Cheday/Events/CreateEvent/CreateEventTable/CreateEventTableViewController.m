@@ -23,6 +23,24 @@
 
 #pragma mark - Navigation
 
+-(NSMutableSet *)selectedCategories
+{
+    if(_selectedCategories == nil)
+    {
+        _selectedCategories = [NSMutableSet new];
+    }
+    return _selectedCategories;
+}
+
+-(NSMutableSet *)selectedVolonteerRolesWithCountSet
+{
+    if(_selectedVolonteerRolesWithCountSet == nil)
+    {
+        _selectedVolonteerRolesWithCountSet = [NSMutableSet new];
+    }
+    return _selectedVolonteerRolesWithCountSet;
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"CreateEventShowChooseCategory"])
@@ -38,8 +56,8 @@
 
 -(IBAction)unwindFromCreateEventChooseCategoryTableViewController:(UIStoryboardSegue*)segue
 {
-    CreateEventChooseCategoryTableViewController *vc = segue.sourceViewController;
-    self.selectedCategories = vc.selectedObjects;
+//    CreateEventChooseCategoryTableViewController *vc = segue.sourceViewController;
+//    self.selectedCategories = vc.selectedObjects;
     EventCategory *eventCategory = self.selectedCategories.anyObject;
     self.categoryCell.filledString = eventCategory.name;
 }

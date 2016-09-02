@@ -46,7 +46,7 @@
     {
         self.titleLabel.text = self.placeholderText;
         self.titleLabel.textColor = self.placeholderTextColor;
-        self.iconImageView.tintColor = nil;
+        self.iconImageView.tintColor = self.iconImageViewOriginalTintColor;
     }
 }
 
