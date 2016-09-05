@@ -8,7 +8,6 @@
 
 #import "CreateEventChooseVolonteerRolesTableViewController.h"
 #import "CreateEventChooseVolonteerRolesTableViewCell.h"
-#import "VolonteerRole.h"
 
 @interface CreateEventChooseVolonteerRolesTableViewController ()
 <CreateEventChooseVolonteerRolesTableViewCellDelegate>
@@ -29,15 +28,16 @@
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     VolonteerRole *volonteerRole = _objects[indexPath.row];
-    if((volonteerRole.count == 0) && (count > 0))
+    NSInteger oldCount = volonteerRole.count;
+    volonteerRole.count = count;
+    if((oldCount == 0) && (volonteerRole.count > 0))
     {
-        [self.selectedObjects addObject:volonteerRole];
+        [self.delegate chooseTableViewController:self didSelectObject:volonteerRole];
     }
     if(count == 0)
     {
-        [self.selectedObjects removeObject:volonteerRole];
+        [self.delegate chooseTableViewController:self didDeselectObject:volonteerRole];
     }
-    volonteerRole.count = count;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

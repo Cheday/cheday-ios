@@ -12,6 +12,18 @@
 #import "VolonteerChooseDatesTableViewController.h"
 #import "User.h"
 
+@import CocoaLumberjack;
+extern DDLogLevel ddLogLevel;
+
+@interface VolonteerFormTableViewController ()
+<VolonteerChooseTableViewControllerDelegate>
+
+@property(nonatomic, weak) VolonteerChooseEventCategoriesTableViewController *chooseEventCategoriesVC;
+@property(nonatomic, weak) VolonteerChooseEventCategoriesTableViewController *chooseDatesVC;
+@property(nonatomic, weak) VolonteerChooseEventCategoriesTableViewController *chooseVolonteerRolesVC;
+
+@end
+
 @implementation VolonteerFormTableViewController
 
 -(NSMutableSet *)selectedPreferredEventCategories
@@ -45,16 +57,53 @@
 {
     if([segue.identifier isEqualToString:@"VolonteerFromShowChooseCategories"])
     {
-        VolonteerChooseEventCategoriesTableViewController *vc = segue.destinationViewController;
-        vc.selectedObjects = self.selectedPreferredEventCategories;
+        self.chooseEventCategoriesVC = segue.destinationViewController;
+        self.chooseEventCategoriesVC.delegate = self;
+        self.chooseEventCategoriesVC.selectedObjects = self.selectedPreferredEventCategories;
     }else if([segue.identifier isEqualToString:@"VolonteerFromShowChooseRoles"])
     {
-        VolonteerChooseRolesTableViewController *vc = segue.destinationViewController;
-        vc.selectedObjects = self.selectedPreferredVolonteerRoles;
+        self.chooseVolonteerRolesVC = segue.destinationViewController;
+        self.chooseVolonteerRolesVC.delegate = self;
+        self.chooseVolonteerRolesVC.selectedObjects = self.selectedPreferredVolonteerRoles;
     } else if([segue.identifier isEqualToString:@"VolonteerFromShowChooseDates"])
     {
-        VolonteerChooseDatesTableViewController *vc = segue.destinationViewController;
-        vc.selectedObjects = self.selectedPreferredDates;
+        self.chooseDatesVC = segue.destinationViewController;
+        self.chooseDatesVC.delegate = self;
+        self.chooseDatesVC.selectedObjects = self.selectedPreferredDates;
+    }
+}
+
+-(void)chooseTableViewController:(VolonteerAbstractChooseTableViewController *)viewController didSelectObject:(id)object
+{
+    if(viewController == self.chooseEventCategoriesVC)
+    {
+        [self.selectedPreferredEventCategories addObject:object];
+    }else if (viewController == self.chooseVolonteerRolesVC)
+    {
+        [self.selectedPreferredVolonteerRoles addObject:object];
+    }else if (viewController == self.chooseDatesVC)
+    {
+        [self.selectedPreferredDates addObject:object];
+    }else
+    {
+        NSAssert(YES, @"Unhandled delegate message sent from %@", viewController);
+    }
+}
+
+-(void)chooseTableViewController:(VolonteerAbstractChooseTableViewController *)viewController didDeselectObject:(id)object
+{
+    if(viewController == self.chooseEventCategoriesVC)
+    {
+        [self.selectedPreferredEventCategories removeObject:object];
+    }else if (viewController == self.chooseVolonteerRolesVC)
+    {
+        [self.selectedPreferredVolonteerRoles removeObject:object];
+    }else if (viewController == self.chooseDatesVC)
+    {
+        [self.selectedPreferredDates removeObject:object];
+    }else
+    {
+        NSAssert(YES, @"Unhandled delegate message sent from %@", viewController);
     }
 }
 

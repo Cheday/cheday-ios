@@ -11,6 +11,8 @@
 
 @interface EqualityProxyFactory : NSObject
 
+@property(nonatomic, strong) NSMutableSet *equalityProxiesForSelectedObjects;
+
 -(id<EqualityProxyProtocol>) proxyForObject:(id)object;
 -(NSArray*) proxyArrayForObjectsArray:(NSArray*)array;
 

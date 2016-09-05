@@ -10,6 +10,8 @@
 @import Parse;
 #import "VolonteerChooseTableViewCell.h"
 
+@protocol VolonteerChooseTableViewControllerDelegate;
+
 @interface VolonteerAbstractChooseTableViewController : UITableViewController
 <VolonteerChooseTableViewCellDelegate>
 {
@@ -17,8 +19,16 @@
     NSMutableSet *_selectedObjects;
 }
 
-@property(nonatomic, strong) NSMutableSet *selectedObjects;
+@property(nonatomic, copy) NSMutableSet *selectedObjects;
+@property(nonatomic, weak) id<VolonteerChooseTableViewControllerDelegate> delegate;
 
 -(PFQuery*) query;
+
+@end
+
+@protocol VolonteerChooseTableViewControllerDelegate <NSObject>
+
+-(void) chooseTableViewController:(VolonteerAbstractChooseTableViewController*)viewController didSelectObject:(id)object;
+-(void) chooseTableViewController:(VolonteerAbstractChooseTableViewController*)viewController didDeselectObject:(id)object;
 
 @end

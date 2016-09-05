@@ -12,7 +12,6 @@
 
 @interface VolonteerAbstractChooseTableViewController ()
 
-@property(nonatomic, strong) NSMutableSet *equalityProxiesForSelectedObjects;;
 @property(nonatomic, strong) EqualityProxyFactory *equalityProxyFactory;
 
 -(IBAction)onRefresh:(id)sender;
@@ -21,28 +20,25 @@
 
 @implementation VolonteerAbstractChooseTableViewController
 
--(NSSet *)selectedObjects
+-(NSMutableSet *)selectedObjects
 {
-    if(_selectedObjects == nil)
-    {
-        _selectedObjects = [NSMutableSet new];
-    }
-    return _selectedObjects;
-}
-
--(NSMutableSet *)equalityProxiesForSelectedObjects
-{
-    if(_equalityProxiesForSelectedObjects == nil)
-    {
-        _equalityProxiesForSelectedObjects = [NSMutableSet new];
-    }
-    return _equalityProxiesForSelectedObjects;
+    NSMutableSet *set = [NSMutableSet new];
+    [self.equalityProxyFactory.equalityProxiesForSelectedObjects.allObjects enumerateObjectsUsingBlock:^(id<Selecting,EqualityProxyProtocol>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
+     {
+         if(obj.selected)
+         {
+             [set addObject:obj.instance];
+         }
+     }];
+    return set;
 }
 
 -(void)setSelectedObjects:(NSMutableSet *)selectedObjects
 {
-    _selectedObjects = selectedObjects;
-    self.equalityProxiesForSelectedObjects = [NSMutableSet setWithArray:[self.equalityProxyFactory proxyArrayForObjectsArray:selectedObjects.allObjects]];
+    self.equalityProxyFactory.equalityProxiesForSelectedObjects = [NSMutableSet setWithArray:[self.equalityProxyFactory proxyArrayForObjectsArray:selectedObjects.allObjects]];
+    [self.equalityProxyFactory.equalityProxiesForSelectedObjects enumerateObjectsUsingBlock:^(id<Selecting>  _Nonnull obj, BOOL * _Nonnull stop) {
+        obj.selected = YES;
+    }];
 }
 
 -(EqualityProxyFactory *)equalityProxyFactory
@@ -112,7 +108,7 @@
         {
             _objects = objects;
             [_objects enumerateObjectsUsingBlock:^(id<Selecting>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                obj.selected = [self.equalityProxiesForSelectedObjects containsObject:[self.equalityProxyFactory proxyForObject:obj]];
+                obj.selected = [self.equalityProxyFactory.equalityProxiesForSelectedObjects containsObject:[self.equalityProxyFactory proxyForObject:obj]];
             }];
             [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
         }
@@ -158,21 +154,22 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
+    [self willChangeValueForKey:@"selectedObjects"];
     id<Selecting> selectedObject = _objects[indexPath.row];
     id selectedProxy = [self.equalityProxyFactory proxyForObject:selectedObject];
-    if([self.equalityProxiesForSelectedObjects containsObject:selectedProxy] == NO)
+    if([self.equalityProxyFactory.equalityProxiesForSelectedObjects containsObject:selectedProxy] == NO)
     {
         selectedObject.selected = YES;
-        [self.equalityProxiesForSelectedObjects addObject:[self.equalityProxyFactory proxyForObject:selectedObject]];
-        [self.selectedObjects addObject:selectedObject];
+        [self.equalityProxyFactory.equalityProxiesForSelectedObjects addObject:[self.equalityProxyFactory proxyForObject:selectedObject]];
+        [self.delegate chooseTableViewController:self didSelectObject:selectedObject];
     }else
     {
         selectedObject.selected = NO;
-        id<EqualityProxyProtocol> savedProxy = [self.equalityProxiesForSelectedObjects member:selectedProxy];
-        [self.equalityProxiesForSelectedObjects removeObject:savedProxy];
-        [self.selectedObjects removeObject:savedProxy.instance];
+        id<EqualityProxyProtocol> savedProxy = [self.equalityProxyFactory.equalityProxiesForSelectedObjects member:selectedProxy];
+        [self.equalityProxyFactory.equalityProxiesForSelectedObjects removeObject:savedProxy];
+        [self.delegate chooseTableViewController:self didDeselectObject:savedProxy.instance];
     }
+    [self didChangeValueForKey:@"selectedObjects"];
 }
 
 @end

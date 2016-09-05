@@ -37,4 +37,13 @@
     return newArray;
 }
 
+-(NSMutableSet *)equalityProxiesForSelectedObjects
+{
+    if(_equalityProxiesForSelectedObjects == nil)
+    {
+        _equalityProxiesForSelectedObjects = [NSMutableSet new];
+    }
+    return _equalityProxiesForSelectedObjects;
+}
+
 @end

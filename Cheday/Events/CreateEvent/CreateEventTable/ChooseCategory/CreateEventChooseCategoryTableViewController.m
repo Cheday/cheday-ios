@@ -32,16 +32,15 @@
     return cell;
 }
 
--(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self.selectedObjects removeAllObjects];
-    [self.selectedObjects addObject:_objects[indexPath.row]];
+-(NSIndexPath*)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{    
+    [self.delegate chooseTableViewController:self didSelectObject:_objects[indexPath.row]];
     return indexPath;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
-
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
