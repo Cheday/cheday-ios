@@ -106,10 +106,20 @@
                                             fromViewController:self];
         }else
         {
-            _objects = objects;
-            [_objects enumerateObjectsUsingBlock:^(id<Selecting>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                obj.selected = [self.equalityProxyFactory.equalityProxiesForSelectedObjects containsObject:[self.equalityProxyFactory proxyForObject:obj]];
+            NSMutableArray *decoratedObjects = [[self.equalityProxyFactory proxyArrayForObjectsArray:objects] mutableCopy];
+            //Заменяем пришедшие объекты, ранее выбранными.
+            [self.equalityProxyFactory.equalityProxiesForSelectedObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
+                NSUInteger index = [decoratedObjects indexOfObject:obj];
+                if(index != NSNotFound)
+                {
+                    [decoratedObjects replaceObjectAtIndex:index
+                                                withObject:obj];
+                }else
+                {
+                    //TODO: Подумать, что делать если выбранный объект больше не приходит с сервера 
+                }
             }];
+            _objects = [decoratedObjects copy];
             [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
         }
         
@@ -155,19 +165,18 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     [self willChangeValueForKey:@"selectedObjects"];
-    id<Selecting> selectedObject = _objects[indexPath.row];
-    id selectedProxy = [self.equalityProxyFactory proxyForObject:selectedObject];
-    if([self.equalityProxyFactory.equalityProxiesForSelectedObjects containsObject:selectedProxy] == NO)
-    {
-        selectedObject.selected = YES;
-        [self.equalityProxyFactory.equalityProxiesForSelectedObjects addObject:[self.equalityProxyFactory proxyForObject:selectedObject]];
-        [self.delegate chooseTableViewController:self didSelectObject:selectedObject];
-    }else
+    id<Selecting, EqualityProxyProtocol> selectedObject = _objects[indexPath.row];
+    
+    if(selectedObject.selected)
     {
         selectedObject.selected = NO;
-        id<EqualityProxyProtocol> savedProxy = [self.equalityProxyFactory.equalityProxiesForSelectedObjects member:selectedProxy];
-        [self.equalityProxyFactory.equalityProxiesForSelectedObjects removeObject:savedProxy];
-        [self.delegate chooseTableViewController:self didDeselectObject:savedProxy.instance];
+        [self.equalityProxyFactory.equalityProxiesForSelectedObjects removeObject:selectedObject];
+        [self.delegate chooseTableViewController:self didDeselectObject:selectedObject.instance];
+    }else
+    {
+        selectedObject.selected = YES;
+        [self.equalityProxyFactory.equalityProxiesForSelectedObjects addObject:selectedObject];
+        [self.delegate chooseTableViewController:self didSelectObject:selectedObject.instance];
     }
     [self didChangeValueForKey:@"selectedObjects"];
 }

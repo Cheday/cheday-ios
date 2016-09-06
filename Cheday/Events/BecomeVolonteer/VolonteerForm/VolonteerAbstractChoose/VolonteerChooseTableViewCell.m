@@ -43,7 +43,7 @@
                        change:(NSDictionary<NSString *,id> *)change
                       context:(void *)context
 {
-    if(context == (__bridge void * _Nullable)(self) && object == _selectableObject && [keyPath isEqualToString:@"selected"])
+    if(context == (__bridge void * _Nullable)(self) && [_selectableObject isEqual:object] && [keyPath isEqualToString:@"selected"])
     {
         [_checkBox setOn:_selectableObject.selected animated:YES];
     }
