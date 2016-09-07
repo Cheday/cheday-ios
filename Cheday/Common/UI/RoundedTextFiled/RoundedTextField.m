@@ -15,7 +15,6 @@
     [super awakeFromNib];
     
     self.layer.cornerRadius = self.bounds.size.height/2;
-    self.backgroundColor = [UIColor colorWithRed:0.91 green:0.92 blue:0.93 alpha:1.00];
 }
 
 -(CGRect)leftViewRectForBounds:(CGRect)bounds

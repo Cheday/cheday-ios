@@ -67,6 +67,7 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-vU-Lkr" customClass="RoundedTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.90980392156862744" green="0.92156862745098034" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="11z-6l-xbV"/>
                                         </constraints>
@@ -79,6 +80,7 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97R-pf-m2q" customClass="RoundedTextField">
                                         <rect key="frame" x="0.0" y="52" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.90980392156862744" green="0.92156862745098034" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="9k2-ty-i6Y"/>
                                         </constraints>
@@ -294,6 +296,7 @@
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-gE-mJA" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                                        <color key="backgroundColor" red="0.90980392160000001" green="0.92156862750000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="ysu-uA-N7i"/>
                                                         </constraints>
@@ -306,6 +309,7 @@
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-k4-e48" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="52" width="240" height="44"/>
+                                                        <color key="backgroundColor" red="0.90980392160000001" green="0.92156862750000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="KJ1-zj-ANe"/>
                                                         </constraints>
@@ -318,6 +322,7 @@
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDR-Cg-ftw" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="104" width="240" height="44"/>
+                                                        <color key="backgroundColor" red="0.90980392160000001" green="0.92156862750000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="468-sh-tIR"/>
                                                         </constraints>
@@ -330,6 +335,7 @@
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль повторно" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCa-QX-LXX" customClass="RoundedTextField">
                                                         <rect key="frame" x="0.0" y="156" width="240" height="44"/>
+                                                        <color key="backgroundColor" red="0.90980392160000001" green="0.92156862750000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="P58-bM-njn"/>
                                                         </constraints>
