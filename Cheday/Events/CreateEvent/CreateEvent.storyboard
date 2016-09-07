@@ -315,6 +315,7 @@
                                 <connections>
                                     <outlet property="countLabel" destination="WtA-Ff-tE2" id="wju-1m-qSn"/>
                                     <outlet property="nameLabel" destination="bQQ-xG-8rF" id="eXx-Vl-huW"/>
+                                    <outlet property="stepper" destination="jxt-O4-RBb" id="W2i-Uz-BMQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -31,6 +31,20 @@
     [invocation invokeWithTarget:_instance];
 }
 
+-(Class)class
+{
+    if(_instance)
+        return [_instance class];
+    return [VolonteerRoleEqualityProxy class];
+}
+
+-(Class)superclass
+{
+    if(_instance)
+        return [_instance superclass];
+    return [super class];
+}
+
 -(BOOL)isEqual:(id)object
 {
     if(_instance == object)

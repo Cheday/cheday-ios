@@ -41,7 +41,6 @@
                                                        green:0.57
                                                         blue:0.87
                                                        alpha:1.00];
-        
     }else
     {
         self.titleLabel.text = self.placeholderText;

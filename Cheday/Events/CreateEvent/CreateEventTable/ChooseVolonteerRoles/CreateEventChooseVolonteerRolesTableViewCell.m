@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
 
 @end
 
@@ -34,13 +35,15 @@
                         context:(__bridge void * _Nullable)(self)];
     self.nameLabel.text = _volonteerRole.name;
     self.countLabel.text = [@(_volonteerRole.count) stringValue];
+    self.stepper.value = _volonteerRole.count;
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
-    if((context == (__bridge void * _Nullable)(self)) && (object == _volonteerRole) && [keyPath isEqualToString:@"count"])
+    if((context == (__bridge void * _Nullable)(self)) && [_volonteerRole isEqual:object] && [keyPath isEqualToString:@"count"])
     {
         self.countLabel.text = [@(_volonteerRole.count) stringValue];
+        self.stepper.value = _volonteerRole.count;
     }
 }
 
