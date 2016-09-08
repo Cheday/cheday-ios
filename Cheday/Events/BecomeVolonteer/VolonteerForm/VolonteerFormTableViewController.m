@@ -86,7 +86,7 @@ extern DDLogLevel ddLogLevel;
         [self.selectedPreferredDates addObject:object];
     }else
     {
-        NSAssert(YES, @"Unhandled delegate message sent from %@", viewController);
+        NSAssert(NO, @"Unhandled delegate message sent from %@", viewController);
     }
 }
 
@@ -103,7 +103,7 @@ extern DDLogLevel ddLogLevel;
         [self.selectedPreferredDates removeObject:object];
     }else
     {
-        NSAssert(YES, @"Unhandled delegate message sent from %@", viewController);
+        NSAssert(NO, @"Unhandled delegate message sent from %@", viewController);
     }
 }
 

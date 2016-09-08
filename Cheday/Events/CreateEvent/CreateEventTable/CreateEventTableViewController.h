@@ -14,6 +14,6 @@
 @property(nonatomic, strong) NSMutableSet *selectedCategories;
 @property(nonatomic, strong) NSDate *startDate;
 @property(nonatomic, strong) NSDate *endDate;
-@property(nonatomic, strong) NSMutableSet *selectedVolonteerRolesWithCountSet;
+@property(nonatomic, strong) NSMutableSet *selectedVolonteerRoles;
 
 @end

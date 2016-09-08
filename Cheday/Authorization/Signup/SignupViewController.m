@@ -73,7 +73,7 @@ extern DDLogLevel ddLogLevel;
         return;
     }
     
-    User *newUser = [User object];
+    User *newUser = [User new];
     newUser.username = self.nameTextField.text;
     newUser.email = self.emailTextField.text;
     newUser.password = self.passwordTextField.text;

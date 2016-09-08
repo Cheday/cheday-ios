@@ -8,6 +8,12 @@
 
 #import "CreateEventViewController.h"
 #import "CreateEventTableViewController.h"
+#import "Event.h"
+#import "VolonteerRole+Counting.h"
+#import "VolonteerRoleWithCount.h"
+#import "UIAlertController+SimpleAlert.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+extern DDLogLevel ddLogLevel;
 
 @interface CreateEventViewController ()
 
@@ -25,8 +31,35 @@
     }
 }
 
-- (IBAction)onCreateEventTouchUpInside:(UIButton *)sender {
+- (IBAction)onCreateEventTouchUpInside:(UIButton *)sender
+{
+    NSAssert(!(self.createEventTVC.selectedCategories.count > 1), @"self.createEventTVC.selectedCategories.count>1");
     
+    Event *event = [Event new];
+    event.owner = [User currentUser];
+    event.category = self.createEventTVC.selectedCategories.anyObject;
+    NSMutableArray *array = [NSMutableArray new];
+    [self.createEventTVC.selectedVolonteerRoles enumerateObjectsUsingBlock:^(VolonteerRole *  _Nonnull obj, BOOL * _Nonnull stop) {
+        VolonteerRoleWithCount *volonteerRoleWithCount = [VolonteerRoleWithCount new];
+        volonteerRoleWithCount.volonteerRole = obj;
+        volonteerRoleWithCount.count = @(obj.count);
+        [array addObject:volonteerRoleWithCount];
+    }];
+    event.volonteerRoles = array;
+    
+    DDLogDebug(@"Save event: %@", event);
+    [event saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if(succeeded)
+        {
+            //[self performSegueWithIdentifier:@"" sender:self];
+            DDLogDebug(@"Event saved");
+        }else
+        {
+            [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                       message:error.localizedDescription
+                                            fromViewController:self];
+        }
+    }];
 }
 
 @end

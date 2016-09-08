@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F04DBA21D46241700105A3D /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */; };
 		4F13DA3D1D7971DA00C272D3 /* VolonteerRole+Counting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F13DA3C1D7971DA00C272D3 /* VolonteerRole+Counting.m */; };
+		4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */; };
 		4F2353AE1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */; };
 		4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B01D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m */; };
 		4F2353B41D76EB360047E4A9 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B31D76EB360047E4A9 /* Event.m */; };
@@ -78,6 +79,8 @@
 		4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
 		4F13DA3B1D7971DA00C272D3 /* VolonteerRole+Counting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VolonteerRole+Counting.h"; path = "Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRole+Counting.h"; sourceTree = "<group>"; };
 		4F13DA3C1D7971DA00C272D3 /* VolonteerRole+Counting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "VolonteerRole+Counting.m"; path = "Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRole+Counting.m"; sourceTree = "<group>"; };
+		4F15E3031D815B5400F520F8 /* VolonteerRoleWithCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolonteerRoleWithCount.h; path = Common/DataModel/VolonteerRoleWithCount.h; sourceTree = "<group>"; };
+		4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerRoleWithCount.m; path = Common/DataModel/VolonteerRoleWithCount.m; sourceTree = "<group>"; };
 		4F2353AC1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventChooseVolonteerRolesTableViewController.h; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewController.h; sourceTree = "<group>"; };
 		4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventChooseVolonteerRolesTableViewController.m; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewController.m; sourceTree = "<group>"; };
 		4F2353AF1D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventChooseVolonteerRolesTableViewCell.h; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewCell.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */,
 				4F2353B21D76EB360047E4A9 /* Event.h */,
 				4F2353B31D76EB360047E4A9 /* Event.m */,
+				4F15E3031D815B5400F520F8 /* VolonteerRoleWithCount.h */,
+				4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -739,6 +744,7 @@
 				4F13DA3D1D7971DA00C272D3 /* VolonteerRole+Counting.m in Sources */,
 				4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */,
 				4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */,
+				4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */,
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
 				4FBC00621D7433C900BF32D4 /* BecomeVolonteerViewController.m in Sources */,

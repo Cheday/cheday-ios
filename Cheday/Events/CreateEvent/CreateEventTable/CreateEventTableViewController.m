@@ -39,13 +39,13 @@ extern DDLogLevel ddLogLevel;
     return _selectedCategories;
 }
 
--(NSMutableSet *)selectedVolonteerRolesWithCountSet
+-(NSMutableSet *)selectedVolonteerRoles
 {
-    if(_selectedVolonteerRolesWithCountSet == nil)
+    if(_selectedVolonteerRoles == nil)
     {
-        _selectedVolonteerRolesWithCountSet = [NSMutableSet new];
+        _selectedVolonteerRoles = [NSMutableSet new];
     }
-    return _selectedVolonteerRolesWithCountSet;
+    return _selectedVolonteerRoles;
 }
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -59,7 +59,7 @@ extern DDLogLevel ddLogLevel;
     }else if([segue.identifier isEqualToString:@"CreateEventShowChooseVolonteerRoles"])
     {
         CreateEventChooseVolonteerRolesTableViewController *chooseRolesTVC = segue.destinationViewController;
-        chooseRolesTVC.selectedObjects = self.selectedVolonteerRolesWithCountSet;
+        chooseRolesTVC.selectedObjects = self.selectedVolonteerRoles;
         chooseRolesTVC.delegate = self;
         self.chooseVolonteerRolesTVC = chooseRolesTVC;
     }
@@ -73,9 +73,9 @@ extern DDLogLevel ddLogLevel;
         [self.selectedCategories addObject:object];
     }else if(viewController == self.chooseVolonteerRolesTVC)
     {
-        [self.selectedVolonteerRolesWithCountSet addObject:object];
+        [self.selectedVolonteerRoles addObject:object];
     }else{
-        NSAssert(YES, @"Unhandled delegate message sent from %@", viewController);
+        NSAssert(NO, @"Unhandled delegate message sent from %@", viewController);
     }
 }
 
@@ -83,10 +83,10 @@ extern DDLogLevel ddLogLevel;
 {
     if(viewController == self.chooseVolonteerRolesTVC)
     {
-        [self.selectedVolonteerRolesWithCountSet removeObject:object];
+        [self.selectedVolonteerRoles removeObject:object];
     }else
     {
-        NSAssert(YES, @"Unhandled delegate message sent from %@", viewController);
+        NSAssert(NO, @"Unhandled delegate message sent from %@", viewController);
     }
 }
 
