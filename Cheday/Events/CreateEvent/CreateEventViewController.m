@@ -56,8 +56,8 @@ extern DDLogLevel ddLogLevel;
         self.createEventButton.enabled = YES;
         if(succeeded)
         {
-            //[self performSegueWithIdentifier:@"" sender:self];
             DDLogDebug(@"Event saved");
+            [self performSegueWithIdentifier:@"UnwindFromCreateEventViewController" sender:self];
         }else
         {
             [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)

@@ -73,7 +73,7 @@
                     <navigationItem key="navigationItem" title="Мероприятие" id="5bd-QC-fH7">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1er-f2-nbg">
                             <connections>
-                                <segue destination="BBi-JU-YnL" kind="unwind" unwindAction="unwindFromCreateEventViewController:" id="yyd-Mg-y6e"/>
+                                <segue destination="BBi-JU-YnL" kind="unwind" identifier="UnwindFromCreateEventViewController" unwindAction="unwindFromCreateEventViewController:" id="yyd-Mg-y6e"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
