@@ -18,6 +18,8 @@ extern DDLogLevel ddLogLevel;
 @interface CreateEventViewController ()
 
 @property(nonatomic, weak) CreateEventTableViewController *createEventTVC;
+@property (weak, nonatomic) IBOutlet UIButton *createEventButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -46,9 +48,12 @@ extern DDLogLevel ddLogLevel;
         [array addObject:volonteerRoleWithCount];
     }];
     event.volonteerRoles = array;
-    
+    self.createEventButton.enabled = NO;
+    [self.activityIndicator startAnimating];
     DDLogDebug(@"Save event: %@", event);
     [event saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        [self.activityIndicator stopAnimating];
+        self.createEventButton.enabled = YES;
         if(succeeded)
         {
             //[self performSegueWithIdentifier:@"" sender:self];
