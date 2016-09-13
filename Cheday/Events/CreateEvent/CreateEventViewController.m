@@ -40,6 +40,13 @@ extern DDLogLevel ddLogLevel;
     Event *event = [Event new];
     event.owner = [User currentUser];
     event.category = self.createEventTVC.selectedCategories.anyObject;
+    if(event.category == nil)
+    {
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Не выбрано ни одной категории", nil)
+                                        fromViewController:self];
+    }
+    
     NSMutableArray *array = [NSMutableArray new];
     [self.createEventTVC.selectedVolonteerRoles enumerateObjectsUsingBlock:^(VolonteerRole *  _Nonnull obj, BOOL * _Nonnull stop) {
         VolonteerRoleWithCount *volonteerRoleWithCount = [VolonteerRoleWithCount new];
@@ -48,6 +55,7 @@ extern DDLogLevel ddLogLevel;
         [array addObject:volonteerRoleWithCount];
     }];
     event.volonteerRoles = array;
+    
     self.createEventButton.enabled = NO;
     [self.activityIndicator startAnimating];
     DDLogDebug(@"Save event: %@", event);
