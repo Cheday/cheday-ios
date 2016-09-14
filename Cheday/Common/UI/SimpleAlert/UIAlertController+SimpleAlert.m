@@ -21,7 +21,10 @@
                                                       handler:^(UIAlertAction * _Nonnull action) {
                                                           [weakAlertController dismissViewControllerAnimated:YES completion:nil];
                                                       }]];
-    [viewController presentViewController:alertController animated:YES completion:nil];
+    if(viewController.parentViewController || viewController.presentingViewController)
+    {
+        [viewController presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 @end

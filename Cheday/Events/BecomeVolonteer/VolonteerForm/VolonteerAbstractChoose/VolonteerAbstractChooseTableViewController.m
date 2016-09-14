@@ -13,6 +13,7 @@
 @interface VolonteerAbstractChooseTableViewController ()
 
 @property(nonatomic, strong) EqualityProxyFactory *equalityProxyFactory;
+@property(nonatomic, strong) PFQuery *currentQuery;
 
 -(IBAction)onRefresh:(id)sender;
 
@@ -75,23 +76,24 @@
 
 -(void)onRefresh:(id)sender
 {
-    PFQuery *query = [self query];
+    self.currentQuery = [self query];
     
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    self.currentQuery.cachePolicy = kPFCachePolicyCacheThenNetwork;
     __block int refreshingCount;
-    if(query.cachePolicy == kPFCachePolicyCacheThenNetwork)
+    if(self.currentQuery.cachePolicy == kPFCachePolicyCacheThenNetwork)
     {
         refreshingCount = 2;
     }else
     {
         refreshingCount = 1;
     }
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    __weak __typeof(self) weakSelf = self;
+    [self.currentQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         refreshingCount--;
         if(refreshingCount == 0)
         {
-            [self.refreshControl endRefreshing];
-            [self performSelector:@selector(setRefreshControl:)
+            [weakSelf.refreshControl endRefreshing];
+            [weakSelf performSelector:@selector(setRefreshControl:)
                        withObject:nil
                        afterDelay:0];
         }
@@ -103,10 +105,10 @@
             }
             [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
                                                        message:error.localizedDescription
-                                            fromViewController:self];
+                                            fromViewController:weakSelf];
         }else
         {
-            NSMutableArray *decoratedObjects = [[self.equalityProxyFactory proxyArrayForObjectsArray:objects] mutableCopy];
+            NSMutableArray *decoratedObjects = [[weakSelf.equalityProxyFactory proxyArrayForObjectsArray:objects] mutableCopy];
             //Заменяем пришедшие объекты, ранее выбранными.
             [self.equalityProxyFactory.equalityProxiesForSelectedObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
                 NSUInteger index = [decoratedObjects indexOfObject:obj];
@@ -120,7 +122,7 @@
                 }
             }];
             _objects = [decoratedObjects copy];
-            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
         }
         
         if(refreshingCount == 0)
@@ -128,6 +130,11 @@
             //Analytics will be here
         }
     }];
+}
+
+-(void)dealloc
+{
+    [self.currentQuery cancel];
 }
 
 #pragma mark - Table view data source
