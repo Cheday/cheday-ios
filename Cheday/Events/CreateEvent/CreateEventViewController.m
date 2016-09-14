@@ -45,6 +45,7 @@ extern DDLogLevel ddLogLevel;
         [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
                                                    message:NSLocalizedString(@"Не выбрано ни одной категории", nil)
                                         fromViewController:self];
+        return;
     }
     
     NSMutableArray *array = [NSMutableArray new];
