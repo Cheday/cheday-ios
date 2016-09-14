@@ -17,7 +17,7 @@
 extern DDLogLevel ddLogLevel;
 
 @interface CreateEventTableViewController ()
-<VolonteerChooseTableViewControllerDelegate>
+<VolonteerChooseTableViewControllerDelegate, UITextFieldDelegate>
 
 @property(nonatomic, weak) CreateEventChooseCategoryTableViewController *chooseCategoryTVC;
 @property(nonatomic, weak) CreateEventChooseVolonteerRolesTableViewController *chooseVolonteerRolesTVC;
@@ -28,7 +28,16 @@ extern DDLogLevel ddLogLevel;
 
 @implementation CreateEventTableViewController
 
-#pragma mark - Navigation
+-(IBAction) eventNameTextDidChanged:(UITextField*)sender
+{
+    self.eventTitle = sender.text;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
 
 -(NSMutableSet *)selectedCategories
 {

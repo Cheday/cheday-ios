@@ -39,6 +39,15 @@ extern DDLogLevel ddLogLevel;
     
     Event *event = [Event new];
     event.owner = [User currentUser];
+    event.title = self.createEventTVC.eventTitle;
+    if(!event.title.length)
+    {
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Событие должно иметь название", nil)
+                                        fromViewController:self];
+        return;
+    }
+    
     event.category = self.createEventTVC.selectedCategories.anyObject;
     if(event.category == nil)
     {
