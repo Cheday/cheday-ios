@@ -9,11 +9,14 @@
 #import "VolonteerAbstractChooseTableViewController.h"
 #import "UIAlertController+SimpleAlert.h"
 #import "EqualityProxyFactory.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+extern DDLogLevel ddLogLevel;
 
 @interface VolonteerAbstractChooseTableViewController ()
 
 @property(nonatomic, strong) EqualityProxyFactory *equalityProxyFactory;
 @property(nonatomic, strong) PFQuery *currentQuery;
+@property(nonatomic, strong) NSArray *objects;
 
 -(IBAction)onRefresh:(id)sender;
 
@@ -110,7 +113,7 @@
         {
             NSMutableArray *decoratedObjects = [[weakSelf.equalityProxyFactory proxyArrayForObjectsArray:objects] mutableCopy];
             //Заменяем пришедшие объекты, ранее выбранными.
-            [self.equalityProxyFactory.equalityProxiesForSelectedObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
+            [weakSelf.equalityProxyFactory.equalityProxiesForSelectedObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
                 NSUInteger index = [decoratedObjects indexOfObject:obj];
                 if(index != NSNotFound)
                 {
@@ -118,10 +121,11 @@
                                                 withObject:obj];
                 }else
                 {
+                    DDLogWarn(@"Selected objects contain object which not recieved from server");
                     //TODO: Подумать, что делать если выбранный объект больше не приходит с сервера
                 }
             }];
-            _objects = [decoratedObjects copy];
+            weakSelf.objects = [decoratedObjects copy];
             [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
         }
         
