@@ -23,6 +23,7 @@ extern DDLogLevel ddLogLevel;
 @property(nonatomic, weak) CreateEventChooseVolonteerRolesTableViewController *chooseVolonteerRolesTVC;
 
 @property (weak, nonatomic) IBOutlet CreateEventTableViewCell *categoryCell;
+@property (weak, nonatomic) IBOutlet CreateEventTableViewCell *volonteersCell;
 
 @end
 
@@ -83,6 +84,7 @@ extern DDLogLevel ddLogLevel;
     }else if(viewController == self.chooseVolonteerRolesTVC)
     {
         [self.selectedVolonteerRoles addObject:object];
+        [self setVolonteerFilledStringForCell];
     }else{
         NSAssert(NO, @"Unhandled delegate message sent from %@", viewController);
     }
@@ -93,6 +95,7 @@ extern DDLogLevel ddLogLevel;
     if(viewController == self.chooseVolonteerRolesTVC)
     {
         [self.selectedVolonteerRoles removeObject:object];
+        [self setVolonteerFilledStringForCell];
     }else
     {
         NSAssert(NO, @"Unhandled delegate message sent from %@", viewController);
@@ -103,6 +106,17 @@ extern DDLogLevel ddLogLevel;
 {
     EventCategory *eventCategory = self.selectedCategories.anyObject;
     self.categoryCell.filledString = eventCategory.name;
+}
+
+-(void) setVolonteerFilledStringForCell
+{
+    if(self.selectedVolonteerRoles.count)
+    {
+        self.volonteersCell.filledString = [NSString stringWithFormat:@"%@ - %lu",NSLocalizedString(@"Волонтеры", nil), (unsigned long)self.selectedVolonteerRoles.count];
+    }else
+    {
+        self.volonteersCell.filledString = nil;
+    }
 }
 
 @end
