@@ -9,6 +9,7 @@
 #import "CreateEventTableViewController.h"
 #import "CreateEventChooseCategoryTableViewController.h"
 #import "CreateEventTableViewCell.h"
+#import "CreateEventDateTableViewCell.h"
 #import "EventCategory.h"
 
 #import "CreateEventChooseVolonteerRolesTableViewController.h"
@@ -19,11 +20,19 @@ extern DDLogLevel ddLogLevel;
 @interface CreateEventTableViewController ()
 <VolonteerChooseTableViewControllerDelegate, UITextFieldDelegate>
 
-@property(nonatomic, weak) CreateEventChooseCategoryTableViewController *chooseCategoryTVC;
-@property(nonatomic, weak) CreateEventChooseVolonteerRolesTableViewController *chooseVolonteerRolesTVC;
-
 @property (weak, nonatomic) IBOutlet CreateEventTableViewCell *categoryCell;
+@property(nonatomic, weak) CreateEventChooseCategoryTableViewController *chooseCategoryTVC;
+
+@property (weak, nonatomic) IBOutlet CreateEventDateTableViewCell *startDateCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *startDatePickerCell;
+@property (nonatomic) BOOL editingStartDate;
+
+@property (weak, nonatomic) IBOutlet CreateEventDateTableViewCell *endDateCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *endDatePickerCell;
+@property (nonatomic) BOOL editingEndDate;
+
 @property (weak, nonatomic) IBOutlet CreateEventTableViewCell *volonteersCell;
+@property(nonatomic, weak) CreateEventChooseVolonteerRolesTableViewController *chooseVolonteerRolesTVC;
 
 @end
 
@@ -117,6 +126,56 @@ extern DDLogLevel ddLogLevel;
     {
         self.volonteersCell.filledString = nil;
     }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 3) //Start date picker
+    {
+        if(self.editingStartDate)
+            return 217;
+        else
+            return 0;
+    }
+    if(indexPath.row == 5) //End date picker
+    {
+        if(self.editingEndDate)
+            return 217;
+        else
+            return 0;
+    }
+    return 44;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView beginUpdates];
+    if(indexPath.row == 2) //Start date
+    {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        self.editingStartDate = !self.editingStartDate;
+        self.editingEndDate = NO;
+    }else if(indexPath.row == 4) //End date
+    {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        self.editingStartDate = NO;
+        self.editingEndDate = !self.editingEndDate;
+    }
+    [tableView endUpdates];
+}
+
+- (IBAction)startDateValueChanged:(UIDatePicker *)sender {
+    self.startDateCell.filledString = [NSDateFormatter localizedStringFromDate:sender.date
+                                                                     dateStyle:NSDateFormatterMediumStyle
+                                                                     timeStyle:NSDateFormatterShortStyle];
+    self.startDate = sender.date;
+}
+
+- (IBAction)endDateValueChanged:(UIDatePicker *)sender {
+    self.endDateCell.filledString = [NSDateFormatter localizedStringFromDate:sender.date
+                                                                     dateStyle:NSDateFormatterMediumStyle
+                                                                     timeStyle:NSDateFormatterShortStyle];
+    self.endDate = sender.date;
 }
 
 @end

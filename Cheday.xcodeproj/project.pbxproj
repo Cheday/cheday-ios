@@ -15,6 +15,7 @@
 		4F2353B41D76EB360047E4A9 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B31D76EB360047E4A9 /* Event.m */; };
 		4F2F33811D47436200F1F003 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F33801D47436200F1F003 /* User.m */; };
 		4F47ED661D51E83C00BE03C1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */; };
+		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
 		4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */; };
 		4F7FF8FB1D6AFB9A0057B60B /* CommonColorsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */; };
@@ -90,6 +91,8 @@
 		4F2F337F1D47436200F1F003 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Common/DataModel/User.h; sourceTree = "<group>"; };
 		4F2F33801D47436200F1F003 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Common/DataModel/User.m; sourceTree = "<group>"; };
 		4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventDateTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.h; sourceTree = "<group>"; };
+		4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventDateTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.m; sourceTree = "<group>"; };
 		4F796C931D4B66B7009D0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
 		4F7FF8F41D6AE1ED0057B60B /* WeekDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekDay.h; path = Common/DataModel/WeekDay.h; sourceTree = "<group>"; };
 		4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekDay.m; path = Common/DataModel/WeekDay.m; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 				4FBC003D1D741ADA00BF32D4 /* CreateEventTableViewController.m */,
 				4FC80B371D759502002C46D2 /* CreateEventTableViewCell.h */,
 				4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */,
+				4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */,
+				4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */,
 			);
 			name = CreateEventTable;
 			sourceTree = "<group>";
@@ -762,6 +767,7 @@
 				4F86B1FB1D54A285004A1DAB /* ProfileUpdaterFromFacebook.m in Sources */,
 				4FE194931D420F7E00708B49 /* RoundedButton.m in Sources */,
 				4FBC00651D7433C900BF32D4 /* EventCategory+Selecting.m in Sources */,
+				4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,6 +56,23 @@ extern DDLogLevel ddLogLevel;
                                         fromViewController:self];
         return;
     }
+    event.startDate = self.createEventTVC.startDate;
+    if(event.startDate == nil)
+    {
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Не выбрана дата начала", nil)
+                                        fromViewController:self];
+        return;
+    }
+    
+    event.endDate = self.createEventTVC.endDate;
+    if(event.endDate == nil)
+    {
+        [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
+                                                   message:NSLocalizedString(@"Не выбрана дата окончания", nil)
+                                        fromViewController:self];
+        return;
+    }
     
     NSMutableArray *array = [NSMutableArray new];
     [self.createEventTVC.selectedVolonteerRoles enumerateObjectsUsingBlock:^(VolonteerRole *  _Nonnull obj, BOOL * _Nonnull stop) {
