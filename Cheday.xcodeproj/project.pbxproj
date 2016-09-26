@@ -66,6 +66,7 @@
 		4FE1EE5D1D48C25D009170FB /* UIAlertController+SimpleAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1EE5C1D48C25D009170FB /* UIAlertController+SimpleAlert.m */; };
 		4FEF49E51D4F4EC2008277F3 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEF49E41D4F4EC2008277F3 /* ParseFacebookUtilsV4.framework */; };
 		4FEF49E91D4F5787008277F3 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEF49E81D4F5787008277F3 /* ParseTwitterUtils.framework */; };
+		4FF5DA801D9930D2008AF6C0 /* CreateEventTable.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5DA7F1D9930D2008AF6C0 /* CreateEventTable.xcassets */; };
 		4FF956B81D40D9B900FB0242 /* AuthorizationAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */; };
 		4FFB0AA31D3F632400D20B8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB0AA21D3F632400D20B8A /* main.m */; };
 		4FFB0AA61D3F632400D20B8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB0AA51D3F632400D20B8A /* AppDelegate.m */; };
@@ -181,6 +182,7 @@
 		4FE1EE5C1D48C25D009170FB /* UIAlertController+SimpleAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+SimpleAlert.m"; path = "Common/UI/SimpleAlert/UIAlertController+SimpleAlert.m"; sourceTree = "<group>"; };
 		4FEF49E41D4F4EC2008277F3 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		4FEF49E81D4F5787008277F3 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = Carthage/Build/iOS/ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		4FF5DA7F1D9930D2008AF6C0 /* CreateEventTable.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CreateEventTable.xcassets; path = Events/CreateEvent/CreateEventTable/CreateEventTable.xcassets; sourceTree = "<group>"; };
 		4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AuthorizationAssets.xcassets; path = Authorization/AuthorizationAssets.xcassets; sourceTree = "<group>"; };
 		4FFB0A9E1D3F632400D20B8A /* Cheday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB0AA21D3F632400D20B8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */,
 				4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */,
 				4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */,
+				4FF5DA7F1D9930D2008AF6C0 /* CreateEventTable.xcassets */,
 			);
 			name = CreateEventTable;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				4FB1CC061D6EF705002879CD /* CreateEvent.storyboard in Resources */,
 				4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */,
 				4FF956B81D40D9B900FB0242 /* AuthorizationAssets.xcassets in Resources */,
+				4FF5DA801D9930D2008AF6C0 /* CreateEventTable.xcassets in Resources */,
 				4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */,
 				4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */,
 				4FBC00611D7433C900BF32D4 /* BecomeVolonteer.xcassets in Resources */,

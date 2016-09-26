@@ -49,6 +49,9 @@ extern DDLogLevel ddLogLevel;
     return NO;
 }
 
+- (IBAction)addImageButtonTouchUpInside:(UIButton *)sender {
+}
+
 -(NSMutableSet *)selectedCategories
 {
     if(_selectedCategories == nil)

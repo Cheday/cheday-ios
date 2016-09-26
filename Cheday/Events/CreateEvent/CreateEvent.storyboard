@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3A4-Dx-FfS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3A4-Dx-FfS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="czC-Lw-O7a" id="5iM-kq-gTj">
-                                            <frame key="frameInset" width="320" height="43.5"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название мероприятия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-gv-Tnm">
@@ -110,13 +110,21 @@
                                                         <outlet property="delegate" destination="0Cb-Q1-Hn8" id="gDL-6f-Lg8"/>
                                                     </connections>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7s-B1-5wP"/>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7s-B1-5wP">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="V7s-B1-5wP" secondAttribute="height" multiplier="1:1" id="L3r-ck-xPd"/>
+                                                    </constraints>
+                                                    <state key="normal" image="addImage"/>
+                                                    <connections>
+                                                        <action selector="addImageButtonTouchUpInside:" destination="0Cb-Q1-Hn8" eventType="touchUpInside" id="25R-Qn-5sS"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Lac-gv-Tnm" secondAttribute="bottom" id="7fr-Bx-Fcd"/>
                                                 <constraint firstItem="Lac-gv-Tnm" firstAttribute="leading" secondItem="5iM-kq-gTj" secondAttribute="leadingMargin" id="8PQ-t8-tB4"/>
-                                                <constraint firstItem="V7s-B1-5wP" firstAttribute="trailing" secondItem="5iM-kq-gTj" secondAttribute="trailingMargin" id="93w-ux-Agx"/>
                                                 <constraint firstAttribute="bottom" secondItem="V7s-B1-5wP" secondAttribute="bottom" id="Buf-fv-HBl"/>
+                                                <constraint firstAttribute="trailing" secondItem="V7s-B1-5wP" secondAttribute="trailing" constant="4" id="EXI-q4-NmU"/>
                                                 <constraint firstItem="Lac-gv-Tnm" firstAttribute="top" secondItem="5iM-kq-gTj" secondAttribute="top" id="O75-wL-LeY"/>
                                                 <constraint firstItem="V7s-B1-5wP" firstAttribute="leading" secondItem="Lac-gv-Tnm" secondAttribute="trailing" constant="8" id="aFt-DT-UFX"/>
                                                 <constraint firstItem="V7s-B1-5wP" firstAttribute="top" secondItem="5iM-kq-gTj" secondAttribute="top" id="c9e-IF-CZ2"/>
@@ -471,6 +479,7 @@
         <image name="VolonteerCategoriesIcon" width="14" height="14"/>
         <image name="VolonteerDatesIcon" width="14" height="14"/>
         <image name="VolonteerRolesIcon" width="16" height="15"/>
+        <image name="addImage" width="24" height="24"/>
         <image name="button_disabled_background" width="1" height="1"/>
         <image name="button_highlighted_background" width="1" height="1"/>
         <image name="button_normal_background" width="1" height="1"/>
