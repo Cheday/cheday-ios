@@ -13,6 +13,7 @@
 		4F2353AE1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */; };
 		4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B01D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m */; };
 		4F2353B41D76EB360047E4A9 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B31D76EB360047E4A9 /* Event.m */; };
+		4F2D4BF71DA3EADD00E984F1 /* SimpleAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2D4BF61DA3EADD00E984F1 /* SimpleAlertController.m */; };
 		4F2F33811D47436200F1F003 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F33801D47436200F1F003 /* User.m */; };
 		4F47ED661D51E83C00BE03C1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */; };
 		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
@@ -89,6 +90,8 @@
 		4F2353B01D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventChooseVolonteerRolesTableViewCell.m; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewCell.m; sourceTree = "<group>"; };
 		4F2353B21D76EB360047E4A9 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = Common/DataModel/Event.h; sourceTree = "<group>"; };
 		4F2353B31D76EB360047E4A9 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = Common/DataModel/Event.m; sourceTree = "<group>"; };
+		4F2D4BF51DA3EADD00E984F1 /* SimpleAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleAlertController.h; path = Common/UI/SimpleAlertController/SimpleAlertController.h; sourceTree = "<group>"; };
+		4F2D4BF61DA3EADD00E984F1 /* SimpleAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleAlertController.m; path = Common/UI/SimpleAlertController/SimpleAlertController.m; sourceTree = "<group>"; };
 		4F2F337F1D47436200F1F003 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Common/DataModel/User.h; sourceTree = "<group>"; };
 		4F2F33801D47436200F1F003 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Common/DataModel/User.m; sourceTree = "<group>"; };
 		4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
@@ -230,6 +233,15 @@
 				4F13DA3C1D7971DA00C272D3 /* VolonteerRole+Counting.m */,
 			);
 			name = CreateEventChooseVolonteerRoles;
+			sourceTree = "<group>";
+		};
+		4F2D4BF41DA3EAAB00E984F1 /* SimpleAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				4F2D4BF51DA3EADD00E984F1 /* SimpleAlertController.h */,
+				4F2D4BF61DA3EADD00E984F1 /* SimpleAlertController.m */,
+			);
+			name = SimpleAlertController;
 			sourceTree = "<group>";
 		};
 		4F2F337E1D47433000F1F003 /* DataModel */ = {
@@ -490,6 +502,7 @@
 		4FE1948F1D420AED00708B49 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4F2D4BF41DA3EAAB00E984F1 /* SimpleAlertController */,
 				4FE1EE5A1D48C18E009170FB /* SimpleAlert */,
 				4FE194941D420F8600708B49 /* RoundedButton */,
 				4FE194901D420AF400708B49 /* RoundedTextField */,
@@ -757,6 +770,7 @@
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
 				4FBC00621D7433C900BF32D4 /* BecomeVolonteerViewController.m in Sources */,
+				4F2D4BF71DA3EADD00E984F1 /* SimpleAlertController.m in Sources */,
 				4FBC00681D7433C900BF32D4 /* WeekDay+Selecting.m in Sources */,
 				4FB88D0A1D61F4A700CDB4C8 /* EventCategory.m in Sources */,
 				4FFB0AA31D3F632400D20B8A /* main.m in Sources */,

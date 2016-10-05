@@ -46,8 +46,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="XIC-aK-GB7" firstAttribute="top" secondItem="daZ-bH-qHI" secondAttribute="top" id="CkY-OT-AKR"/>
                                     <constraint firstAttribute="bottom" secondItem="XIC-aK-GB7" secondAttribute="bottom" id="XCy-cS-Hub"/>
+                                    <constraint firstItem="XIC-aK-GB7" firstAttribute="top" secondItem="daZ-bH-qHI" secondAttribute="top" id="gGC-4X-5wQ"/>
                                     <constraint firstItem="XIC-aK-GB7" firstAttribute="leading" secondItem="daZ-bH-qHI" secondAttribute="leading" id="il0-aI-LZV"/>
                                     <constraint firstAttribute="trailing" secondItem="XIC-aK-GB7" secondAttribute="trailing" id="uln-y0-uwJ"/>
                                 </constraints>
@@ -81,7 +81,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWR-Ab-kg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BBi-JU-YnL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="631" y="329"/>
+            <point key="canvasLocation" x="629.60000000000002" y="328.78560719640183"/>
         </scene>
         <!--Create Event Table View Controller-->
         <scene sceneID="HW7-mT-QbP">
@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="czC-Lw-O7a" id="5iM-kq-gTj">
-                                            <frame key="frameInset" width="320" height="43"/>
+                                            <frame key="frameInset" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название мероприятия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-gv-Tnm">
@@ -344,14 +344,41 @@
                         <outlet property="categoryCell" destination="ESM-Ye-D7v" id="BMh-NZ-9oz"/>
                         <outlet property="endDateCell" destination="1QM-so-xKa" id="fte-5r-scT"/>
                         <outlet property="endDatePickerCell" destination="p5J-eV-hcK" id="VZx-K5-H3g"/>
+                        <outlet property="eventImageContainerView" destination="ah3-LK-Mke" id="rbE-pX-aSJ"/>
+                        <outlet property="eventImageView" destination="gVp-MU-eCS" id="ZD0-xm-VRi"/>
                         <outlet property="startDateCell" destination="fwb-Np-hpq" id="NcR-Tw-yZy"/>
                         <outlet property="startDatePickerCell" destination="7a9-ir-erO" id="oCm-YJ-Zko"/>
                         <outlet property="volonteersCell" destination="sic-IM-4Kp" id="MTR-zP-DNT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azd-i9-fO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="ah3-LK-Mke">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVp-MU-eCS"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcM-BZ-wl4">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <state key="normal" title="Удалить изображение">
+                                <color key="titleColor" white="0.87" alpha="0.87" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="deleteImageButtonTouchUpInside:" destination="0Cb-Q1-Hn8" eventType="touchUpInside" id="onO-PB-s2f"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="QcM-BZ-wl4" firstAttribute="centerX" secondItem="ah3-LK-Mke" secondAttribute="centerX" id="5dy-wR-hgB"/>
+                        <constraint firstItem="gVp-MU-eCS" firstAttribute="leading" secondItem="ah3-LK-Mke" secondAttribute="leading" id="YWU-vW-BZe"/>
+                        <constraint firstItem="QcM-BZ-wl4" firstAttribute="centerY" secondItem="ah3-LK-Mke" secondAttribute="centerY" id="evj-ri-wWZ"/>
+                        <constraint firstItem="gVp-MU-eCS" firstAttribute="top" secondItem="ah3-LK-Mke" secondAttribute="top" id="fVg-Eb-pvX"/>
+                        <constraint firstAttribute="trailing" secondItem="gVp-MU-eCS" secondAttribute="trailing" id="i3y-5C-ffa"/>
+                        <constraint firstAttribute="bottom" secondItem="gVp-MU-eCS" secondAttribute="bottom" id="ogV-No-Nkt"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="1402.5" y="328.52112676056339"/>
+            <point key="canvasLocation" x="1401.5999999999999" y="328.33583208395805"/>
         </scene>
         <!--Create Event Choose Volonteer Roles Table View Controller-->
         <scene sceneID="Qon-hY-8JV">
@@ -423,7 +450,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreateEventChooseCategoryTableViewCell" textLabel="qYb-70-w1C" style="IBUITableViewCellStyleDefault" id="cHG-yz-2nf">
-                                <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="56" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cHG-yz-2nf" id="4cc-0r-own">
                                     <frame key="frameInset" width="320" height="43.5"/>
