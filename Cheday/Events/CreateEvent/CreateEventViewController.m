@@ -40,6 +40,8 @@ extern DDLogLevel ddLogLevel;
     Event *event = [Event new];
     event.owner = [User currentUser];
     event.title = self.createEventTVC.eventTitle;
+    event.image = [PFFile fileWithData:UIImageJPEGRepresentation(self.createEventTVC.eventImage,0.95)];
+    
     if(!event.title.length)
     {
         [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)

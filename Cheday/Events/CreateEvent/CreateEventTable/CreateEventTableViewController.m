@@ -96,7 +96,9 @@ extern DDLogLevel ddLogLevel;
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
-    self.eventImageView.image = info[UIImagePickerControllerOriginalImage];
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    self.eventImageView.image = image;
+    self.eventImage = image;
     [self setEventImageViewSize];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -108,6 +110,7 @@ extern DDLogLevel ddLogLevel;
 
 - (IBAction)deleteImageButtonTouchUpInside:(UIButton *)sender
 {
+    self.eventImage = nil;
     self.eventImageView.image = nil;
     [self setEventImageViewSize];
 }

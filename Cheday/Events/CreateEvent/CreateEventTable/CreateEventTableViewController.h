@@ -10,6 +10,7 @@
 
 @interface CreateEventTableViewController : UITableViewController
 
+@property(nonatomic, strong) UIImage *eventImage;
 @property(nonatomic, strong) NSString *eventTitle;
 @property(nonatomic, strong) NSMutableSet *selectedCategories;
 @property(nonatomic, strong) NSDate *startDate;
