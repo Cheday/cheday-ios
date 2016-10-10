@@ -18,6 +18,7 @@
 		4F47ED661D51E83C00BE03C1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */; };
 		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
+		4F7FEDDC1DA7876600F086B1 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */; };
 		4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */; };
 		4F7FF8FB1D6AFB9A0057B60B /* CommonColorsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */; };
 		4F86B1EC1D54850E004A1DAB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F86B1EB1D54850E004A1DAB /* FBSDKCoreKit.framework */; };
@@ -98,6 +99,8 @@
 		4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventDateTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.h; sourceTree = "<group>"; };
 		4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventDateTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.m; sourceTree = "<group>"; };
 		4F796C931D4B66B7009D0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
+		4F7FEDDA1DA7876600F086B1 /* ImageResizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageResizer.h; path = Common/ImageResizer/ImageResizer.h; sourceTree = "<group>"; };
+		4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageResizer.m; path = Common/ImageResizer/ImageResizer.m; sourceTree = "<group>"; };
 		4F7FF8F41D6AE1ED0057B60B /* WeekDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekDay.h; path = Common/DataModel/WeekDay.h; sourceTree = "<group>"; };
 		4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekDay.m; path = Common/DataModel/WeekDay.m; sourceTree = "<group>"; };
 		4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CommonColorsImages.xcassets; path = Common/UI/CommonColorsImages.xcassets; sourceTree = "<group>"; };
@@ -284,6 +287,15 @@
 				4FF956B71D40D9B900FB0242 /* AuthorizationAssets.xcassets */,
 			);
 			name = Authorization;
+			sourceTree = "<group>";
+		};
+		4F7FEDD91DA7872D00F086B1 /* ImageResizer */ = {
+			isa = PBXGroup;
+			children = (
+				4F7FEDDA1DA7876600F086B1 /* ImageResizer.h */,
+				4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */,
+			);
+			name = ImageResizer;
 			sourceTree = "<group>";
 		};
 		4F86B1F31D54A1CA004A1DAB /* ProfileUpdaters */ = {
@@ -493,6 +505,7 @@
 		4FE1948B1D420A9700708B49 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4F7FEDD91DA7872D00F086B1 /* ImageResizer */,
 				4F2F337E1D47433000F1F003 /* DataModel */,
 				4FE1948F1D420AED00708B49 /* UI */,
 			);
@@ -742,6 +755,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7FEDDC1DA7876600F086B1 /* ImageResizer.m in Sources */,
 				4FE1948A1D42029200708B49 /* LoginView.m in Sources */,
 				4FBC00631D7433C900BF32D4 /* VolonteerAbstractChooseTableViewController.m in Sources */,
 				4FBC006A1D7433C900BF32D4 /* VolonteerFormTableViewController.m in Sources */,

@@ -64,8 +64,8 @@
     }]];
 #endif
     
-    [PFTwitterUtils initializeWithConsumerKey:@"qgZqM8mTgxrWvqvsQp0d5SjcL"
-                               consumerSecret:@"k2RUY84LVxzd1Dy2oXDOoyxiua8UTZvIZqAA2si0H4jHdwJq5q"];
+    [PFTwitterUtils initializeWithConsumerKey:@"peDNKySK2KhzdCzQwQp2K02i5"
+                               consumerSecret:@"fYyaYYNclV4SZzmsT9T86eh9FcpbU8mNc8fp6QiIpsPpetjFA6"];
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     
     [IQKeyboardManager sharedManager].enable = NO;
