@@ -103,7 +103,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название мероприятия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-gv-Tnm">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="eventNameTextDidChanged:" destination="0Cb-Q1-Hn8" eventType="editingChanged" id="Wyd-ok-VHa"/>
@@ -322,12 +322,31 @@
                                             <segue destination="UPi-ZJ-eAh" kind="show" identifier="CreateEventShowChooseVolonteerRoles" id="AWR-YX-67f"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1Q4-BS-v2U">
-                                        <rect key="frame" x="0.0" y="689" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="1Q4-BS-v2U">
+                                        <rect key="frame" x="0.0" y="689" width="320" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Q4-BS-v2U" id="aFb-HG-zAM">
-                                            <frame key="frameInset" width="320" height="43.5"/>
+                                            <frame key="frameInset" width="320" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="93Z-em-z4n" customClass="CSNPlaceholderTextView">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Подробнее"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0Cb-Q1-Hn8" id="Nuh-MU-PTS"/>
+                                                    </connections>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="93Z-em-z4n" secondAttribute="bottom" id="6JW-Sx-PiN"/>
+                                                <constraint firstItem="93Z-em-z4n" firstAttribute="leading" secondItem="aFb-HG-zAM" secondAttribute="leadingMargin" id="Hdk-vC-X5h"/>
+                                                <constraint firstItem="93Z-em-z4n" firstAttribute="trailing" secondItem="aFb-HG-zAM" secondAttribute="trailingMargin" id="Wom-mX-XHa"/>
+                                                <constraint firstItem="93Z-em-z4n" firstAttribute="top" secondItem="aFb-HG-zAM" secondAttribute="top" id="sJn-4c-s1L"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

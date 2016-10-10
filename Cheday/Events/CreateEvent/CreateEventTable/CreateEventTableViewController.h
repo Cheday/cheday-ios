@@ -16,5 +16,6 @@
 @property(nonatomic, strong) NSDate *startDate;
 @property(nonatomic, strong) NSDate *endDate;
 @property(nonatomic, strong) NSMutableSet *selectedVolonteerRoles;
+@property(nonatomic, strong) NSString *eventDetailsString;
 
 @end

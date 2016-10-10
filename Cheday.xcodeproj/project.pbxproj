@@ -50,6 +50,7 @@
 		4FBC00701D74382800BF32D4 /* CreateEventChooseCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC006F1D74382800BF32D4 /* CreateEventChooseCategoryTableViewController.m */; };
 		4FBF89101D3F894300C371A4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF890E1D3F894300C371A4 /* Bolts.framework */; };
 		4FBF89111D3F894300C371A4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF890F1D3F894300C371A4 /* Parse.framework */; };
+		4FC112501DABAEB0009189D4 /* CSNPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC1124F1DABAEB0009189D4 /* CSNPlaceholderTextView.m */; };
 		4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4701D4A0BD300854283 /* Profile.storyboard */; };
 		4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4751D4A0E0600854283 /* Profile.xcassets */; };
 		4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F47A1D4A10D900854283 /* RoundImageView.m */; };
@@ -156,6 +157,8 @@
 		4FBC006F1D74382800BF32D4 /* CreateEventChooseCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventChooseCategoryTableViewController.m; path = Events/CreateEvent/CreateEventTable/ChooseCategory/CreateEventChooseCategoryTableViewController.m; sourceTree = "<group>"; };
 		4FBF890E1D3F894300C371A4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		4FBF890F1D3F894300C371A4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
+		4FC1124E1DABAEB0009189D4 /* CSNPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNPlaceholderTextView.h; sourceTree = "<group>"; };
+		4FC1124F1DABAEB0009189D4 /* CSNPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNPlaceholderTextView.m; sourceTree = "<group>"; };
 		4FC4F4701D4A0BD300854283 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/Profile.storyboard; sourceTree = "<group>"; };
 		4FC4F4751D4A0E0600854283 /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Profile.xcassets; path = Profile/Profile.xcassets; sourceTree = "<group>"; };
 		4FC4F4791D4A10D900854283 /* RoundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundImageView.h; path = Profile/RoundImageView/RoundImageView.h; sourceTree = "<group>"; };
@@ -446,6 +449,16 @@
 			name = CreateEventChooseCategory;
 			sourceTree = "<group>";
 		};
+		4FC1124D1DABAEB0009189D4 /* CSNPlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				4FC1124E1DABAEB0009189D4 /* CSNPlaceholderTextView.h */,
+				4FC1124F1DABAEB0009189D4 /* CSNPlaceholderTextView.m */,
+			);
+			name = CSNPlaceholderTextView;
+			path = Common/UI/CSNPlaceholderTextView;
+			sourceTree = "<group>";
+		};
 		4FC4F4771D4A106200854283 /* RoundImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +528,7 @@
 		4FE1948F1D420AED00708B49 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4FC1124D1DABAEB0009189D4 /* CSNPlaceholderTextView */,
 				4F2D4BF41DA3EAAB00E984F1 /* SimpleAlertController */,
 				4FE1EE5A1D48C18E009170FB /* SimpleAlert */,
 				4FE194941D420F8600708B49 /* RoundedButton */,
@@ -783,6 +797,7 @@
 				4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */,
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
+				4FC112501DABAEB0009189D4 /* CSNPlaceholderTextView.m in Sources */,
 				4FBC00621D7433C900BF32D4 /* BecomeVolonteerViewController.m in Sources */,
 				4F2D4BF71DA3EADD00E984F1 /* SimpleAlertController.m in Sources */,
 				4FBC00681D7433C900BF32D4 /* WeekDay+Selecting.m in Sources */,

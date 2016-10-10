@@ -22,7 +22,7 @@ extern DDLogLevel ddLogLevel;
 #import "SimpleAlertController.h"
 
 @interface CreateEventTableViewController ()
-<VolonteerChooseTableViewControllerDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+<VolonteerChooseTableViewControllerDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIView *eventImageContainerView;
@@ -210,6 +210,8 @@ extern DDLogLevel ddLogLevel;
         else
             return 0;
     }
+    if(indexPath.row == 7)
+        return 160;
     return 44;
 }
 
@@ -242,6 +244,11 @@ extern DDLogLevel ddLogLevel;
                                                                      dateStyle:NSDateFormatterMediumStyle
                                                                      timeStyle:NSDateFormatterShortStyle];
     self.endDate = sender.date;
+}
+
+-(void)textViewDidChange:(UITextView *)textView
+{
+    self.eventDetailsString = textView.text;
 }
 
 @end

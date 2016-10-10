@@ -90,6 +90,8 @@ extern DDLogLevel ddLogLevel;
     }];
     event.volonteerRoles = array;
     
+    event.details = self.createEventTVC.eventDetailsString;
+    
     self.createEventButton.enabled = NO;
     [self.activityIndicator startAnimating];
     DDLogDebug(@"Save event: %@", event);

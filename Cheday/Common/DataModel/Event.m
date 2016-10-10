@@ -10,7 +10,7 @@
 
 @implementation Event
 
-@dynamic owner, title, startDate, endDate, volonteerRoles, category, image;
+@dynamic owner, title, startDate, endDate, volonteerRoles, category, image, details;
 
 +(NSString *)parseClassName
 {

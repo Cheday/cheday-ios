@@ -20,5 +20,6 @@
 @property(nonatomic, strong) NSArray *volonteerRoles;
 @property(nonatomic, strong) EventCategory *category;
 @property(nonatomic, strong) PFFile *image;
+@property(nonatomic, strong) NSString *details;
 
 @end

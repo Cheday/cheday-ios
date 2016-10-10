@@ -1,6 +1,7 @@
 github "AFNetworking/AFNetworking" "3.1.0"
 github "Boris-Em/BEMCheckBox" "1.3.0"
 github "BoltsFramework/Bolts-ObjC" "1.8.4"
+github "griffin-stewie/CSNPlaceholderTextView" "0.0.4"
 github "CocoaLumberjack/CocoaLumberjack" "2.3.0"
 github "andrey-krukovskiy/IQKeyboardManager" "73df44b4599918cc8b5f55f0c7be538a4769016e"
 github "andrey-krukovskiy/Parse-SDK-iOS-OSX" "e3f4840b3fe5353114349eb9125b3e641662dad3"
