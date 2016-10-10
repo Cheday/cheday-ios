@@ -33,10 +33,12 @@ extern DDLogLevel ddLogLevel;
 
 @property (weak, nonatomic) IBOutlet CreateEventDateTableViewCell *startDateCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *startDatePickerCell;
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
 @property (nonatomic) BOOL editingStartDate;
 
 @property (weak, nonatomic) IBOutlet CreateEventDateTableViewCell *endDateCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *endDatePickerCell;
+@property (weak, nonatomic) IBOutlet UIDatePicker *endDatePicker;
 @property (nonatomic) BOOL editingEndDate;
 
 @property (weak, nonatomic) IBOutlet CreateEventTableViewCell *volonteersCell;
@@ -223,11 +225,13 @@ extern DDLogLevel ddLogLevel;
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         self.editingStartDate = !self.editingStartDate;
         self.editingEndDate = NO;
+        [self startDateValueChanged:self.startDatePicker];
     }else if(indexPath.row == 4) //End date
     {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         self.editingStartDate = NO;
         self.editingEndDate = !self.editingEndDate;
+        [self endDateValueChanged:self.endDatePicker];
     }
     [tableView endUpdates];
 }

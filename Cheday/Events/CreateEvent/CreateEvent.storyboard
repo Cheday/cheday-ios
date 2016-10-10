@@ -362,10 +362,12 @@
                     <connections>
                         <outlet property="categoryCell" destination="ESM-Ye-D7v" id="BMh-NZ-9oz"/>
                         <outlet property="endDateCell" destination="1QM-so-xKa" id="fte-5r-scT"/>
+                        <outlet property="endDatePicker" destination="Vi7-sO-C8z" id="cKz-Rx-7CN"/>
                         <outlet property="endDatePickerCell" destination="p5J-eV-hcK" id="VZx-K5-H3g"/>
                         <outlet property="eventImageContainerView" destination="ah3-LK-Mke" id="rbE-pX-aSJ"/>
                         <outlet property="eventImageView" destination="gVp-MU-eCS" id="ZD0-xm-VRi"/>
                         <outlet property="startDateCell" destination="fwb-Np-hpq" id="NcR-Tw-yZy"/>
+                        <outlet property="startDatePicker" destination="fEl-5n-JfY" id="g0k-Gd-PQZ"/>
                         <outlet property="startDatePickerCell" destination="7a9-ir-erO" id="oCm-YJ-Zko"/>
                         <outlet property="volonteersCell" destination="sic-IM-4Kp" id="MTR-zP-DNT"/>
                     </connections>
