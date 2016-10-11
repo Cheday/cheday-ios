@@ -70,6 +70,8 @@ extern DDLogLevel ddLogLevel;
     [self.tableView endUpdates];
 }
 
+#pragma mark - Title
+
 -(IBAction) eventNameTextDidChanged:(UITextField*)sender
 {
     self.eventTitle = sender.text;
@@ -80,6 +82,8 @@ extern DDLogLevel ddLogLevel;
     [textField resignFirstResponder];
     return NO;
 }
+
+#pragma mark - Image
 
 - (IBAction)addImageButtonTouchUpInside:(UIButton *)sender {
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
@@ -116,6 +120,8 @@ extern DDLogLevel ddLogLevel;
     self.eventImageView.image = nil;
     [self setEventImageViewSize];
 }
+
+#pragma mark - Categories and Volonteers
 
 -(NSMutableSet *)selectedCategories
 {
@@ -196,6 +202,8 @@ extern DDLogLevel ddLogLevel;
     }
 }
 
+#pragma mark - Dates
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row == 3) //Start date picker
@@ -249,6 +257,8 @@ extern DDLogLevel ddLogLevel;
                                                                      timeStyle:NSDateFormatterShortStyle];
     self.endDate = sender.date;
 }
+
+#pragma mark - Details
 
 -(void)textViewDidChange:(UITextView *)textView
 {

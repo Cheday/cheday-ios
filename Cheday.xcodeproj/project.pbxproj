@@ -54,6 +54,8 @@
 		4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4701D4A0BD300854283 /* Profile.storyboard */; };
 		4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4751D4A0E0600854283 /* Profile.xcassets */; };
 		4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F47A1D4A10D900854283 /* RoundImageView.m */; };
+		4FC773951DACE8D100DA9510 /* EventsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC773941DACE8D100DA9510 /* EventsCollectionViewController.m */; };
+		4FC773971DACF1C300DA9510 /* EventList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC773961DACF1C300DA9510 /* EventList.storyboard */; };
 		4FC80B391D759502002C46D2 /* CreateEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */; };
 		4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD28091D49FEC300C98C6A /* MainViewController.m */; };
 		4FDA5B7F1D6C52D3005709C1 /* EventCategoryEqualityProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA5B7E1D6C52D3005709C1 /* EventCategoryEqualityProxy.m */; };
@@ -163,6 +165,9 @@
 		4FC4F4751D4A0E0600854283 /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Profile.xcassets; path = Profile/Profile.xcassets; sourceTree = "<group>"; };
 		4FC4F4791D4A10D900854283 /* RoundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundImageView.h; path = Profile/RoundImageView/RoundImageView.h; sourceTree = "<group>"; };
 		4FC4F47A1D4A10D900854283 /* RoundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundImageView.m; path = Profile/RoundImageView/RoundImageView.m; sourceTree = "<group>"; };
+		4FC773931DACE8D100DA9510 /* EventsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsCollectionViewController.h; path = Events/EventList/EventsCollectionViewController/EventsCollectionViewController.h; sourceTree = "<group>"; };
+		4FC773941DACE8D100DA9510 /* EventsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsCollectionViewController.m; path = Events/EventList/EventsCollectionViewController/EventsCollectionViewController.m; sourceTree = "<group>"; };
+		4FC773961DACF1C300DA9510 /* EventList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventList.storyboard; path = Events/EventList/EventList.storyboard; sourceTree = "<group>"; };
 		4FC80B371D759502002C46D2 /* CreateEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventTableViewCell.h; sourceTree = "<group>"; };
 		4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventTableViewCell.m; sourceTree = "<group>"; };
 		4FCD28081D49FEC300C98C6A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = MainScreen/MainViewController.h; sourceTree = "<group>"; };
@@ -273,6 +278,7 @@
 		4F796C971D4B6809009D0E6C /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				4FC773921DACE38200DA9510 /* EventList */,
 				4FBC00411D7433C800BF32D4 /* BecomeVolonteer */,
 				4FB1CC011D6EF612002879CD /* CreateEvent */,
 			);
@@ -466,6 +472,16 @@
 				4FC4F47A1D4A10D900854283 /* RoundImageView.m */,
 			);
 			name = RoundImageView;
+			sourceTree = "<group>";
+		};
+		4FC773921DACE38200DA9510 /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				4FC773931DACE8D100DA9510 /* EventsCollectionViewController.h */,
+				4FC773941DACE8D100DA9510 /* EventsCollectionViewController.m */,
+				4FC773961DACF1C300DA9510 /* EventList.storyboard */,
+			);
+			name = EventList;
 			sourceTree = "<group>";
 		};
 		4FCD28071D49FE8000C98C6A /* MainScreen */ = {
@@ -715,6 +731,7 @@
 				4FB1CC061D6EF705002879CD /* CreateEvent.storyboard in Resources */,
 				4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */,
 				4FF956B81D40D9B900FB0242 /* AuthorizationAssets.xcassets in Resources */,
+				4FC773971DACF1C300DA9510 /* EventList.storyboard in Resources */,
 				4FF5DA801D9930D2008AF6C0 /* CreateEventTable.xcassets in Resources */,
 				4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */,
 				4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */,
@@ -806,6 +823,7 @@
 				4FE1949C1D422BBE00708B49 /* ForgotPasswordViewController.m in Sources */,
 				4FE194991D42138C00708B49 /* SignupViewController.m in Sources */,
 				4F86B1FC1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m in Sources */,
+				4FC773951DACE8D100DA9510 /* EventsCollectionViewController.m in Sources */,
 				4FDA5B821D6C5667005709C1 /* VolonteerRoleEqualityProxy.m in Sources */,
 				4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */,
 				4FC80B391D759502002C46D2 /* CreateEventTableViewCell.m in Sources */,
