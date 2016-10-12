@@ -93,7 +93,7 @@ extern DDLogLevel ddLogLevel;
     user.preferredEventCategories = self.volonteerFormViewController.selectedPreferredEventCategories.allObjects;
     user.preferredVolonteerRoles = self.volonteerFormViewController.selectedPreferredVolonteerRoles.allObjects;
     user.preferredVolonteerDays = self.volonteerFormViewController.selectedPreferredDates.allObjects;
-    if(user.wantToVolonteer)
+    if(user.wantToVolonteer.boolValue)
     {
         if(!user.preferredEventCategories.count)
         {
