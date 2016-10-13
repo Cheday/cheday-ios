@@ -22,7 +22,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCollectionViewCell" id="mAl-xf-8rm">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCollectionViewCell" id="mAl-xf-8rm" customClass="EventCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -58,6 +58,11 @@
                                     <constraint firstItem="4gO-Nt-AbV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SNv-zO-KB4" secondAttribute="bottom" constant="4" id="nDD-yU-Gdb"/>
                                     <constraint firstAttribute="trailing" secondItem="Q2Y-ta-7Ci" secondAttribute="trailing" id="y8f-6c-y9j"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="Q2Y-ta-7Ci" id="W1s-GL-j3o"/>
+                                    <outlet property="ownerNameLabel" destination="4gO-Nt-AbV" id="NJq-E6-6f1"/>
+                                    <outlet property="titleLabel" destination="SNv-zO-KB4" id="xSi-4W-DGT"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

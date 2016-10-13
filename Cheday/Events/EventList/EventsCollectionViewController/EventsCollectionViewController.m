@@ -7,6 +7,7 @@
 //
 
 #import "EventsCollectionViewController.h"
+#import "EventCollectionViewCell.h"
 
 @interface EventsCollectionViewController ()
 
