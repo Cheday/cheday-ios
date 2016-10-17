@@ -91,6 +91,7 @@
 		4F13F2E71DAFB3DB00350190 /* EventCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventCollectionViewCell.m; path = Events/EventList/EventsCollectionViewController/EventCollectionViewCell.m; sourceTree = "<group>"; };
 		4F15E3031D815B5400F520F8 /* VolonteerRoleWithCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolonteerRoleWithCount.h; path = Common/DataModel/VolonteerRoleWithCount.h; sourceTree = "<group>"; };
 		4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerRoleWithCount.m; path = Common/DataModel/VolonteerRoleWithCount.m; sourceTree = "<group>"; };
+		4F1914201DB4E2FF0098644E /* ContentRefreshing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentRefreshing.h; path = MainScreen/ContentRefreshing.h; sourceTree = "<group>"; };
 		4F2353AC1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventChooseVolonteerRolesTableViewController.h; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewController.h; sourceTree = "<group>"; };
 		4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventChooseVolonteerRolesTableViewController.m; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewController.m; sourceTree = "<group>"; };
 		4F2353AF1D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventChooseVolonteerRolesTableViewCell.h; path = Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/CreateEventChooseVolonteerRolesTableViewCell.h; sourceTree = "<group>"; };
@@ -495,6 +496,7 @@
 				4FCD28081D49FEC300C98C6A /* MainViewController.h */,
 				4FCD28091D49FEC300C98C6A /* MainViewController.m */,
 				4FFB0AAA1D3F632400D20B8A /* Main.storyboard */,
+				4F1914201DB4E2FF0098644E /* ContentRefreshing.h */,
 			);
 			name = MainScreen;
 			sourceTree = "<group>";

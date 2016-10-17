@@ -114,7 +114,7 @@
                                             </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="lol-Ir-xqF">
                                                 <connections>
-                                                    <segue destination="fOM-Jf-Z88" kind="embed" id="ggZ-Tg-b8u"/>
+                                                    <segue destination="fOM-Jf-Z88" kind="embed" identifier="MainEmbedNearEvents" id="ggZ-Tg-b8u"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>

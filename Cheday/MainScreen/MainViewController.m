@@ -11,6 +11,7 @@
 @import CocoaLumberjack;
 extern DDLogLevel ddLogLevel;
 #import "BecomeVolonteerViewController.h"
+#import "ContentRefreshing.h"
 
 #import "LoginViewController.h"
 
@@ -21,6 +22,8 @@ extern DDLogLevel ddLogLevel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UIButton *becomeVolonteerButton;
 @property (weak, nonatomic) IBOutlet UIButton *createEventButton;
+
+@property(weak, nonatomic) UIViewController<ContentRefreshing> *nearEventsViewController;
 
 @end
 
@@ -79,6 +82,9 @@ extern DDLogLevel ddLogLevel;
         vc = navController.viewControllers[0];
         vc.user = self.user;
          */
+    }else if([segue.identifier isEqualToString:@"MainEmbedNearEvents"])
+    {
+        self.nearEventsViewController = segue.destinationViewController;
     }
 }
 
@@ -89,7 +95,7 @@ extern DDLogLevel ddLogLevel;
 
 -(IBAction) unwindFromCreateEventViewController:(UIStoryboardSegue*)segue
 {
-    
+    [self.nearEventsViewController refreshContent];
 }
 
 @end

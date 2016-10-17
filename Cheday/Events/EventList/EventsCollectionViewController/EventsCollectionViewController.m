@@ -9,8 +9,10 @@
 #import "EventsCollectionViewController.h"
 #import "EventCollectionViewCell.h"
 #import "SimpleAlertController.h"
+#import "ContentRefreshing.h"
 
 @interface EventsCollectionViewController ()
+<ContentRefreshing>
 
 @property(nonatomic, strong) NSArray *objects;
 @property(nonatomic, strong) PFQuery *currentQuery;
@@ -23,6 +25,11 @@
 {
     [super viewDidLoad];
     
+    [self refreshContent];
+}
+
+-(void)refreshContent
+{
     self.currentQuery = [Event query];
     
     self.currentQuery.cachePolicy = kPFCachePolicyCacheThenNetwork;
@@ -36,7 +43,7 @@
                 return;
             }
             SimpleAlertController *alertController = [SimpleAlertController alertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
-                                                    message:error.localizedDescription];
+                                                                                             message:error.localizedDescription];
             [weakSelf presentViewController:alertController
                                    animated:YES
                                  completion:nil];
