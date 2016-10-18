@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContentRefreshing.h"
 
 @interface EventsCollectionViewController : UICollectionViewController
+<ContentRefreshing>
 
 @end

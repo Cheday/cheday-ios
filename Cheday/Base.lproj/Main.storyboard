@@ -112,11 +112,17 @@
                                                     <constraint firstItem="5yB-t1-2Ut" firstAttribute="top" secondItem="Dt8-Qx-caS" secondAttribute="bottom" id="znL-Wb-Qkl"/>
                                                 </constraints>
                                             </view>
-                                            <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="lol-Ir-xqF">
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lol-Ir-xqF">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="Kgm-Hu-hvm"/>
+                                                </constraints>
                                                 <connections>
                                                     <segue destination="fOM-Jf-Z88" kind="embed" identifier="MainEmbedNearEvents" id="ggZ-Tg-b8u"/>
                                                 </connections>
                                             </containerView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcV-gY-vPF">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="kfw-hH-zkC" firstAttribute="leading" secondItem="awc-EP-mUZ" secondAttribute="leading" id="5or-x7-p49"/>
@@ -160,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="802.5" y="-380.28169014084506"/>
         </scene>
-        <!--EventList-->
+        <!--NearEventsViewController-->
         <scene sceneID="Pmq-ZC-Cht">
             <objects>
-                <viewControllerPlaceholder storyboardName="EventList" id="fOM-Jf-Z88" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="EventList" referencedIdentifier="NearEventsViewController" id="fOM-Jf-Z88" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zN1-Yo-Eb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="803" y="63"/>

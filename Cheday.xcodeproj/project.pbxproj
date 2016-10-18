@@ -18,6 +18,7 @@
 		4F2F33811D47436200F1F003 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F33801D47436200F1F003 /* User.m */; };
 		4F47ED661D51E83C00BE03C1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */; };
 		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
+		4F658C641DB63FA3005BE724 /* NearEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F658C631DB63FA3005BE724 /* NearEventsViewController.m */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
 		4F7FEDDC1DA7876600F086B1 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */; };
 		4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */; };
@@ -105,6 +106,8 @@
 		4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 		4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventDateTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.h; sourceTree = "<group>"; };
 		4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventDateTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.m; sourceTree = "<group>"; };
+		4F658C621DB63FA3005BE724 /* NearEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearEventsViewController.h; sourceTree = "<group>"; };
+		4F658C631DB63FA3005BE724 /* NearEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearEventsViewController.m; sourceTree = "<group>"; };
 		4F796C931D4B66B7009D0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
 		4F7FEDDA1DA7876600F086B1 /* ImageResizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageResizer.h; path = Common/ImageResizer/ImageResizer.h; sourceTree = "<group>"; };
 		4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageResizer.m; path = Common/ImageResizer/ImageResizer.m; sourceTree = "<group>"; };
@@ -277,6 +280,16 @@
 				4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		4F658C5E1DB63EA6005BE724 /* NearEvents */ = {
+			isa = PBXGroup;
+			children = (
+				4F658C621DB63FA3005BE724 /* NearEventsViewController.h */,
+				4F658C631DB63FA3005BE724 /* NearEventsViewController.m */,
+			);
+			name = NearEvents;
+			path = Events/EventList/NearEvents;
 			sourceTree = "<group>";
 		};
 		4F796C971D4B6809009D0E6C /* Events */ = {
@@ -486,6 +499,7 @@
 				4F13F2E61DAFB3DB00350190 /* EventCollectionViewCell.h */,
 				4F13F2E71DAFB3DB00350190 /* EventCollectionViewCell.m */,
 				4FC773961DACF1C300DA9510 /* EventList.storyboard */,
+				4F658C5E1DB63EA6005BE724 /* NearEvents */,
 			);
 			name = EventList;
 			sourceTree = "<group>";
@@ -819,6 +833,7 @@
 				4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */,
 				4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */,
 				4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */,
+				4F658C641DB63FA3005BE724 /* NearEventsViewController.m in Sources */,
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
 				4FC112501DABAEB0009189D4 /* CSNPlaceholderTextView.m in Sources */,

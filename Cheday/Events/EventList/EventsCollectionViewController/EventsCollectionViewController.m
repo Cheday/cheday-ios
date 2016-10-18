@@ -9,10 +9,8 @@
 #import "EventsCollectionViewController.h"
 #import "EventCollectionViewCell.h"
 #import "SimpleAlertController.h"
-#import "ContentRefreshing.h"
 
 @interface EventsCollectionViewController ()
-<ContentRefreshing>
 
 @property(nonatomic, strong) NSArray *objects;
 @property(nonatomic, strong) PFQuery *currentQuery;
