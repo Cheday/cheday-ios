@@ -71,9 +71,9 @@
     [IQKeyboardManager sharedManager].enable = NO;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     
-//    UINavigationController *navController = (UINavigationController*)self.window.rootViewController;
-//    self.mainVC = (MainViewController*)navController.viewControllers[0];
-    self.mainVC = (MainViewController*)self.window.rootViewController;
+    UINavigationController *navController = (UINavigationController*)self.window.rootViewController;
+    self.mainVC = (MainViewController*)navController.viewControllers[0];
+//  self.mainVC = (MainViewController*)self.window.rootViewController;
     
     if([User currentUser] == nil)
     {

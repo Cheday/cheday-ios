@@ -37,6 +37,13 @@ extern DDLogLevel ddLogLevel;
     [self presentViewController:authVC animated:YES completion:nil];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 -(void)loginViewControllerDidLogin:(LoginViewController *)loginViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];

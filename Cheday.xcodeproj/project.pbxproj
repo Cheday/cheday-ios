@@ -20,6 +20,7 @@
 		4F5312F91DB76D76001ABE66 /* NearEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F21DB76D76001ABE66 /* NearEventsViewController.m */; };
 		4F5312FA1DB76D76001ABE66 /* EventCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */; };
 		4F5312FB1DB76D76001ABE66 /* EventsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */; };
+		4F5312FF1DB77709001ABE66 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312FE1DB77709001ABE66 /* EventViewController.m */; };
 		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
 		4F7FEDDC1DA7876600F086B1 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */; };
@@ -109,6 +110,8 @@
 		4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCollectionViewCell.m; sourceTree = "<group>"; };
 		4F5312F61DB76D76001ABE66 /* EventsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCollectionViewController.h; sourceTree = "<group>"; };
 		4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCollectionViewController.m; sourceTree = "<group>"; };
+		4F5312FD1DB77709001ABE66 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = Event/EventViewController.h; sourceTree = "<group>"; };
+		4F5312FE1DB77709001ABE66 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = Event/EventViewController.m; sourceTree = "<group>"; };
 		4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventDateTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.h; sourceTree = "<group>"; };
 		4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventDateTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.m; sourceTree = "<group>"; };
 		4F796C931D4B66B7009D0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
@@ -301,6 +304,15 @@
 			);
 			name = EventsCollectionVC;
 			path = EventsCollectionViewController;
+			sourceTree = "<group>";
+		};
+		4F5312FC1DB76E3D001ABE66 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				4F5312FD1DB77709001ABE66 /* EventViewController.h */,
+				4F5312FE1DB77709001ABE66 /* EventViewController.m */,
+			);
+			name = Event;
 			sourceTree = "<group>";
 		};
 		4F796C971D4B6809009D0E6C /* Events */ = {
@@ -505,6 +517,7 @@
 		4FC773921DACE38200DA9510 /* DisplayEvents */ = {
 			isa = PBXGroup;
 			children = (
+				4F5312FC1DB76E3D001ABE66 /* Event */,
 				4F5312F01DB76D76001ABE66 /* NearEvents */,
 				4F5312F31DB76D76001ABE66 /* EventsCollectionVC */,
 				4F5312EF1DB76D76001ABE66 /* DisplayEvents.storyboard */,
@@ -843,6 +856,7 @@
 				4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */,
 				4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */,
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
+				4F5312FF1DB77709001ABE66 /* EventViewController.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
 				4F5312F91DB76D76001ABE66 /* NearEventsViewController.m in Sources */,
 				4F5312FA1DB76D76001ABE66 /* EventCollectionViewCell.m in Sources */,

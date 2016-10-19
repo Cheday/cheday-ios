@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lKZ-wi-u5H">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8o-ia-8zv">
@@ -70,7 +70,7 @@
                                                                 <state key="disabled" backgroundImage="button_disabled_background"/>
                                                                 <state key="highlighted" backgroundImage="button_highlighted_background"/>
                                                                 <connections>
-                                                                    <segue destination="xwF-aH-lto" kind="show" identifier="MainShowBecomeVolonteer" id="nUo-Ui-Bsn"/>
+                                                                    <segue destination="xwF-aH-lto" kind="show" id="TIh-NS-dDf"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipu-m3-6mC" customClass="RoundedButton">
@@ -83,7 +83,7 @@
                                                                 <state key="disabled" backgroundImage="button_disabled_background"/>
                                                                 <state key="highlighted" backgroundImage="button_highlighted_background"/>
                                                                 <connections>
-                                                                    <segue destination="PKu-C6-9Cw" kind="show" id="E30-3y-IMa"/>
+                                                                    <segue destination="PKu-C6-9Cw" kind="show" id="D2t-NK-eLJ"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -164,12 +164,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.5" y="-380.28169014084506"/>
+            <point key="canvasLocation" x="1741.5999999999999" y="-380.95952023988008"/>
         </scene>
         <!--NearEventsViewController-->
         <scene sceneID="Pmq-ZC-Cht">
             <objects>
-                <viewControllerPlaceholder storyboardName="EventList" referencedIdentifier="NearEventsViewController" id="fOM-Jf-Z88" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="DisplayEvents" referencedIdentifier="NearEventsViewController" id="fOM-Jf-Z88" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zN1-Yo-Eb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="803" y="63"/>
@@ -180,7 +180,7 @@
                 <viewControllerPlaceholder storyboardName="BecomeVolonteer" referencedIdentifier="BecomeVolonteerViewController" id="xwF-aH-lto" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehk-V5-UpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597" y="-410"/>
+            <point key="canvasLocation" x="2535.1999999999998" y="-410.19490254872568"/>
         </scene>
         <!--CreateEvent-->
         <scene sceneID="lcZ-zB-Qv5">
@@ -188,7 +188,25 @@
                 <viewControllerPlaceholder storyboardName="CreateEvent" id="PKu-C6-9Cw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPS-fA-CeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482" y="-354"/>
+            <point key="canvasLocation" x="2420" y="-354.42278860569718"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9s2-RP-Oa9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lKZ-wi-u5H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kRn-p3-DGx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nBs-Bo-4yI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcS-XJ-RjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.39999999999998" y="-380.95952023988008"/>
         </scene>
     </scenes>
     <resources>
