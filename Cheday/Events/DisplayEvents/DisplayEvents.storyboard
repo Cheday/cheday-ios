@@ -101,7 +101,7 @@
                                     <outlet property="imageView" destination="Q2Y-ta-7Ci" id="W1s-GL-j3o"/>
                                     <outlet property="ownerNameLabel" destination="4gO-Nt-AbV" id="NJq-E6-6f1"/>
                                     <outlet property="titleLabel" destination="SNv-zO-KB4" id="xSi-4W-DGT"/>
-                                    <segue destination="iaZ-4o-gg7" kind="show" id="HFa-YJ-55h"/>
+                                    <segue destination="iaZ-4o-gg7" kind="show" identifier="EventsCollectionShowEvent" id="HFa-YJ-55h"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

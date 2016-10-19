@@ -297,10 +297,10 @@
 		4F5312F31DB76D76001ABE66 /* EventsCollectionVC */ = {
 			isa = PBXGroup;
 			children = (
-				4F5312F41DB76D76001ABE66 /* EventCollectionViewCell.h */,
-				4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */,
 				4F5312F61DB76D76001ABE66 /* EventsCollectionViewController.h */,
 				4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */,
+				4F5312F41DB76D76001ABE66 /* EventCollectionViewCell.h */,
+				4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */,
 			);
 			name = EventsCollectionVC;
 			path = EventsCollectionViewController;
