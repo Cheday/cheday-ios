@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4F04DBA21D46241700105A3D /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */; };
 		4F13DA3D1D7971DA00C272D3 /* VolonteerRole+Counting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F13DA3C1D7971DA00C272D3 /* VolonteerRole+Counting.m */; };
-		4F13F2E81DAFB3DB00350190 /* EventCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F13F2E71DAFB3DB00350190 /* EventCollectionViewCell.m */; };
 		4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */; };
 		4F2353AE1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353AD1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m */; };
 		4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2353B01D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m */; };
@@ -17,8 +16,11 @@
 		4F2D4BF71DA3EADD00E984F1 /* SimpleAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2D4BF61DA3EADD00E984F1 /* SimpleAlertController.m */; };
 		4F2F33811D47436200F1F003 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F33801D47436200F1F003 /* User.m */; };
 		4F47ED661D51E83C00BE03C1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */; };
+		4F5312F81DB76D76001ABE66 /* DisplayEvents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5312EF1DB76D76001ABE66 /* DisplayEvents.storyboard */; };
+		4F5312F91DB76D76001ABE66 /* NearEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F21DB76D76001ABE66 /* NearEventsViewController.m */; };
+		4F5312FA1DB76D76001ABE66 /* EventCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */; };
+		4F5312FB1DB76D76001ABE66 /* EventsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */; };
 		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
-		4F658C641DB63FA3005BE724 /* NearEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F658C631DB63FA3005BE724 /* NearEventsViewController.m */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
 		4F7FEDDC1DA7876600F086B1 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */; };
 		4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */; };
@@ -56,8 +58,6 @@
 		4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4701D4A0BD300854283 /* Profile.storyboard */; };
 		4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4F4751D4A0E0600854283 /* Profile.xcassets */; };
 		4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F47A1D4A10D900854283 /* RoundImageView.m */; };
-		4FC773951DACE8D100DA9510 /* EventsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC773941DACE8D100DA9510 /* EventsCollectionViewController.m */; };
-		4FC773971DACF1C300DA9510 /* EventList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC773961DACF1C300DA9510 /* EventList.storyboard */; };
 		4FC80B391D759502002C46D2 /* CreateEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */; };
 		4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCD28091D49FEC300C98C6A /* MainViewController.m */; };
 		4FDA5B7F1D6C52D3005709C1 /* EventCategoryEqualityProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDA5B7E1D6C52D3005709C1 /* EventCategoryEqualityProxy.m */; };
@@ -88,8 +88,6 @@
 		4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
 		4F13DA3B1D7971DA00C272D3 /* VolonteerRole+Counting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VolonteerRole+Counting.h"; path = "Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRole+Counting.h"; sourceTree = "<group>"; };
 		4F13DA3C1D7971DA00C272D3 /* VolonteerRole+Counting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "VolonteerRole+Counting.m"; path = "Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRole+Counting.m"; sourceTree = "<group>"; };
-		4F13F2E61DAFB3DB00350190 /* EventCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventCollectionViewCell.h; path = Events/EventList/EventsCollectionViewController/EventCollectionViewCell.h; sourceTree = "<group>"; };
-		4F13F2E71DAFB3DB00350190 /* EventCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventCollectionViewCell.m; path = Events/EventList/EventsCollectionViewController/EventCollectionViewCell.m; sourceTree = "<group>"; };
 		4F15E3031D815B5400F520F8 /* VolonteerRoleWithCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolonteerRoleWithCount.h; path = Common/DataModel/VolonteerRoleWithCount.h; sourceTree = "<group>"; };
 		4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerRoleWithCount.m; path = Common/DataModel/VolonteerRoleWithCount.m; sourceTree = "<group>"; };
 		4F1914201DB4E2FF0098644E /* ContentRefreshing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentRefreshing.h; path = MainScreen/ContentRefreshing.h; sourceTree = "<group>"; };
@@ -104,10 +102,15 @@
 		4F2F337F1D47436200F1F003 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Common/DataModel/User.h; sourceTree = "<group>"; };
 		4F2F33801D47436200F1F003 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Common/DataModel/User.m; sourceTree = "<group>"; };
 		4F47ED651D51E83C00BE03C1 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		4F5312EF1DB76D76001ABE66 /* DisplayEvents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DisplayEvents.storyboard; sourceTree = "<group>"; };
+		4F5312F11DB76D76001ABE66 /* NearEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearEventsViewController.h; sourceTree = "<group>"; };
+		4F5312F21DB76D76001ABE66 /* NearEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearEventsViewController.m; sourceTree = "<group>"; };
+		4F5312F41DB76D76001ABE66 /* EventCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCollectionViewCell.h; sourceTree = "<group>"; };
+		4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCollectionViewCell.m; sourceTree = "<group>"; };
+		4F5312F61DB76D76001ABE66 /* EventsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCollectionViewController.h; sourceTree = "<group>"; };
+		4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCollectionViewController.m; sourceTree = "<group>"; };
 		4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventDateTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.h; sourceTree = "<group>"; };
 		4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventDateTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.m; sourceTree = "<group>"; };
-		4F658C621DB63FA3005BE724 /* NearEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearEventsViewController.h; sourceTree = "<group>"; };
-		4F658C631DB63FA3005BE724 /* NearEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearEventsViewController.m; sourceTree = "<group>"; };
 		4F796C931D4B66B7009D0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
 		4F7FEDDA1DA7876600F086B1 /* ImageResizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageResizer.h; path = Common/ImageResizer/ImageResizer.h; sourceTree = "<group>"; };
 		4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageResizer.m; path = Common/ImageResizer/ImageResizer.m; sourceTree = "<group>"; };
@@ -172,9 +175,6 @@
 		4FC4F4751D4A0E0600854283 /* Profile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Profile.xcassets; path = Profile/Profile.xcassets; sourceTree = "<group>"; };
 		4FC4F4791D4A10D900854283 /* RoundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundImageView.h; path = Profile/RoundImageView/RoundImageView.h; sourceTree = "<group>"; };
 		4FC4F47A1D4A10D900854283 /* RoundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundImageView.m; path = Profile/RoundImageView/RoundImageView.m; sourceTree = "<group>"; };
-		4FC773931DACE8D100DA9510 /* EventsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsCollectionViewController.h; path = Events/EventList/EventsCollectionViewController/EventsCollectionViewController.h; sourceTree = "<group>"; };
-		4FC773941DACE8D100DA9510 /* EventsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsCollectionViewController.m; path = Events/EventList/EventsCollectionViewController/EventsCollectionViewController.m; sourceTree = "<group>"; };
-		4FC773961DACF1C300DA9510 /* EventList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventList.storyboard; path = Events/EventList/EventList.storyboard; sourceTree = "<group>"; };
 		4FC80B371D759502002C46D2 /* CreateEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventTableViewCell.h; sourceTree = "<group>"; };
 		4FC80B381D759502002C46D2 /* CreateEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventTableViewCell.m; sourceTree = "<group>"; };
 		4FCD28081D49FEC300C98C6A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = MainScreen/MainViewController.h; sourceTree = "<group>"; };
@@ -282,22 +282,33 @@
 			name = DataModel;
 			sourceTree = "<group>";
 		};
-		4F658C5E1DB63EA6005BE724 /* NearEvents */ = {
+		4F5312F01DB76D76001ABE66 /* NearEvents */ = {
 			isa = PBXGroup;
 			children = (
-				4F658C621DB63FA3005BE724 /* NearEventsViewController.h */,
-				4F658C631DB63FA3005BE724 /* NearEventsViewController.m */,
+				4F5312F11DB76D76001ABE66 /* NearEventsViewController.h */,
+				4F5312F21DB76D76001ABE66 /* NearEventsViewController.m */,
 			);
-			name = NearEvents;
-			path = Events/EventList/NearEvents;
+			path = NearEvents;
+			sourceTree = "<group>";
+		};
+		4F5312F31DB76D76001ABE66 /* EventsCollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				4F5312F41DB76D76001ABE66 /* EventCollectionViewCell.h */,
+				4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */,
+				4F5312F61DB76D76001ABE66 /* EventsCollectionViewController.h */,
+				4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */,
+			);
+			name = EventsCollectionVC;
+			path = EventsCollectionViewController;
 			sourceTree = "<group>";
 		};
 		4F796C971D4B6809009D0E6C /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				4FC773921DACE38200DA9510 /* EventList */,
 				4FBC00411D7433C800BF32D4 /* BecomeVolonteer */,
 				4FB1CC011D6EF612002879CD /* CreateEvent */,
+				4FC773921DACE38200DA9510 /* DisplayEvents */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -491,17 +502,15 @@
 			name = RoundImageView;
 			sourceTree = "<group>";
 		};
-		4FC773921DACE38200DA9510 /* EventList */ = {
+		4FC773921DACE38200DA9510 /* DisplayEvents */ = {
 			isa = PBXGroup;
 			children = (
-				4FC773931DACE8D100DA9510 /* EventsCollectionViewController.h */,
-				4FC773941DACE8D100DA9510 /* EventsCollectionViewController.m */,
-				4F13F2E61DAFB3DB00350190 /* EventCollectionViewCell.h */,
-				4F13F2E71DAFB3DB00350190 /* EventCollectionViewCell.m */,
-				4FC773961DACF1C300DA9510 /* EventList.storyboard */,
-				4F658C5E1DB63EA6005BE724 /* NearEvents */,
+				4F5312F01DB76D76001ABE66 /* NearEvents */,
+				4F5312F31DB76D76001ABE66 /* EventsCollectionVC */,
+				4F5312EF1DB76D76001ABE66 /* DisplayEvents.storyboard */,
 			);
-			name = EventList;
+			name = DisplayEvents;
+			path = Events/DisplayEvents;
 			sourceTree = "<group>";
 		};
 		4FCD28071D49FE8000C98C6A /* MainScreen */ = {
@@ -747,12 +756,12 @@
 			files = (
 				4F7FF8FB1D6AFB9A0057B60B /* CommonColorsImages.xcassets in Resources */,
 				4FFB0AB11D3F632400D20B8A /* LaunchScreen.storyboard in Resources */,
+				4F5312F81DB76D76001ABE66 /* DisplayEvents.storyboard in Resources */,
 				4FFB0AAE1D3F632400D20B8A /* Assets.xcassets in Resources */,
 				4F8ACE9F1D40D3DA00593D00 /* LaunchImage.xcassets in Resources */,
 				4FB1CC061D6EF705002879CD /* CreateEvent.storyboard in Resources */,
 				4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */,
 				4FF956B81D40D9B900FB0242 /* AuthorizationAssets.xcassets in Resources */,
-				4FC773971DACF1C300DA9510 /* EventList.storyboard in Resources */,
 				4FF5DA801D9930D2008AF6C0 /* CreateEventTable.xcassets in Resources */,
 				4FC4F4761D4A0E0600854283 /* Profile.xcassets in Resources */,
 				4FC4F4711D4A0BD300854283 /* Profile.storyboard in Resources */,
@@ -833,20 +842,20 @@
 				4F2353B11D76D6FC0047E4A9 /* CreateEventChooseVolonteerRolesTableViewCell.m in Sources */,
 				4FCD280A1D49FEC300C98C6A /* MainViewController.m in Sources */,
 				4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */,
-				4F658C641DB63FA3005BE724 /* NearEventsViewController.m in Sources */,
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
+				4F5312F91DB76D76001ABE66 /* NearEventsViewController.m in Sources */,
+				4F5312FA1DB76D76001ABE66 /* EventCollectionViewCell.m in Sources */,
 				4FC112501DABAEB0009189D4 /* CSNPlaceholderTextView.m in Sources */,
-				4F13F2E81DAFB3DB00350190 /* EventCollectionViewCell.m in Sources */,
 				4FBC00621D7433C900BF32D4 /* BecomeVolonteerViewController.m in Sources */,
 				4F2D4BF71DA3EADD00E984F1 /* SimpleAlertController.m in Sources */,
 				4FBC00681D7433C900BF32D4 /* WeekDay+Selecting.m in Sources */,
 				4FB88D0A1D61F4A700CDB4C8 /* EventCategory.m in Sources */,
 				4FFB0AA31D3F632400D20B8A /* main.m in Sources */,
 				4FE1949C1D422BBE00708B49 /* ForgotPasswordViewController.m in Sources */,
+				4F5312FB1DB76D76001ABE66 /* EventsCollectionViewController.m in Sources */,
 				4FE194991D42138C00708B49 /* SignupViewController.m in Sources */,
 				4F86B1FC1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m in Sources */,
-				4FC773951DACE8D100DA9510 /* EventsCollectionViewController.m in Sources */,
 				4FDA5B821D6C5667005709C1 /* VolonteerRoleEqualityProxy.m in Sources */,
 				4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */,
 				4FC80B391D759502002C46D2 /* CreateEventTableViewCell.m in Sources */,
