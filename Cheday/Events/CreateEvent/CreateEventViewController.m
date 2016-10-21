@@ -41,12 +41,14 @@ extern DDLogLevel ddLogLevel;
     Event *event = [Event new];
     event.owner = [User currentUser];
     event.title = self.createEventTVC.eventTitle;
-    UIImage *resizedImage = nil;
-    resizedImage = [[ImageReducer new] reduceImage:self.createEventTVC.eventImage
-                                            toSize:CGSizeMake(2048, 2048)];
-    event.image = [PFFile fileWithData:UIImageJPEGRepresentation(resizedImage,0.9)
-                           contentType:@"image/jpeg"];
-    
+    if(self.createEventTVC.eventImage)
+    {
+        UIImage *resizedImage = nil;
+        resizedImage = [[ImageReducer new] reduceImage:self.createEventTVC.eventImage
+                                                toSize:CGSizeMake(2048, 2048)];
+        event.image = [PFFile fileWithData:UIImageJPEGRepresentation(resizedImage,0.9)
+                               contentType:@"image/jpeg"];
+    }
     if(!event.title.length)
     {
         [UIAlertController presentAlertControllerWithTitle:NSLocalizedString(@"Проверка", nil)
