@@ -23,7 +23,7 @@
 {
     _event = event;
     
-    [self.imageView setImageWithURL:[NSURL URLWithString:event.image.url]];
+    [self.imageView setImageWithURL:[NSURL URLWithString:event.image.url] placeholderImage:[UIImage new]];
     self.titleLabel.text = event.title;
     self.ownerNameLabel.text = event.owner.fullName;
 }
