@@ -1,5 +1,5 @@
 //
-//  ImageResizer.h
+//  ImageReducer.h
 //  Cheday
 //
 //  Created by Andrey Krukovskiy on 07.10.16.
@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ImageResizer : NSObject
+@interface ImageReducer : NSObject
 
--(UIImage*) resizeImage:(UIImage*)image toSize:(CGSize)size;
+-(UIImage*) reduceImage:(UIImage*)image toSize:(CGSize)size;
 
 @end

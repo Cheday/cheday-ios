@@ -14,7 +14,7 @@
 #import "UIAlertController+SimpleAlert.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 extern DDLogLevel ddLogLevel;
-#import "ImageResizer.h"
+#import "ImageReducer.h"
 
 @interface CreateEventViewController ()
 
@@ -42,8 +42,8 @@ extern DDLogLevel ddLogLevel;
     event.owner = [User currentUser];
     event.title = self.createEventTVC.eventTitle;
     UIImage *resizedImage = nil;
-    resizedImage = [[ImageResizer new] resizeImage:self.createEventTVC.eventImage
-                                            toSize:CGSizeMake(1242, 931.5)];//iphone 6plus screen width
+    resizedImage = [[ImageReducer new] reduceImage:self.createEventTVC.eventImage
+                                            toSize:CGSizeMake(2048, 2048)];
     event.image = [PFFile fileWithData:UIImageJPEGRepresentation(resizedImage,0.9)
                            contentType:@"image/jpeg"];
     

@@ -21,9 +21,9 @@
 		4F5312FA1DB76D76001ABE66 /* EventCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F51DB76D76001ABE66 /* EventCollectionViewCell.m */; };
 		4F5312FB1DB76D76001ABE66 /* EventsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */; };
 		4F5312FF1DB77709001ABE66 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312FE1DB77709001ABE66 /* EventViewController.m */; };
+		4F536F3B1DBA3202004475AC /* ImageReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F536F391DBA3201004475AC /* ImageReducer.m */; };
 		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
-		4F7FEDDC1DA7876600F086B1 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */; };
 		4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */; };
 		4F7FF8FB1D6AFB9A0057B60B /* CommonColorsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */; };
 		4F86B1EC1D54850E004A1DAB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F86B1EB1D54850E004A1DAB /* FBSDKCoreKit.framework */; };
@@ -112,11 +112,11 @@
 		4F5312F71DB76D76001ABE66 /* EventsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCollectionViewController.m; sourceTree = "<group>"; };
 		4F5312FD1DB77709001ABE66 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = Event/EventViewController.h; sourceTree = "<group>"; };
 		4F5312FE1DB77709001ABE66 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = Event/EventViewController.m; sourceTree = "<group>"; };
+		4F536F391DBA3201004475AC /* ImageReducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageReducer.m; path = Common/ImageReducer/ImageReducer.m; sourceTree = "<group>"; };
+		4F536F3A1DBA3202004475AC /* ImageReducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageReducer.h; path = Common/ImageReducer/ImageReducer.h; sourceTree = "<group>"; };
 		4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventDateTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.h; sourceTree = "<group>"; };
 		4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventDateTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.m; sourceTree = "<group>"; };
 		4F796C931D4B66B7009D0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
-		4F7FEDDA1DA7876600F086B1 /* ImageResizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageResizer.h; path = Common/ImageResizer/ImageResizer.h; sourceTree = "<group>"; };
-		4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageResizer.m; path = Common/ImageResizer/ImageResizer.m; sourceTree = "<group>"; };
 		4F7FF8F41D6AE1ED0057B60B /* WeekDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekDay.h; path = Common/DataModel/WeekDay.h; sourceTree = "<group>"; };
 		4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekDay.m; path = Common/DataModel/WeekDay.m; sourceTree = "<group>"; };
 		4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CommonColorsImages.xcassets; path = Common/UI/CommonColorsImages.xcassets; sourceTree = "<group>"; };
@@ -338,13 +338,13 @@
 			name = Authorization;
 			sourceTree = "<group>";
 		};
-		4F7FEDD91DA7872D00F086B1 /* ImageResizer */ = {
+		4F7FEDD91DA7872D00F086B1 /* ImageReducer */ = {
 			isa = PBXGroup;
 			children = (
-				4F7FEDDA1DA7876600F086B1 /* ImageResizer.h */,
-				4F7FEDDB1DA7876600F086B1 /* ImageResizer.m */,
+				4F536F3A1DBA3202004475AC /* ImageReducer.h */,
+				4F536F391DBA3201004475AC /* ImageReducer.m */,
 			);
-			name = ImageResizer;
+			name = ImageReducer;
 			sourceTree = "<group>";
 		};
 		4F86B1F31D54A1CA004A1DAB /* ProfileUpdaters */ = {
@@ -577,7 +577,7 @@
 		4FE1948B1D420A9700708B49 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4F7FEDD91DA7872D00F086B1 /* ImageResizer */,
+				4F7FEDD91DA7872D00F086B1 /* ImageReducer */,
 				4F2F337E1D47433000F1F003 /* DataModel */,
 				4FE1948F1D420AED00708B49 /* UI */,
 			);
@@ -829,7 +829,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7FEDDC1DA7876600F086B1 /* ImageResizer.m in Sources */,
 				4FE1948A1D42029200708B49 /* LoginView.m in Sources */,
 				4FBC00631D7433C900BF32D4 /* VolonteerAbstractChooseTableViewController.m in Sources */,
 				4FBC006A1D7433C900BF32D4 /* VolonteerFormTableViewController.m in Sources */,
@@ -870,6 +869,7 @@
 				4F5312FB1DB76D76001ABE66 /* EventsCollectionViewController.m in Sources */,
 				4FE194991D42138C00708B49 /* SignupViewController.m in Sources */,
 				4F86B1FC1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m in Sources */,
+				4F536F3B1DBA3202004475AC /* ImageReducer.m in Sources */,
 				4FDA5B821D6C5667005709C1 /* VolonteerRoleEqualityProxy.m in Sources */,
 				4FC4F47B1D4A10D900854283 /* RoundImageView.m in Sources */,
 				4FC80B391D759502002C46D2 /* CreateEventTableViewCell.m in Sources */,
