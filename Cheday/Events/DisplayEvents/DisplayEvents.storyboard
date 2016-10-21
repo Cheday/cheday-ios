@@ -123,15 +123,85 @@
                         <viewControllerLayoutGuide type="top" id="i7F-N1-Oac"/>
                         <viewControllerLayoutGuide type="bottom" id="gSI-7E-5mn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ODb-F4-4cp">
+                    <view key="view" contentMode="scaleToFill" id="ODb-F4-4cp" customClass="EventView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1TN-7b-SPE">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1TN-7b-SPE" secondAttribute="height" multiplier="4:3" id="Bng-u4-Eux"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-DK-JD3">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="24" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8g-3l-Eg1">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="17" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntv-cv-pF3">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="19.5" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaE-gC-LIR">
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="17" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us5-w2-7QA">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="35.5" placeholderIntrinsicHeight="17" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQD-bL-Ou0">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="YaE-gC-LIR" firstAttribute="leading" secondItem="k8g-3l-Eg1" secondAttribute="leading" id="8VT-yu-ynr"/>
+                                    <constraint firstItem="Ntv-cv-pF3" firstAttribute="trailing" secondItem="k8g-3l-Eg1" secondAttribute="trailing" id="Bhr-n2-oUz"/>
+                                    <constraint firstItem="Ntv-cv-pF3" firstAttribute="top" secondItem="k8g-3l-Eg1" secondAttribute="bottom" constant="8" id="Cl8-uj-xs4"/>
+                                    <constraint firstItem="Us5-w2-7QA" firstAttribute="leading" secondItem="k8g-3l-Eg1" secondAttribute="leading" id="Fu0-ZB-CMG"/>
+                                    <constraint firstItem="k8g-3l-Eg1" firstAttribute="leading" secondItem="Y88-DK-JD3" secondAttribute="leading" constant="20" id="G3R-fO-5YI"/>
+                                    <constraint firstAttribute="bottom" secondItem="qQD-bL-Ou0" secondAttribute="bottom" id="Gg0-OQ-Vqs"/>
+                                    <constraint firstItem="YaE-gC-LIR" firstAttribute="trailing" secondItem="k8g-3l-Eg1" secondAttribute="trailing" id="MEH-Wy-y6a"/>
+                                    <constraint firstItem="Ntv-cv-pF3" firstAttribute="leading" secondItem="k8g-3l-Eg1" secondAttribute="leading" id="N1w-tu-uQx"/>
+                                    <constraint firstItem="Us5-w2-7QA" firstAttribute="trailing" secondItem="k8g-3l-Eg1" secondAttribute="trailing" id="SHe-uv-gar"/>
+                                    <constraint firstItem="qQD-bL-Ou0" firstAttribute="leading" secondItem="k8g-3l-Eg1" secondAttribute="leading" id="ST9-t2-mEy"/>
+                                    <constraint firstAttribute="trailing" secondItem="k8g-3l-Eg1" secondAttribute="trailing" constant="20" id="Ub3-TC-UcS"/>
+                                    <constraint firstItem="Us5-w2-7QA" firstAttribute="top" secondItem="YaE-gC-LIR" secondAttribute="bottom" constant="12" id="b7o-8N-qMn"/>
+                                    <constraint firstItem="k8g-3l-Eg1" firstAttribute="top" secondItem="Y88-DK-JD3" secondAttribute="top" constant="18" id="i4S-lA-ydh"/>
+                                    <constraint firstItem="YaE-gC-LIR" firstAttribute="top" secondItem="Ntv-cv-pF3" secondAttribute="bottom" constant="5" id="kYL-3A-3t0"/>
+                                    <constraint firstItem="qQD-bL-Ou0" firstAttribute="top" secondItem="Us5-w2-7QA" secondAttribute="bottom" constant="4" id="wdX-Ss-LX1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Y88-DK-JD3" secondAttribute="trailing" id="67n-wv-1re"/>
+                            <constraint firstAttribute="trailing" secondItem="1TN-7b-SPE" secondAttribute="trailing" id="7RI-zX-iGX"/>
+                            <constraint firstItem="1TN-7b-SPE" firstAttribute="leading" secondItem="ODb-F4-4cp" secondAttribute="leading" id="b3u-AK-DMf"/>
+                            <constraint firstItem="1TN-7b-SPE" firstAttribute="top" secondItem="i7F-N1-Oac" secondAttribute="bottom" id="eWa-hB-HK6"/>
+                            <constraint firstItem="Y88-DK-JD3" firstAttribute="top" secondItem="1TN-7b-SPE" secondAttribute="bottom" id="hzw-gV-Rng"/>
+                            <constraint firstItem="Y88-DK-JD3" firstAttribute="leading" secondItem="ODb-F4-4cp" secondAttribute="leading" id="mtS-UV-7wF"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="categoryLabel" destination="Ntv-cv-pF3" id="Fk1-9Q-oqk"/>
+                            <outlet property="createdLabel" destination="qQD-bL-Ou0" id="BD0-QX-KFS"/>
+                            <outlet property="dateLabel" destination="YaE-gC-LIR" id="psq-gD-5S6"/>
+                            <outlet property="detailsLabel" destination="Us5-w2-7QA" id="K84-3v-sRe"/>
+                            <outlet property="eventNameLabel" destination="k8g-3l-Eg1" id="7C0-W3-dio"/>
+                            <outlet property="imageView" destination="1TN-7b-SPE" id="L3E-C6-igG"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwa-0D-jlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="910"/>
+            <point key="canvasLocation" x="-234.40000000000001" y="909.89505247376314"/>
         </scene>
     </scenes>
 </document>

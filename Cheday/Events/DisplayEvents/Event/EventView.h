@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
 @interface EventView : UIView
+
+@property(nonatomic, strong) Event *event;
 
 @end

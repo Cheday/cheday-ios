@@ -23,6 +23,7 @@
 		4F5312FF1DB77709001ABE66 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5312FE1DB77709001ABE66 /* EventViewController.m */; };
 		4F536F3B1DBA3202004475AC /* ImageReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F536F391DBA3201004475AC /* ImageReducer.m */; };
 		4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */; };
+		4F6A785B1DB8E4290069A745 /* EventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A785A1DB8E4290069A745 /* EventView.m */; };
 		4F796C921D4B66B7009D0E6C /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F796C941D4B66B7009D0E6C /* Authorization.storyboard */; };
 		4F7FF8F61D6AE1ED0057B60B /* WeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */; };
 		4F7FF8FB1D6AFB9A0057B60B /* CommonColorsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7FF8FA1D6AFB9A0057B60B /* CommonColorsImages.xcassets */; };
@@ -116,6 +117,8 @@
 		4F536F3A1DBA3202004475AC /* ImageReducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageReducer.h; path = Common/ImageReducer/ImageReducer.h; sourceTree = "<group>"; };
 		4F5EF9E11D92A38A00371A8C /* CreateEventDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventDateTableViewCell.h; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.h; sourceTree = "<group>"; };
 		4F5EF9E21D92A38A00371A8C /* CreateEventDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventDateTableViewCell.m; path = Events/CreateEvent/CreateEventTable/CreateEventDateTableViewCell.m; sourceTree = "<group>"; };
+		4F6A78591DB8E4290069A745 /* EventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventView.h; path = Event/EventView.h; sourceTree = "<group>"; };
+		4F6A785A1DB8E4290069A745 /* EventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventView.m; path = Event/EventView.m; sourceTree = "<group>"; };
 		4F796C931D4B66B7009D0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authorization.storyboard; sourceTree = "<group>"; };
 		4F7FF8F41D6AE1ED0057B60B /* WeekDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekDay.h; path = Common/DataModel/WeekDay.h; sourceTree = "<group>"; };
 		4F7FF8F51D6AE1ED0057B60B /* WeekDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekDay.m; path = Common/DataModel/WeekDay.m; sourceTree = "<group>"; };
@@ -311,6 +314,8 @@
 			children = (
 				4F5312FD1DB77709001ABE66 /* EventViewController.h */,
 				4F5312FE1DB77709001ABE66 /* EventViewController.m */,
+				4F6A78591DB8E4290069A745 /* EventView.h */,
+				4F6A785A1DB8E4290069A745 /* EventView.m */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -859,6 +864,7 @@
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
 				4F5312F91DB76D76001ABE66 /* NearEventsViewController.m in Sources */,
 				4F5312FA1DB76D76001ABE66 /* EventCollectionViewCell.m in Sources */,
+				4F6A785B1DB8E4290069A745 /* EventView.m in Sources */,
 				4FC112501DABAEB0009189D4 /* CSNPlaceholderTextView.m in Sources */,
 				4FBC00621D7433C900BF32D4 /* BecomeVolonteerViewController.m in Sources */,
 				4F2D4BF71DA3EADD00E984F1 /* SimpleAlertController.m in Sources */,

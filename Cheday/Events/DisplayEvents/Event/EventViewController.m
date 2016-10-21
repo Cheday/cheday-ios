@@ -7,12 +7,27 @@
 //
 
 #import "EventViewController.h"
+#import "EventView.h"
 
 @interface EventViewController ()
+
+@property(nonatomic, strong) EventView *view;
 
 @end
 
 @implementation EventViewController
+
+@dynamic view;
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [PFObject fetchAllIfNeededInBackground:@[self.event.category]
+                                     block:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+                                         self.view.event = self.event;
+                                     }];
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
