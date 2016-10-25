@@ -127,9 +127,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1TN-7b-SPE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="281.5" translatesAutoresizingMaskIntoConstraints="NO" id="1TN-7b-SPE">
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="1TN-7b-SPE" secondAttribute="height" multiplier="4:3" id="Bng-u4-Eux"/>
+                                    <constraint firstAttribute="height" secondItem="1TN-7b-SPE" secondAttribute="width" multiplier="3:4" id="Bng-u4-Eux"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-DK-JD3">
@@ -182,9 +182,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1TN-7b-SPE" firstAttribute="centerX" secondItem="ODb-F4-4cp" secondAttribute="centerX" id="5zP-d7-iZY"/>
                             <constraint firstAttribute="trailing" secondItem="Y88-DK-JD3" secondAttribute="trailing" id="67n-wv-1re"/>
-                            <constraint firstAttribute="trailing" secondItem="1TN-7b-SPE" secondAttribute="trailing" id="7RI-zX-iGX"/>
-                            <constraint firstItem="1TN-7b-SPE" firstAttribute="leading" secondItem="ODb-F4-4cp" secondAttribute="leading" id="b3u-AK-DMf"/>
+                            <constraint firstItem="1TN-7b-SPE" firstAttribute="width" relation="lessThanOrEqual" secondItem="ODb-F4-4cp" secondAttribute="width" id="VJa-vM-KHn"/>
                             <constraint firstItem="1TN-7b-SPE" firstAttribute="top" secondItem="i7F-N1-Oac" secondAttribute="bottom" id="eWa-hB-HK6"/>
                             <constraint firstItem="Y88-DK-JD3" firstAttribute="top" secondItem="1TN-7b-SPE" secondAttribute="bottom" id="hzw-gV-Rng"/>
                             <constraint firstItem="Y88-DK-JD3" firstAttribute="leading" secondItem="ODb-F4-4cp" secondAttribute="leading" id="mtS-UV-7wF"/>
