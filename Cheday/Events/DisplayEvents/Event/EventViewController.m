@@ -23,6 +23,7 @@
 {
     [super viewDidLoad];
     
+    self.view.event = self.event;
     [PFObject fetchAllIfNeededInBackground:@[self.event.category]
                                      block:^(NSArray * _Nullable objects, NSError * _Nullable error) {
                                          self.view.event = self.event;

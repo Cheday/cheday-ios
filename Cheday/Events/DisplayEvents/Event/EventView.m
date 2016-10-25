@@ -28,7 +28,10 @@
     
     [self.imageView setImageWithURL:[NSURL URLWithString:_event.image.url]];
     self.eventNameLabel.text = _event.title;
-    self.categoryLabel.text = _event.category.name;
+    if([_event.category isDataAvailable])
+    {
+        self.categoryLabel.text = _event.category.name;
+    }
     self.dateLabel.text = [NSDateFormatter localizedStringFromDate:_event.startDate
                                                          dateStyle:NSDateFormatterMediumStyle
                                                          timeStyle:NSDateFormatterShortStyle];
