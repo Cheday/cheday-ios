@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *createdLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *ownerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *ownerNameLabel;
+
 @end
 
 @implementation EventView
@@ -40,6 +43,10 @@
                                                                          dateStyle:NSDateFormatterMediumStyle
                                                                          timeStyle:NSDateFormatterShortStyle];
     self.createdLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Создано:", nil), formattedCreateDateString];
+    
+    [self.ownerImageView setImageWithURL:[NSURL URLWithString:_event.owner.photoURLString]
+                        placeholderImage:[UIImage imageNamed:@"ProfilePirate"]];
+    self.ownerNameLabel.text = _event.owner.fullName;
 }
 
 @end

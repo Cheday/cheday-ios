@@ -37,6 +37,9 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
+- (IBAction)phoneButtonTouchUpInside:(UIButton *)sender {
+}
+
 /*
 #pragma mark - Navigation
 
