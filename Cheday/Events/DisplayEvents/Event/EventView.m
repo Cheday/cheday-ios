@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ownerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *ownerNameLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *actionButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actionButtonActivityIndicator;
 @end
 
 @implementation EventView
@@ -47,6 +49,16 @@
     [self.ownerImageView setImageWithURL:[NSURL URLWithString:_event.owner.photoURLString]
                         placeholderImage:[UIImage imageNamed:@"ProfilePirate"]];
     self.ownerNameLabel.text = _event.owner.fullName;
+    
+    if([_event.owner isEqual:[User currentUser]])
+    {
+        [self.actionButton setTitle:NSLocalizedString(@"ЗАВЕРШИТЬ МЕРОПРИЯТИЕ", nil)
+                           forState:UIControlStateNormal];
+    }else
+    {
+        [self.actionButton setTitle:NSLocalizedString(@"ХОЧУ УЧАСТВОВАТЬ", nil)
+                           forState:UIControlStateNormal];
+    }
 }
 
 @end

@@ -12,6 +12,7 @@
 @interface EventViewController ()
 
 @property(nonatomic, strong) EventView *view;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actionButtonActivityIndicator;
 
 @end
 
@@ -39,6 +40,14 @@
 
 - (IBAction)phoneButtonTouchUpInside:(UIButton *)sender {
 }
+
+- (IBAction)actionButtonTouchUpInside:(UIButton *)sender {
+    
+    //sender.enabled = NO;
+    //[self.actionButtonActivityIndicator startAnimating];
+}
+
+
 
 /*
 #pragma mark - Navigation

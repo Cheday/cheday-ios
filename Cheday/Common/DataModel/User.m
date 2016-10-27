@@ -58,4 +58,24 @@
     return photoURLString;
 }
 
+-(BOOL)isEqual:(id)object
+{
+    if(self == object)
+        return YES;
+    if(!object || ![object isKindOfClass:[self class]])
+        return NO;
+    return [self isEqualToUser:object];
+}
+
+-(BOOL) isEqualToUser:(User*)user
+{
+    if(self == user)
+        return YES;
+    if((self.objectId != user.objectId) && ![self.objectId isEqualToString:user.objectId])
+        return NO;
+//    if((self.name != user.name) && ![_instance.name isEqual:eventCategory.name])
+//        return NO;
+    return YES;
+}
+
 @end
