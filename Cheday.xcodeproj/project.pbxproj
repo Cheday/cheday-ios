@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F00AADF1DC9E2A2001DF808 /* OwnerEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00AADE1DC9E2A2001DF808 /* OwnerEventViewController.m */; };
 		4F04DBA21D46241700105A3D /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */; };
 		4F13DA3D1D7971DA00C272D3 /* VolonteerRole+Counting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F13DA3C1D7971DA00C272D3 /* VolonteerRole+Counting.m */; };
 		4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15E3041D815B5400F520F8 /* VolonteerRoleWithCount.m */; };
@@ -31,6 +32,7 @@
 		4F86B1EE1D548A8F004A1DAB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F86B1ED1D548A8F004A1DAB /* FBSDKLoginKit.framework */; };
 		4F86B1FB1D54A285004A1DAB /* ProfileUpdaterFromFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B1F71D54A285004A1DAB /* ProfileUpdaterFromFacebook.m */; };
 		4F86B1FC1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B1FA1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m */; };
+		4F89C0DA1DC8DA910076304A /* VolonteerEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F89C0D91DC8DA910076304A /* VolonteerEventViewController.m */; };
 		4F8ACE9F1D40D3DA00593D00 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8ACE9E1D40D3DA00593D00 /* LaunchImage.xcassets */; };
 		4F943ABA1D58847C00854183 /* BEMCheckBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F943AB91D58847C00854183 /* BEMCheckBox.framework */; };
 		4F9D54851D3F97D300A14739 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */; };
@@ -87,6 +89,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F00AADB1DC9E1D2001DF808 /* EventVCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventVCProtocol.h; path = Event/EventVCProtocol.h; sourceTree = "<group>"; };
+		4F00AADD1DC9E2A2001DF808 /* OwnerEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnerEventViewController.h; sourceTree = "<group>"; };
+		4F00AADE1DC9E2A2001DF808 /* OwnerEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnerEventViewController.m; sourceTree = "<group>"; };
 		4F04DBA11D46241700105A3D /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
 		4F13DA3B1D7971DA00C272D3 /* VolonteerRole+Counting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VolonteerRole+Counting.h"; path = "Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRole+Counting.h"; sourceTree = "<group>"; };
 		4F13DA3C1D7971DA00C272D3 /* VolonteerRole+Counting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "VolonteerRole+Counting.m"; path = "Events/CreateEvent/CreateEventTable/ChooseVolonteerRoles/VolonteerRole+Counting.m"; sourceTree = "<group>"; };
@@ -130,6 +135,8 @@
 		4F86B1F71D54A285004A1DAB /* ProfileUpdaterFromFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileUpdaterFromFacebook.m; sourceTree = "<group>"; };
 		4F86B1F91D54A285004A1DAB /* ProfileUpdaterFromTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileUpdaterFromTwitter.h; sourceTree = "<group>"; };
 		4F86B1FA1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileUpdaterFromTwitter.m; sourceTree = "<group>"; };
+		4F89C0D81DC8DA910076304A /* VolonteerEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolonteerEventViewController.h; path = Event/Volonteer/VolonteerEventViewController.h; sourceTree = "<group>"; };
+		4F89C0D91DC8DA910076304A /* VolonteerEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerEventViewController.m; path = Event/Volonteer/VolonteerEventViewController.m; sourceTree = "<group>"; };
 		4F8A08A31D509135004658DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		4F8ACE9E1D40D3DA00593D00 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LaunchImage.xcassets; path = LaunchImage/LaunchImage.xcassets; sourceTree = "<group>"; };
 		4F943AB91D58847C00854183 /* BEMCheckBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BEMCheckBox.framework; path = Carthage/Build/iOS/BEMCheckBox.framework; sourceTree = "<group>"; };
@@ -246,6 +253,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F00AADC1DC9E2A2001DF808 /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				4F00AADD1DC9E2A2001DF808 /* OwnerEventViewController.h */,
+				4F00AADE1DC9E2A2001DF808 /* OwnerEventViewController.m */,
+			);
+			name = Owner;
+			path = Event/Owner;
+			sourceTree = "<group>";
+		};
 		4F2353AB1D76D2AF0047E4A9 /* CreateEventChooseVolonteerRoles */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,10 +329,13 @@
 		4F5312FC1DB76E3D001ABE66 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				4F89C0D71DC8DA760076304A /* Volonteer */,
+				4F00AADC1DC9E2A2001DF808 /* Owner */,
 				4F5312FD1DB77709001ABE66 /* EventViewController.h */,
 				4F5312FE1DB77709001ABE66 /* EventViewController.m */,
 				4F6A78591DB8E4290069A745 /* EventView.h */,
 				4F6A785A1DB8E4290069A745 /* EventView.m */,
+				4F00AADB1DC9E1D2001DF808 /* EventVCProtocol.h */,
 			);
 			name = Event;
 			sourceTree = "<group>";
@@ -380,6 +400,15 @@
 			);
 			name = ProfileUpdaterFromTwitter;
 			path = Authorization/ProfileUpdaters/ProfileUpdaterFromTwitter;
+			sourceTree = "<group>";
+		};
+		4F89C0D71DC8DA760076304A /* Volonteer */ = {
+			isa = PBXGroup;
+			children = (
+				4F89C0D81DC8DA910076304A /* VolonteerEventViewController.h */,
+				4F89C0D91DC8DA910076304A /* VolonteerEventViewController.m */,
+			);
+			name = Volonteer;
 			sourceTree = "<group>";
 		};
 		4F8ACE9D1D40D37E00593D00 /* LaunchImage */ = {
@@ -840,6 +869,7 @@
 				4FBC003E1D741ADA00BF32D4 /* CreateEventTableViewController.m in Sources */,
 				4FBC00691D7433C900BF32D4 /* VolonteerFormTableView.m in Sources */,
 				4FBC006C1D7433C900BF32D4 /* VolonteerRole+Selecting.m in Sources */,
+				4F00AADF1DC9E2A2001DF808 /* OwnerEventViewController.m in Sources */,
 				4FBB6B271D6D88F20050F652 /* EqualityProxyFactory.m in Sources */,
 				4FE1EE5D1D48C25D009170FB /* UIAlertController+SimpleAlert.m in Sources */,
 				4FE194861D42016100708B49 /* LoginViewController.m in Sources */,
@@ -883,6 +913,7 @@
 				4F2353AE1D76D3E10047E4A9 /* CreateEventChooseVolonteerRolesTableViewController.m in Sources */,
 				4F86B1FB1D54A285004A1DAB /* ProfileUpdaterFromFacebook.m in Sources */,
 				4FE194931D420F7E00708B49 /* RoundedButton.m in Sources */,
+				4F89C0DA1DC8DA910076304A /* VolonteerEventViewController.m in Sources */,
 				4FBC00651D7433C900BF32D4 /* EventCategory+Selecting.m in Sources */,
 				4F5EF9E31D92A38A00371A8C /* CreateEventDateTableViewCell.m in Sources */,
 			);

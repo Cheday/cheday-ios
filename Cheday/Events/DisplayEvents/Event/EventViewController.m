@@ -39,15 +39,8 @@
 }
 
 - (IBAction)phoneButtonTouchUpInside:(UIButton *)sender {
+
 }
-
-- (IBAction)actionButtonTouchUpInside:(UIButton *)sender {
-    
-    //sender.enabled = NO;
-    //[self.actionButtonActivityIndicator startAnimating];
-}
-
-
 
 /*
 #pragma mark - Navigation

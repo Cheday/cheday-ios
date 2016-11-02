@@ -9,7 +9,7 @@
 #import "EventsCollectionViewController.h"
 #import "EventCollectionViewCell.h"
 #import "SimpleAlertController.h"
-#import "EventViewController.h"
+#import "EventVCProtocol.h"
 
 @interface EventsCollectionViewController ()
 
@@ -62,11 +62,12 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"EventsCollectionShowEvent"])
+    if([segue.identifier isEqualToString:@"EventsCollectionShowEventForOwner"] ||
+       [segue.identifier isEqualToString:@"EventsCollectionShowEventForVolonteer"])
     {
         NSIndexPath *selectedIndexPath = self.collectionView.indexPathsForSelectedItems.firstObject;
         Event *event = self.objects[selectedIndexPath.item];
-        EventViewController *vc = segue.destinationViewController;
+        UIViewController<EventVCProtocol> *vc = segue.destinationViewController;
         vc.event = event;
     }
 }
@@ -89,33 +90,18 @@
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    Event *event = self.objects[indexPath.row];
+    if([event.owner isEqual:[User currentUser]])
+    {
+        [self performSegueWithIdentifier:@"EventsCollectionShowEventForOwner"
+                                  sender:self];
+    }else
+    {
+        [self performSegueWithIdentifier:@"EventsCollectionShowEventForVolonteer"
+                                  sender:self];
+    }
 }
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
