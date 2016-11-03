@@ -12,7 +12,6 @@
 @interface EventViewController ()
 
 @property(nonatomic, strong) EventView *view;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actionButtonActivityIndicator;
 
 @end
 

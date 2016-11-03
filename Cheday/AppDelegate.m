@@ -31,8 +31,6 @@
 #import "MainViewController.h"
 
 
-
-
 @interface AppDelegate ()
 <LoginViewControllerDelegate>
 

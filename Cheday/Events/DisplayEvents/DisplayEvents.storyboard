@@ -179,6 +179,9 @@
                             <constraint firstAttribute="trailing" secondItem="Jq0-ZN-ITQ" secondAttribute="trailing" id="xQz-fI-J1b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="wantToParticipateButtonActivityIndicator" destination="Mn0-ba-TFd" id="q3u-K9-Uwj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rg-sa-EZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,7 +407,7 @@
                                     <constraint firstAttribute="height" constant="44" id="GNe-xw-ZSK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="ЗАВРШИТЬ МЕРОПРИЯТИЕ" backgroundImage="button_normal_background">
+                                <state key="normal" title="ЗАВЕРШИТЬ МЕРОПРИЯТИЕ" backgroundImage="button_normal_background">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="disabled" backgroundImage="button_disabled_background"/>
