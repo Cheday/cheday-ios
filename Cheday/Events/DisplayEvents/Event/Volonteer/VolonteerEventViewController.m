@@ -27,6 +27,7 @@
         eventVC.event = self.event;
     }
 }
+
 - (IBAction)wantToParticipateButtonTouchUpInside:(UIButton *)sender {
     EventParticipation *eventParticipation = [EventParticipation new];
     eventParticipation.user = [User currentUser];
