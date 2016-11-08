@@ -17,7 +17,8 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"OwnerEventEmbedEvent"])
+    if([segue.identifier isEqualToString:@"OwnerEventEmbedEvent"]||
+       [segue.identifier isEqualToString:@"OwnerEventShowResponses"])
     {
         UIViewController<EventVCProtocol> *eventVC = segue.destinationViewController;
         eventVC.event = self.event;

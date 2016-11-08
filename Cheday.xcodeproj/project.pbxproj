@@ -35,6 +35,7 @@
 		4F86B1FC1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B1FA1D54A285004A1DAB /* ProfileUpdaterFromTwitter.m */; };
 		4F89C0DA1DC8DA910076304A /* VolonteerEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F89C0D91DC8DA910076304A /* VolonteerEventViewController.m */; };
 		4F8ACE9F1D40D3DA00593D00 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8ACE9E1D40D3DA00593D00 /* LaunchImage.xcassets */; };
+		4F8B7E6C1DD1D0E100BC33FB /* ResponseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B7E6B1DD1D0E100BC33FB /* ResponseTableViewCell.m */; };
 		4F8DDDB11DC9FB4400E7E750 /* EventParticipation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8DDDB01DC9FB4400E7E750 /* EventParticipation.m */; };
 		4F943ABA1D58847C00854183 /* BEMCheckBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F943AB91D58847C00854183 /* BEMCheckBox.framework */; };
 		4F9D54851D3F97D300A14739 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9D54841D3F97D300A14739 /* CocoaLumberjack.framework */; };
@@ -143,6 +144,8 @@
 		4F89C0D91DC8DA910076304A /* VolonteerEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolonteerEventViewController.m; path = Event/Volonteer/VolonteerEventViewController.m; sourceTree = "<group>"; };
 		4F8A08A31D509135004658DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		4F8ACE9E1D40D3DA00593D00 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LaunchImage.xcassets; path = LaunchImage/LaunchImage.xcassets; sourceTree = "<group>"; };
+		4F8B7E6A1DD1D0E100BC33FB /* ResponseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponseTableViewCell.h; path = Responses/ResponseTableViewCell.h; sourceTree = "<group>"; };
+		4F8B7E6B1DD1D0E100BC33FB /* ResponseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponseTableViewCell.m; path = Responses/ResponseTableViewCell.m; sourceTree = "<group>"; };
 		4F8DDDAF1DC9FB4400E7E750 /* EventParticipation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventParticipation.h; path = Common/DataModel/EventParticipation.h; sourceTree = "<group>"; };
 		4F8DDDB01DC9FB4400E7E750 /* EventParticipation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventParticipation.m; path = Common/DataModel/EventParticipation.m; sourceTree = "<group>"; };
 		4F943AB91D58847C00854183 /* BEMCheckBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BEMCheckBox.framework; path = Carthage/Build/iOS/BEMCheckBox.framework; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 			children = (
 				4F3B2B4F1DCCA06F00C9B28F /* ResponsesTableViewController.h */,
 				4F3B2B501DCCA06F00C9B28F /* ResponsesTableViewController.m */,
+				4F8B7E6A1DD1D0E100BC33FB /* ResponseTableViewCell.h */,
+				4F8B7E6B1DD1D0E100BC33FB /* ResponseTableViewCell.m */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -909,6 +914,7 @@
 				4F15E3051D815B5400F520F8 /* VolonteerRoleWithCount.m in Sources */,
 				4FBC00641D7433C900BF32D4 /* VolonteerChooseTableViewCell.m in Sources */,
 				4F5312FF1DB77709001ABE66 /* EventViewController.m in Sources */,
+				4F8B7E6C1DD1D0E100BC33FB /* ResponseTableViewCell.m in Sources */,
 				4FB1CC041D6EF6DA002879CD /* CreateEventViewController.m in Sources */,
 				4F5312F91DB76D76001ABE66 /* NearEventsViewController.m in Sources */,
 				4F5312FA1DB76D76001ABE66 /* EventCollectionViewCell.m in Sources */,

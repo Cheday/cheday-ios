@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventVCProtocol.h"
 
 @interface ResponsesTableViewController : UITableViewController
+<EventVCProtocol>
+
+@property(nonatomic, strong) Event *event;
 
 @end
