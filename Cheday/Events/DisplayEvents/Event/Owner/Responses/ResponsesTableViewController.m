@@ -74,6 +74,7 @@
     ResponseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResponseTableViewCell" forIndexPath:indexPath];
     
     cell.eventParticipation = self.objects[indexPath.row];
+    cell.delegate = self;
     
     return cell;
 }
@@ -88,8 +89,16 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     EventParticipation *eventParticipation = self.objects[indexPath.row];
     eventParticipation.state = kEventParticipationStateAcceptedByOwner;
+    __weak __typeof(self) weakSelf = self;
     [eventParticipation saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        
+        if(succeeded == NO)
+        {
+            SimpleAlertController *alertController = [SimpleAlertController alertControllerWithTitle:NSLocalizedString(@"Ошибка", nil)
+                                                                                             message:error.localizedDescription];
+            [weakSelf presentViewController:alertController
+                                   animated:YES
+                                 completion:nil];
+        }
     }];
 }
 
