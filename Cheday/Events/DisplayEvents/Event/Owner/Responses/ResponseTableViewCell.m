@@ -44,19 +44,21 @@
 {
     if((context == (__bridge void * _Nullable)(self)) && [_eventParticipation isEqual:object] && [keyPath isEqualToString:@"state"])
     {
+        NSString *title = nil;
+        UIImage *image = nil;
         if([_eventParticipation.state isEqualToString:kEventParticipationStateSentToOwner])
         {
-            [self.assignButton setTitle:NSLocalizedString(@"Назначить", nil)
-                               forState:UIControlStateNormal];
-            [self.assignButton setBackgroundImage:[UIImage imageNamed:@"button_normal_background"]
-                                         forState:UIControlStateNormal];
+            title = NSLocalizedString(@"Назначить", nil);
+            image = [UIImage imageNamed:@"button_normal_background"];
         }else if([_eventParticipation.state isEqualToString:kEventParticipationStateAcceptedByOwner])
         {
-            [self.assignButton setTitle:NSLocalizedString(@"Назначен", nil)
-                               forState:UIControlStateNormal];
-            [self.assignButton setBackgroundImage:[UIImage imageNamed:@"greenPixel"]
-                                         forState:UIControlStateNormal];
+            title = NSLocalizedString(@"Назначен", nil);
+            image = [UIImage imageNamed:@"greenPixel"];
         }
+        [self.assignButton setTitle:title
+                           forState:UIControlStateNormal];
+        [self.assignButton setBackgroundImage:image
+                                     forState:UIControlStateNormal];
     }
 }
 
