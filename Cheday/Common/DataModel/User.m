@@ -73,8 +73,6 @@
         return YES;
     if((self.objectId != user.objectId) && ![self.objectId isEqualToString:user.objectId])
         return NO;
-//    if((self.name != user.name) && ![_instance.name isEqual:eventCategory.name])
-//        return NO;
     return YES;
 }
 
