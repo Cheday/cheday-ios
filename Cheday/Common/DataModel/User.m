@@ -62,7 +62,7 @@
 {
     if(self == object)
         return YES;
-    if(!object || ![object isKindOfClass:[self class]])
+    if(!object || ![object isKindOfClass:[User class]])
         return NO;
     return [self isEqualToUser:object];
 }
