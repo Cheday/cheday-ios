@@ -24,15 +24,7 @@ extern DDLogLevel ddLogLevel;
 
 -(NSMutableSet *)selectedObjects
 {
-    NSMutableSet *set = [NSMutableSet new];
-    [_selectedObjects.allObjects enumerateObjectsUsingBlock:^(id<Selecting>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
-     {
-         if(obj.selected)
-         {
-             [set addObject:obj];
-         }
-     }];
-    return set;
+    return [_selectedObjects mutableCopy];
 }
 
 -(void)setSelectedObjects:(NSMutableSet *)selectedObjects
