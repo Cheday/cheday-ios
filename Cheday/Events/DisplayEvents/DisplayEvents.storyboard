@@ -378,9 +378,21 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwa-0D-jlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9Yq-CO-oWI"/>
+                <tapGestureRecognizer id="9Yq-CO-oWI">
+                    <connections>
+                        <segue destination="5wD-Tn-tQa" kind="show" id="8J9-2d-vci"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1457" y="134"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="oyr-No-2gm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="5wD-Tn-tQa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E33-O6-ack" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2712" y="158"/>
         </scene>
         <!--Мероприятие-->
         <scene sceneID="izp-GR-TNj">
@@ -507,6 +519,7 @@
                                     <outlet property="assignButton" destination="wgi-A7-qWH" id="djA-K6-IkN"/>
                                     <outlet property="userFullNameLabel" destination="Wck-PM-Nro" id="Rso-Na-0vz"/>
                                     <outlet property="userImageView" destination="3e3-qe-qLB" id="hJA-1S-cow"/>
+                                    <segue destination="5wD-Tn-tQa" kind="show" id="isW-GV-55H"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -528,5 +541,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Zrk-R5-mLR"/>
+        <segue reference="isW-GV-55H"/>
     </inferredMetricsTieBreakers>
 </document>
