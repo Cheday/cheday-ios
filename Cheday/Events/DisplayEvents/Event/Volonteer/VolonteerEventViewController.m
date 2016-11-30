@@ -12,11 +12,19 @@
 
 @interface VolonteerEventViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *wantToParticipateButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *wantToParticipateButtonActivityIndicator;
 
 @end
 
 @implementation VolonteerEventViewController
+
+-(void)setEvent:(Event *)event
+{
+    _event = event;
+    
+    //TODO: set wantToParticipateButton correct state 
+}
 
 #pragma mark - Navigation
 

@@ -86,6 +86,8 @@
 
 -(void)responseTableViewCellAssignButtonTap:(ResponseTableViewCell *)cell
 {
+    //[self.currentQuery clearCachedResult];
+    
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     EventParticipation *eventParticipation = self.objects[indexPath.row];
     eventParticipation.state = kEventParticipationStateAcceptedByOwner;

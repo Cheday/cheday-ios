@@ -180,6 +180,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="wantToParticipateButton" destination="ibZ-Ic-0c9" id="4yk-Y1-Rqf"/>
                         <outlet property="wantToParticipateButtonActivityIndicator" destination="Mn0-ba-TFd" id="q3u-K9-Uwj"/>
                     </connections>
                 </viewController>
@@ -466,10 +467,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResponseTableViewCell" id="pYF-UU-X0I" customClass="ResponseTableViewCell">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pYF-UU-X0I" id="KWT-Hm-8yc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3e3-qe-qLB" customClass="RoundImageView">
@@ -540,7 +541,7 @@
         <image name="button_normal_background" width="1" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zrk-R5-mLR"/>
+        <segue reference="pyh-Hs-dcy"/>
         <segue reference="isW-GV-55H"/>
     </inferredMetricsTieBreakers>
 </document>
