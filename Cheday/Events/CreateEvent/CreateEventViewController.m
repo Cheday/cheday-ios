@@ -36,6 +36,7 @@ extern DDLogLevel ddLogLevel;
 
 - (IBAction)onCreateEventTouchUpInside:(UIButton *)sender
 {
+    //test
     NSAssert(!(self.createEventTVC.selectedCategories.count > 1), @"self.createEventTVC.selectedCategories.count>1");
     
     Event *event = [Event new];
